@@ -4,3 +4,4 @@
 - By default, `heapq` is a min-heap, which means the 0th index is always the smallest number.
 - You can make a `heapq` node a tuple, it will always use the first value in the tuple to determine its position in the heap.
 - When it comes to prefix-suffix arrays, just remember, the result for each element is everything before (or after) _excluding_ itself.
+- Biggest advice for prefix-suffix arrays is take it a step at a time and whiteboard it.
