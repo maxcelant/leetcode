@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sliding Window/hard/minimum-window-substring.md",
+                "file": "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "minimum-window-substring"
+              "title": "Best Time To Buy And Sell Stocks"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 615.0031242370605
   },
   "right": {
     "id": "59dafd0067bea484",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sliding Window/hard/minimum-window-substring.md",
+                "file": "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for minimum-window-substring"
+              "title": "Backlinks for Best Time To Buy And Sell Stocks"
             }
           },
           {
@@ -170,15 +170,16 @@
   },
   "active": "7bfb3a1714c9732c",
   "lastOpenFiles": [
-    "Sliding Window/medium/permutation-in-string.md",
-    "Sliding Window/hard/minimum-window-substring.md",
-    "Sliding Window/medium/longest-repeating-character-replacement.md",
-    "Sliding Window/medium/longest-subarray-with-sum-less-than-or-equal-to-k.md",
-    "Sliding Window/medium/longest-substring-without-repeating-characters.md",
+    "Sliding Window/hard/Minimum Window Substring.md",
+    "Sliding Window/hard/Sliding Window Maximum.md",
+    "Sliding Window/medium/Longest Repeating Character Replacement.md",
+    "Sliding Window/medium/Longest Subarray With Sum Less Than Or Equal To K.md",
+    "Sliding Window/medium/Longest Substring Without Repeating Characters.md",
+    "Sliding Window/medium/Permutation In String.md",
     "Templates/Problem Template.md",
     "docs.md",
     "Templates",
-    "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
+    "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
     "Sliding Window/takeaways.md",
     "Arrays/takeaways.md",
     "Arrays/medium/valid-sudoku.md",
