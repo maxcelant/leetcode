@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs.md",
-                "mode": "preview",
+                "file": "Sliding Window/hard/minimum-window-substring.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docs"
-            }
-          },
-          {
-            "id": "c618d28393a907d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "best-time-to-buy-and-sell-stocks"
+              "title": "minimum-window-substring"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
+                "file": "Sliding Window/hard/minimum-window-substring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for best-time-to-buy-and-sell-stocks"
+              "title": "Backlinks for minimum-window-substring"
             }
           },
           {
@@ -183,10 +168,17 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "c618d28393a907d6",
+  "active": "7bfb3a1714c9732c",
   "lastOpenFiles": [
-    "Sliding Window/medium/longest-substring-without-repeating-characters.md",
+    "Sliding Window/medium/permutation-in-string.md",
+    "Sliding Window/hard/minimum-window-substring.md",
+    "Sliding Window/medium/longest-repeating-character-replacement.md",
     "Sliding Window/medium/longest-subarray-with-sum-less-than-or-equal-to-k.md",
+    "Sliding Window/medium/longest-substring-without-repeating-characters.md",
+    "Templates/Problem Template.md",
+    "docs.md",
+    "Templates",
+    "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
     "Sliding Window/takeaways.md",
     "Arrays/takeaways.md",
     "Arrays/medium/valid-sudoku.md",
@@ -204,8 +196,6 @@
     "Arrays/medium/longest-consecutive-sequence.md",
     "Arrays/medium/group-anagrams.md",
     "Order.md",
-    "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
-    "docs.md",
     "Two Pointers/medium/3-sum.py",
     "Two Pointers/medium/container-with-most-water.py",
     "Two Pointers/medium/two-integer-sum-2.py",
