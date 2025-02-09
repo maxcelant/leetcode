@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1739120240613,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "1D Dynamic Programming"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "2D Dynamic Programming"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Advanced Graphs"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Arrays"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Backtracking"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Binary Search"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Graphs"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Greedy"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Heaps"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Linked List"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Sliding Window"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Stack"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Trees"
+        },
+        {
+          "type": "group",
+          "ctime": 1739120240613,
+          "items": [],
+          "title": "Two Pointers"
+        },
+        {
+          "type": "file",
+          "ctime": 1739120240613,
+          "path": "docs.md",
+          "subpath": "#^-"
+        },
+        {
+          "type": "file",
+          "ctime": 1739120240613,
+          "path": "README.md",
+          "subpath": "#^-"
+        },
+        {
+          "type": "file",
+          "ctime": 1739120629834,
+          "path": "Order.md",
+          "subpath": "#^-"
+        }
+      ],
+      "title": "sortspec"
+    }
+  ]
+}
