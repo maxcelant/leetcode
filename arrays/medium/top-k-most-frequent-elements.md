@@ -1,4 +1,5 @@
 
+```python
 from collections import defaultdict
 import heapq
 from typing import List
@@ -24,3 +25,4 @@ nums = [1,2,2,3,3,3]
 k = 2
 s = Solution()
 print(s.topKFrequent(nums, k))
+```

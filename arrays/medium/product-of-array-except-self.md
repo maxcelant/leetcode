@@ -1,3 +1,4 @@
+```python
 from typing import List
 
 class Solution:
@@ -34,3 +35,4 @@ class Solution:
 nums = [1,2,4,6]
 s = Solution()
 print(s.productExceptSelf(nums))
+```

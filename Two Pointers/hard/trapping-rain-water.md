@@ -1,3 +1,4 @@
+```python
 '''
 - the edges can't contain any water. Just start at 1 and N - 1
 - keep track of max on left and right
@@ -27,3 +28,4 @@ class Solution:
 
 s = Solution()
 print(s.trap([0,2,0,3,1,0,1,3,2,1]))
+```

@@ -1,3 +1,4 @@
+```python
 from typing import List
 
 
@@ -34,3 +35,4 @@ class Solution:
 
 s = Solution()
 print(s.threeSum([-1,0,1,2,-1,-4]))
+```

@@ -1,3 +1,4 @@
+```python
 from collections import defaultdict
 
 class Solution:
@@ -7,3 +8,4 @@ class Solution:
       sortedStr = "".join(sorted(s))
       groups[sortedStr].append(s)
     return [ g for g in groups.values() ]
+```

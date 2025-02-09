@@ -1,4 +1,5 @@
 
+```python
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
         res = 0
@@ -11,3 +12,4 @@ class Solution:
 
 s = Solution()
 print(s.maxProfit([10, 1, 5, 6, 7, 1]))
+```

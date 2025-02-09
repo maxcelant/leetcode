@@ -1,0 +1,31 @@
+/* Adjust spacing between headers and content */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin-bottom: 0.1em;  /* Reduced from 0.5em */
+}
+
+/* Adjust spacing for bullet points */
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+  margin-top: 0.1em;     /* Reduced from 0.3em */
+  margin-bottom: 0.1em;  /* Reduced from 0.3em */
+}
+
+/* Adjust spacing between list items */
+.markdown-preview-view li {
+  margin-top: 0.05em;     /* Reduced from 0.2em */
+  margin-bottom: 0.05em;  /* Reduced from 0.2em */
+}
+
+/* Adjust spacing for nested lists */
+.markdown-preview-view ul ul,
+.markdown-preview-view ol ol,
+.markdown-preview-view ul ol,
+.markdown-preview-view ol ul {
+  margin-top: 0.05em;    /* Reduced from 0.1em */
+  margin-bottom: 0.05em; /* Reduced from 0.1em */
+}

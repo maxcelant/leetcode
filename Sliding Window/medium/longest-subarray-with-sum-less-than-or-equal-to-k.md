@@ -1,4 +1,5 @@
 
+```python
 '''
 You are given an array of integers nums and an integer k. 
 Find the length of the longest contiguous subarray whose sum is less than or equal to k. Return 0 if no such subarray exists.
@@ -28,9 +29,6 @@ class Solution:
             total = max(total, (r - l) + 1)
         return total
 
-
-
-
 s = Solution()
 tests = [
     ([1,2,3,4,5], 9, 3),
@@ -42,3 +40,4 @@ for t in tests:
     actual = s.longestSubarrayNaive(nums, k)
     assert expect == actual, "Incorrect!"
 
+```
