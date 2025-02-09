@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Order.md",
-                "mode": "source",
+                "file": "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Order"
+              "title": "best-time-to-buy-and-sell-stocks"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Order.md",
+                "file": "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Order"
+              "title": "Backlinks for best-time-to-buy-and-sell-stocks"
             }
           },
           {
@@ -168,7 +168,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,30 +183,32 @@
       "custom-sort:Toggle custom sorting": false
     }
   },
-  "active": "1d9efe0518d47d02",
+  "active": "c618d28393a907d6",
   "lastOpenFiles": [
-    "Arrays/medium/valid_sudoku.md",
-    "Arrays/medium/top-k-most-frequent-elements.md",
-    "Arrays/medium/temp.md",
-    "Arrays/medium/product-of-array-except-self.md",
-    "Arrays/medium/longest-consecutive-sequence.md",
-    "Arrays/medium/group-anagrams.md",
-    "Arrays/easy/valid-anagram.md",
-    "Arrays/easy/two-sum.md",
-    "Arrays/easy/contains-duplicate.md",
+    "Sliding Window/medium/longest-substring-without-repeating-characters.md",
+    "Sliding Window/medium/longest-subarray-with-sum-less-than-or-equal-to-k.md",
+    "Sliding Window/takeaways.md",
+    "Arrays/takeaways.md",
+    "Arrays/medium/valid-sudoku.md",
+    "Two Pointers/takeaway.md",
     "Two Pointers/medium/two-integer-sum-2.md",
     "Two Pointers/medium/container-with-most-water.md",
     "Two Pointers/medium/3-sum.md",
     "Two Pointers/hard/trapping-rain-water.md",
-    "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
-    "Sliding Window/medium/longest-substring-without-repeating-characters.md",
-    "Sliding Window/medium/longest-subarray-with-sum-less-than-or-equal-to-k.md",
-    "docs.md",
+    "Arrays/easy/contains-duplicate.md",
+    "Arrays/easy/two-sum.md",
+    "Arrays/easy/valid-anagram.md",
+    "Arrays/medium/product-of-array-except-self.md",
+    "Arrays/medium/top-k-most-frequent-elements.md",
+    "Arrays/medium/temp.md",
+    "Arrays/medium/longest-consecutive-sequence.md",
+    "Arrays/medium/group-anagrams.md",
     "Order.md",
+    "Sliding Window/easy/best-time-to-buy-and-sell-stocks.md",
+    "docs.md",
     "Two Pointers/medium/3-sum.py",
     "Two Pointers/medium/container-with-most-water.py",
     "Two Pointers/medium/two-integer-sum-2.py",
-    "Two Pointers/takeaway.md",
     "Two Pointers/hard/trapping-rain-water.py"
   ]
 }

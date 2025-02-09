@@ -1,4 +1,4 @@
-
+```python
 class Solution:
   def twoSum(self, nums: List[int], target: int) -> List[int]:
       t = {}
@@ -9,3 +9,4 @@ class Solution:
         else:
             t[n] = i
       return [-1,-1]
+```

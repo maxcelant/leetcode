@@ -1,3 +1,4 @@
+```python
 from collections import defaultdict
 from typing import List
 
@@ -37,3 +38,4 @@ board = [["1","2",".",".","3",".",".",".","."],
 s = Solution()
 print(s.isValidSudoku(board))
 
+```

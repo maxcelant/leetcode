@@ -1,0 +1,47 @@
+/* Make code blocks collapsible with animation and indicator */
+pre {
+  max-height: 125px; /* Adjust height for collapsed state */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.6s ease; /* Smooth opening animation */
+  padding-bottom: 10px; /* Small padding before cut-off */
+}
+
+/* Fading effect at the bottom */
+pre::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Height of the fade */
+  background: linear-gradient(to bottom, rgba(42, 36, 29, 0) 0%, rgba(45, 39, 31, 100) 100%);
+  pointer-events: none;
+}
+
+/* Indicator: Three dots centered at the bottom */
+pre::after {
+  content: '...'; /* Three dots for collapsed state */
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: gray; /* Adjust color to fit your theme */
+  font-size: 1.2em; /* Adjust size if needed */
+  font-weight: bold;
+  display: block;
+  pointer-events: none;
+}
+
+/* Expand behavior */
+pre:hover {
+  max-height: 1000px; /* Large height for expansion */
+  overflow: auto;
+}
+
+/* Remove fade and dots when expanded */
+pre:hover::before,
+pre:hover::after {
+  content: '';
+  display: none;
+}

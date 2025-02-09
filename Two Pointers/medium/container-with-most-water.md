@@ -1,5 +1,5 @@
 
-
+```python
 '''
 - The volume of the water will be the diff between the pointers X the min of the two heights
 '''
@@ -21,3 +21,4 @@ class Solution:
 
 s = Solution()
 print(s.maxArea([1,7,2,5,4,7,3,6]))
+```

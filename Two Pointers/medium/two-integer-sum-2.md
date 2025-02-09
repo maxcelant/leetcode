@@ -1,9 +1,10 @@
+```python
 from typing import List
 
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         # If the total is less than the target, increase left pointer
-        # If the total is greater than the target, decrease rught pointer
+        # If the total is greater than the target, decrease right pointer
         l, r = 0, len(numbers) - 1
         while l < r:
             cur = numbers[l] + numbers[r]
@@ -15,3 +16,4 @@ class Solution:
 
 s = Solution()
 print(s.twoSum([1,2,3,4], 3))
+```

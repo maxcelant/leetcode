@@ -1,4 +1,5 @@
 
+```python
 '''
 - Use sliding window, add characters to a set
 - Check if the character on the right you are adding is already in the set,
@@ -19,6 +20,7 @@ class Solution:
             r += 1
             count = max(count, len(window))
         return count
+```
 
 
 

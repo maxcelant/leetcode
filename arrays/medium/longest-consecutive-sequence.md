@@ -1,4 +1,4 @@
-
+```python
 class Solution:
     def longestConsecutive(self, nums: list[int]) -> int:
         seq = set(nums)
@@ -19,3 +19,4 @@ class Solution:
 
 s = Solution()
 print(s.longestConsecutive([2,20,4,10,3,4,5]))
+```

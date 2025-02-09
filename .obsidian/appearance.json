@@ -1,1 +1,11 @@
-{}
+{
+  "accentColor": "#dd7631",
+  "cssTheme": "Primary",
+  "interfaceFontFamily": "MonoLisa Nerd Font Mono",
+  "textFontFamily": "MonoLisa Nerd Font Mono",
+  "monospaceFontFamily": "MonoLisa Nerd Font Mono",
+  "enabledCssSnippets": [
+    "spacing",
+    "width"
+  ]
+}
