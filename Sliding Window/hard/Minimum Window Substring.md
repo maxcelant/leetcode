@@ -41,4 +41,3 @@ class Solution:
 #### Post-Attempt Thoughts
 ---
 - I shrink the window when I have met the minimum requirement of having all the elements of my substring! 
-- 

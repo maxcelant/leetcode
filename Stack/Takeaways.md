@@ -1,0 +1,1 @@
+- When you are dealing with different permutations of a thing, it most likely needs a recursive approach.
