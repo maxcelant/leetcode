@@ -10,3 +10,5 @@ for r in range(len(foo)):
 ```
 
 - The window doesn't always need to necessarily be a data structure, sometimes a counter will do!
+- The most important thing is answering _"what causes the window to shrink?"_.
+- 

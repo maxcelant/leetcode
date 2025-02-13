@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
+                "file": "Stack/medium/Car Fleet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Best Time To Buy And Sell Stocks"
+              "title": "Car Fleet"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 615.0031242370605
+    "width": 319
   },
   "right": {
     "id": "59dafd0067bea484",
@@ -163,40 +163,38 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "vscode-editor:Create Code File": false,
-      "custom-sort:Toggle custom sorting": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "7bfb3a1714c9732c",
   "lastOpenFiles": [
+    "Pasted image 20250213172320.png",
+    "Stack/medium/Daily Temperatures.md",
+    "Stack/medium/Car Fleet.md",
+    "Stack/medium/Evaluate Reverse Polish Notation.md",
+    "Backtracking/medium/Generate Parenthesis.md",
+    "Stack/Takeaways.md",
+    "Two Pointers/takeaway.md",
+    "Two Pointers/hard/Trapping Rain Water.md",
+    "Two Pointers/medium/3 Sum.md",
+    "Two Pointers/medium/Two Integer Sum 2.md",
+    "Two Pointers/medium/Container of Most Water.md",
+    "Sliding Window/Takeaways.md",
+    "Arrays/Takeaways.md",
+    "Arrays/medium/Valid Sudoku.md",
+    "Arrays/medium/Top K Most Frequent Elements.md",
+    "Arrays/medium/Product of Array Except Self.md",
+    "Arrays/medium/Longest Consecutive Sequence.md",
+    "Arrays/medium/Group Anagrams.md",
+    "Arrays/easy/Valid Anagram.md",
+    "Arrays/easy/Two Sum.md",
+    "Arrays/easy/Contains Duplicates.md",
     "Sliding Window/hard/Minimum Window Substring.md",
+    "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
     "Sliding Window/hard/Sliding Window Maximum.md",
     "Sliding Window/medium/Longest Repeating Character Replacement.md",
     "Sliding Window/medium/Longest Subarray With Sum Less Than Or Equal To K.md",
-    "Sliding Window/medium/Longest Substring Without Repeating Characters.md",
-    "Sliding Window/medium/Permutation In String.md",
-    "Templates/Problem Template.md",
-    "docs.md",
     "Templates",
-    "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
-    "Sliding Window/takeaways.md",
-    "Arrays/takeaways.md",
-    "Arrays/medium/valid-sudoku.md",
-    "Two Pointers/takeaway.md",
-    "Two Pointers/medium/two-integer-sum-2.md",
-    "Two Pointers/medium/container-with-most-water.md",
-    "Two Pointers/medium/3-sum.md",
-    "Two Pointers/hard/trapping-rain-water.md",
-    "Arrays/easy/contains-duplicate.md",
-    "Arrays/easy/two-sum.md",
-    "Arrays/easy/valid-anagram.md",
-    "Arrays/medium/product-of-array-except-self.md",
-    "Arrays/medium/top-k-most-frequent-elements.md",
-    "Arrays/medium/temp.md",
-    "Arrays/medium/longest-consecutive-sequence.md",
-    "Arrays/medium/group-anagrams.md",
-    "Order.md",
     "Two Pointers/medium/3-sum.py",
     "Two Pointers/medium/container-with-most-water.py",
     "Two Pointers/medium/two-integer-sum-2.py",
