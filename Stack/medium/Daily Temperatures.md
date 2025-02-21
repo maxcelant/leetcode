@@ -14,7 +14,7 @@ class Solution:
 		for i, temp in enumerate(temperatures):
 			# If the current temperature is greater than the top of the stack
 			# Then we will continously pop until we hit a value larger than current
-			while stack and temp > stack[len(stack) - 1][1]:
+			while stack and temp > stack[-1][1]:
 				j, _ = stack.pop()
 				res[j] = i - j
 			# No matter what, we add the value to the stack

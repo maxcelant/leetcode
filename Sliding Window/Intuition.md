@@ -1,4 +1,3 @@
-
 - Because of the nature of sliding window problems. You usually only need to have a left pointer, the right can made in the loop.
 
 ```python

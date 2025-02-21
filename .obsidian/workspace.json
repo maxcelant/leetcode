@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Stack/medium/Daily Temperatures.md",
+                "file": "Stack/Intuition.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily Temperatures"
+              "title": "Intuition"
+            }
+          },
+          {
+            "id": "769ed56de7295d36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stack/Intuition.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intuition"
             }
           }
         ]
@@ -168,34 +182,35 @@
   },
   "active": "7bfb3a1714c9732c",
   "lastOpenFiles": [
+    "Stack/medium/Evaluate Reverse Polish Notation.md",
+    "Stack/medium/Daily Temperatures.md",
+    "Stack/Intuition.md",
+    "Stack/medium/Next Smaller Element.md",
+    "Stack/medium/Car Fleet.md",
+    "_images/Pasted image 20250218211756.png",
+    "Arrays/Intuition.md",
+    "Sliding Window/Intuition.md",
+    "Two Pointers/Intuition.md",
+    "Mindset.md",
+    "Arrays/easy/Valid Anagram.md",
+    "Arrays/easy/Two Sum.md",
+    "Arrays/easy/Contains Duplicates.md",
     "README.md",
     "_images/Pasted image 20250213172320.png",
     "Order.md",
     "docs.md",
     "_images",
-    "Stack/medium/Evaluate Reverse Polish Notation.md",
-    "Stack/medium/Daily Temperatures.md",
-    "Stack/medium/Car Fleet.md",
     "Backtracking/medium/Generate Parenthesis.md",
-    "Stack/Takeaways.md",
-    "Two Pointers/takeaway.md",
     "Two Pointers/hard/Trapping Rain Water.md",
     "Two Pointers/medium/3 Sum.md",
     "Two Pointers/medium/Two Integer Sum 2.md",
     "Two Pointers/medium/Container of Most Water.md",
-    "Sliding Window/Takeaways.md",
-    "Arrays/Takeaways.md",
     "Arrays/medium/Valid Sudoku.md",
     "Arrays/medium/Top K Most Frequent Elements.md",
     "Arrays/medium/Product of Array Except Self.md",
     "Arrays/medium/Longest Consecutive Sequence.md",
     "Arrays/medium/Group Anagrams.md",
-    "Arrays/easy/Valid Anagram.md",
-    "Arrays/easy/Two Sum.md",
-    "Arrays/easy/Contains Duplicates.md",
     "Sliding Window/hard/Minimum Window Substring.md",
-    "Sliding Window/easy/Best Time To Buy And Sell Stocks.md",
-    "Sliding Window/hard/Sliding Window Maximum.md",
     "Templates",
     "Two Pointers/medium/3-sum.py",
     "Two Pointers/medium/container-with-most-water.py",
