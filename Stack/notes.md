@@ -12,6 +12,7 @@ A monotonic stack maintains an increasing/decreasing order by popping elements f
 ##### Problems 
 - [[Daily Temperatures]]
 - [[Next Smaller Element]]
+- [[Remove K Digits to Form Smallest Number]]
 
 ---
 
