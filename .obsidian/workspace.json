@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Master Note.md",
+                "file": "Binary Search/medium/Search a 2D Matrix.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Master Note"
+              "title": "Search a 2D Matrix"
             }
           },
           {
@@ -191,17 +191,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1d9efe0518d47d02",
+  "active": "7f2c6baa89a967da",
   "lastOpenFiles": [
+    "README.md",
+    "Binary Search/medium/Search a 2D Matrix.md",
+    "master.md",
     "Binary Search/notes.md",
-    "Master Note.md",
     "Stack/notes.md",
     "Sliding Window/notes.md",
-    "README.md",
     "Mindset.md",
     "Two Pointers/notes.md",
     "Arrays/notes.md",
-    "Binary Search/medium/Search a 2D Matrix.md",
     "Binary Search/easy/Binary Search.md",
     "Two Pointers/hard/Trapping Rain Water.md",
     "Sliding Window/medium/Permutation In String.md",
