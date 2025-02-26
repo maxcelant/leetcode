@@ -1,28 +1,34 @@
+#### Approach
+---
+- Keep track of the value and its frequency.
+- Use a heap to continuously keep the most frequent at the top
+- Heaps are min heap by default, so we can make it negative to fix it.
+- Find frequencies first 
+- Then insert them in heap.
 
+#### Code
+---
 ```python
-from collections import defaultdict
 import heapq
-from typing import List
-
+from collections import defaultdict
 
 class Solution:
-  def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-    # Determine frequency of each number
-    freq = defaultdict(int) 
-    for n in nums:
-      freq[n] += 1
-    
-    heap = [] # Heaps are min-heap by default
-    for n in freq.keys():
-      heapq.heappush(heap, (freq[n], n))
-      if len(heap) > k:
-        heapq.heappop(heap) # Popping the top of the heap (smallest)
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        h = []
+        freqs = defaultdict(int)
+        for n in nums:
+            freqs[n] += 1
 
-    return [n for (_, n) in heap]
+        for v, f in freqs.items():
+            heapq.heappush(h, (-f, v))
 
-
-nums = [1,2,2,3,3,3]
-k = 2
-s = Solution()
-print(s.topKFrequent(nums, k))
+        res = []
+        while k > 0:
+            res.append(heapq.heappop(h)[1])
+            k -= 1
+        return re
 ```
+
+#### Post-Attempt Thoughts
+---
+- 
