@@ -42,3 +42,6 @@ for r in range(len(foo)):
 - Use `l + ((r - l) // 2)` to find the middle index. Drill this.
 - Put the `target` on the left-hand side of the comparison to help orient it in your brain.
 
+- 14 total examples -> https://www.amazon.jobs/content/en/our-workplace/leadership-principles
+- Send Resume
+- Amazon specific leetcode questions?

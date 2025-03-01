@@ -1,22 +1,29 @@
+#### Approach
+---
+- Turn this list into a set, and starting from the bottom
+- Increment the value by 1 and see if it's still in the set
+- Keep track of the highest consecutive sequence.
+
+#### Code
+---
+
 ```python
 class Solution:
-    def longestConsecutive(self, nums: list[int]) -> int:
-        seq = set(nums)
-        cnt = 0
-        for n in nums: 
-            tmp_cnt = 0
-            # If a larger number in the sequence exists
-            # just skip this one.
-            if n+1 in seq: continue
-            cur = n
-            # Loop downwards until all the values are captured
-            while cur in seq:
-                cur =- 1
-                tmp_cnt += 1
-            cnt = max(cnt, tmp_cnt)
+  def longestConsecutive(self, nums: List[int]) -> int:
+    longest_seq = 0
+    nums = set(nums)
+    for n in nums:
+      cur = n
+      cur_seq = 0
+      while cur in nums:
+        cur += 1
+        cur_seq += 1
+      longest_seq = max(longest_seq, cur_seq)
+    return longest_seq
 
-        return cnt
-
-s = Solution()
-print(s.longestConsecutive([2,20,4,10,3,4,5]))
 ```
+
+
+#### Post-Attempt Thoughts
+---
+- 

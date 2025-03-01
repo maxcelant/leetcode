@@ -1,38 +1,32 @@
-```python
-from typing import List
+#### Approach
+---
+- Initialize result array to all 1's. `[1,1,1,1]`
+- Prefix (left to right), not including self. `[1,1,2,8]`
+- Postfix (right to left), not including self. `[48, 24, 6, 1]`
+- Multiply them together! `[(1x48), (1x24), (2x6), (1x8)]`
+- You can optimize this to `O(1)` space complexity by using a prefix/postfix value instead of array.
 
+#### Code
+---
+
+```python
 class Solution:
   def productExceptSelf(self, nums: List[int]) -> List[int]:
-    n = len(nums)
-    res = [0] * n
-    prefix = [0] * n
-    suffix = [0] * n
-    # Since there are no elements before index 0
-    # And we "dont include the current element", then it needs to be just 1
-    prefix[0] = 1
-    # And no elements after n - 1, same thing as above
-    suffix[n - 1] = 1
-    # Find the product BEFORE the current element
+    res = [1] * len(nums)
+    prefix = 1
+    for i in range(len(nums)):
+      res[i] = prefix
+      prefix *= nums[i]
     
-    '''
-    i	nums[i]	prefix[i] (product before i)
-    0	  1	    1
-    1	  2	    1
-    2	  3	    1 x 2 = 2
-    3	  4	    1 x 2 x 3 = 6
-    '''
-    for i in range(1, n):
-      prefix[i] = nums[i - 1] * prefix[i - 1]
-    print(prefix)
-    for i in range(n - 2, -1, -1):
-      suffix[i] = nums[i + 1] * suffix[i + 1]
-    print(suffix)
-    for i in range(n):
-      res[i] = suffix[i] * prefix[i]
+    postfix = 1
+    for i in range(len(nums) - 1, -1, -1):
+      res[i] *= postfix
+      postfix *= nums[i]
+    
     return res
-
-
-nums = [1,2,4,6]
-s = Solution()
-print(s.productExceptSelf(nums))
 ```
+
+
+#### Post-Attempt Thoughts
+---
+- 
