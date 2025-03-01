@@ -1,24 +1,30 @@
+#### Approach
+---
+- Use two pointers, decrement the smallest side.
+- Calculate the area by doing the min of left and right.
+- Multiplied by distance between left and right pointers.
+
+#### Code
+---
 
 ```python
-'''
-- The volume of the water will be the diff between the pointers X the min of the two heights
-'''
-
-
 class Solution:
-    def maxArea(self, heights: list[int]) -> int:
-        res = 0
-        l, r = 0, len(heights) - 1
-        while l < r:
-            diff = r - l
-            area = diff * min(heights[l], heights[r])
-            res = max(area, res)
-            if heights[l] < heights[r]:
-                l += 1
-            else:
-                r -= 1
-        return res
+  def maxArea(self, height: List[int]) -> int:
+    max_area = 0
+    l, r = 0, len(height) - 1
+    while l < r:
+      min_height = min(height[l], height[r])
+      area = min_height * (r - l)
+      max_area = max(area, max_area)
+      if height[l] < height[r]:
+        l += 1
+      else:
+        r -= 1
+    return max_area
 
-s = Solution()
-print(s.maxArea([1,7,2,5,4,7,3,6]))
 ```
+
+
+#### Post-Attempt Thoughts
+---
+- 
