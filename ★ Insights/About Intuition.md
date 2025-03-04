@@ -1,0 +1,7 @@
+- "How could I make the insight that leads to discovering the solution?" is just as important as "What is the solution?"
+- Focus on strengthening your "intuition" on which algorithm a problem needs.
+- For sliding window:
+	- It's typically a question of a smaller thing within a bigger thing
+		- Ex: Substring without repeating characters
+- For two pointers:
+	- It's typically a sorted problem, or needs to be sorted to then use two pointers.
