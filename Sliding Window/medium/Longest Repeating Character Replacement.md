@@ -35,6 +35,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - I can only have K changes, which means we only count changes that aren't the most frequent element. Hence why window length - most frequent is used.

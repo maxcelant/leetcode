@@ -21,6 +21,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - Using an external data structure like a set here is helpful because we need to keep track of the chars in the window.

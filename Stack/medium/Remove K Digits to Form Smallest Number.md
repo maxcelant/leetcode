@@ -23,7 +23,7 @@ def removeKdigits(num: str, k: int) -> str:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - `lstrip` is helpful.
 - Instead  of using a separate variable to keep track of removals, just decrement `k` itself is cleaner.

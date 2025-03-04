@@ -50,6 +50,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - The key to this problem is to use binary search to find the correct row, then using it again to find the correct value.

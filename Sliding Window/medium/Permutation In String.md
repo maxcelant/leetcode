@@ -43,7 +43,7 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - I can compare counters, duh. 
 - I just need to make sure to stay within the window size of `s1`.

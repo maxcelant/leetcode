@@ -38,6 +38,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - I shrink the window when I have met the minimum requirement of having all the elements of my substring! 

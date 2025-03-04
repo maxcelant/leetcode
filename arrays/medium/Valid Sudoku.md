@@ -33,6 +33,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
-- Remember that tuples can be used as keys in a dictionary. 
+Forgot that tuples can be used as keys in a dictionary.
