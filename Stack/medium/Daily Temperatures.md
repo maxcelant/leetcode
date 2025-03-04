@@ -22,7 +22,7 @@ class Solution:
 			stack.append((i, temp))  
 		return res	
 ```
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - Add values to the stack. 
 - When a value that is found is greater than the top of the stack, we pop the top and get the diff.

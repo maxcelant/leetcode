@@ -1,5 +1,9 @@
 - "How could I make the insight that leads to discovering the solution?" is just as important as "What is the solution?"
 - Focus on strengthening your "intuition" on which algorithm a problem needs.
+- Things to keep in mind:
+	- Can I solve this by sorting it?
+	- Will reversing it help?
+	- Will starting from the end of the list help?
 - For sliding window:
 	- It's typically a question of a smaller thing within a bigger thing
 		- Ex: Substring without repeating characters

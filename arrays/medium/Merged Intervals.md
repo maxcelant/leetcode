@@ -10,22 +10,23 @@ class Solution:
   def merge(self, intervals: List[List[int]]) -> List[List[int]]:
     # Sort the pairs
     intervals.sort()
-    merged = []
+    res = []
     prev = intervals[0]
     for intr in intervals[1:]:
       # There's overlap, update end of pair
-      if prev[1] > intr[0]: 
+      if prev[1] >= intr[0]: 
         prev[1] = max(prev[1], intr[1])
       # No overlap, prev to be the current value
       else: 
-        merged.append(prev)
+        res.append(prev)
         prev = intr
-    merged.append(prev)
-    return merged
+    res.append(prev)
+    return res
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - I got stuck figuring out how to efficiently "merge" them. 
 - The answer was using `prev` value and adding to it, and _only_ merging once we the next pair was not part of the merged sequence.
+- I was trying to add directly to `res` instead of having a temporary data structure before adding to `res` to store the current in-progress values.

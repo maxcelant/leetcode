@@ -25,7 +25,7 @@ class Solution:
 		return res
 ```
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - When you are dealing with different permutations of a thing, it's most likely recursion
 - You don't actually need to use a stack here. You can just add to the string and that would work.

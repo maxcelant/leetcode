@@ -48,6 +48,6 @@ class Solution:
 ```
 
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - Since the stack is in reverse order to the input array. When we pop, the first value will actually be the right value, and then the left.

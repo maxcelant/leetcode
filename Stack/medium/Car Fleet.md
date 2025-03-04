@@ -24,7 +24,7 @@ class Solution:
 		return len(stack)
 ```
 
-#### Post-Attempt Thoughts
+#### Where did I go wrong?
 ---
 - We need to sort the array by the starting position.
 - We will calculate this starting from the furthest along car and moving backwards.
