@@ -1,0 +1,18 @@
+- "How could I make the insight that leads to discovering the solution?" is just as important as "What is the solution?"
+- Focus on strengthening your "intuition" on which algorithm a problem needs.
+- Metacognition is the idea of "thinking about thinking".
+	- Think about why you chose a particular strategy.
+	- Ask: "Where did I get stuck?"
+	- Realizations or "Aha" moments.
+- Ways to rapidly improve your intuition
+	- Look at a bunch of problems, and immediately look at their solutions and pick up on the common patterns that you see.
+	- Read a bunch of problems and quiz yourself to see if your intuition is correct.
+- Things to keep in mind:
+	- Can I solve this by sorting it?
+	- Will reversing it help?
+	- Will starting from the end of the list help?
+- For sliding window:
+	- It's typically a question of a smaller thing within a bigger thing
+		- Ex: Substring without repeating characters
+- For two pointers:
+	- It's typically a sorted problem, or needs to be sorted to then use two pointers.
