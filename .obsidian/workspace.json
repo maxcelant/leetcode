@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "in progress/Search in Rotated Sorted Array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Search in Rotated Sorted Array"
             }
           }
         ]
@@ -168,13 +168,21 @@
   },
   "active": "9bf89487e26ee6c1",
   "lastOpenFiles": [
+    "_templates/Problem Template.md",
     "in progress/Search in Rotated Sorted Array.md",
+    "problems/Time-Based Key Value Store.md",
+    "notes/About Intuition.md",
+    "_images/Pasted image 20250306202203.png",
+    "_images/Pasted image 20250306201940.png",
+    "problems/Daily Temperatures.md",
+    "problems/Longest Repeating Character Replacement.md",
+    "problems/Group Anagrams.md",
+    "problems/Contains Duplicates.md",
+    "README.md",
     "problems/Find Minimum in Rotated Sorted Array.md",
     "_images/Pasted image 20250306111027.png",
     "problems/Koko Eating Bananas.md",
-    "_templates/Problem Template.md",
     "problems/Integer to Roman.md",
-    "problems/Longest Repeating Character Replacement.md",
     "_images/Pasted image 20250305150757.png",
     "_images/Pasted image 20250305150746.png",
     "problems/Median of Two Sorted Arrays.md",
@@ -184,8 +192,6 @@
     "problems/Merged Intervals.md",
     "problems/Merge Sorted Arrays.md",
     "problems/Longest Consecutive Sequence.md",
-    "problems/Group Anagrams.md",
-    "problems/Contains Duplicates.md",
     "problems/Valid Anagram.md",
     "problems/Two Sum.md",
     "problems/Generate Parenthesis.md",
@@ -193,10 +199,6 @@
     "problems/Word Ladder.md",
     "problems/Search a 2D Matrix.md",
     "Binary Search/easy/Binary Search.md",
-    "problems/Reorganize String.md",
-    "problems/Trapping Rain Water 1.md",
-    "Two Pointers/notes.md",
-    "problems/Container of Most Water.md",
     "problems",
     "BFS/hard",
     "BFS/medium",
