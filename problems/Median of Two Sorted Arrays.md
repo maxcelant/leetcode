@@ -3,7 +3,6 @@ tags:
   - two-pointers
   - hard
 ---
-
 #### Intuition
 ---
 - Since the arrays are sorted, we don't need to merge them to figure out the median.
@@ -16,41 +15,52 @@ tags:
 ```python
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        n, m = len(nums1), len(nums2)
+        # We want to have a pointer at the start of both nums1 and nums2
+        # Increment the smaller one
+        # When we reach the end of one of the lists, we just want to increment the other
+        # We will simply just make a helper func that returns the "next" value in the list
+        # We loop through (n+m)/2 times.
+        # If its an odd number of values, we return the middle
+        # If its an even number of values, then we take the middle values and 
+        # so loop (n+m - 1) times and take the next two and divide by 2
+        n = len(nums1) 
+        m = len(nums2)
         p1, p2 = 0, 0
-        def get_next():
+
+        def next() -> int:
             nonlocal p1, p2
+            res = None
             if p1 < n and p2 < m:
                 if nums1[p1] < nums2[p2]:
-                    ans = nums1[p1]
+                    res = nums1[p1]
                     p1 += 1
                 else:
-                    ans = nums2[p2]
+                    res = nums2[p2]
                     p2 += 1
-            elif p1 == n:
-                ans = nums2[p2]
-                p2 += 1
             else:
-                ans = nums1[p1]
-                p1 += 1
-            return ans
+                if p1 == n:
+                    res = nums2[p2]
+                    p2 += 1
+                else:
+                    res = nums1[p1]
+                    p1 += 1
+            return res
         
-        if (n+m) % 2 == 1: # Odd case
+        if (n + m) % 2 == 0: # Even case
+            for _ in range(((n+m) // 2) - 1):
+                next()
+            return (next() + next()) / 2
+        else:              # Odd case
             for _ in range((n+m) // 2):
-                get_next()
-            return get_next()
-        else:              # Even case
-            for _ in range((n+m) // 2 - 1):
-                get_next()
-            return (get_next() + get_next()) / 2
-
+                next()
+            return next()
 ```
 
 #### Insight
 ---
-- Use a pointer on each list, increment the smaller one until we reach `(n+m)//2` for odd and `((n+m // 2) + (n+m // 2) + 1) // 2` for even.
 - We use this helper function to always get the next value that's pointed to.
 	- This is important because it let's us use the same function for odd and even lengths.
+- Since we need two values for even cases, we need to stop the loop one value early so we can grab the **next two**—Hence the `((n+m)//2)-1`
 
 #### Takeaways
 ---
