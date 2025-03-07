@@ -26,7 +26,7 @@ class Solution:
         last -= 1
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

@@ -27,7 +27,7 @@ class Solution:
         return res
 ```
 
-#### Analysis
+#### Insight
 ---
 - 
 
@@ -37,5 +37,5 @@ class Solution:
 - **Lessons Learned?**
 - **Aha Moments?**
 
-#### Analysis
+#### Insight
 ---

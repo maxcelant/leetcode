@@ -43,7 +43,7 @@ class Solution:
 			
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

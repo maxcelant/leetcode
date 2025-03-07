@@ -34,7 +34,7 @@ class Solution:
     return [[i, l, r] for (i, l, r) in res ]
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

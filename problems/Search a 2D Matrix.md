@@ -54,7 +54,7 @@ class Solution:
 
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

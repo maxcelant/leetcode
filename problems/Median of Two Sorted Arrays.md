@@ -46,7 +46,7 @@ class Solution:
 
 ```
 
-#### Analysis
+#### Insight
 ---
 - Use a pointer on each list, increment the smaller one until we reach `(n+m)//2` for odd and `((n+m // 2) + (n+m // 2) + 1) // 2` for even.
 - We use this helper function to always get the next value that's pointed to.
