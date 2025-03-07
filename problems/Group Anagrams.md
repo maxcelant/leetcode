@@ -23,7 +23,7 @@ class Solution:
     return [ g for g in groups.values() ]
 ```
 
-#### Analysis
+#### Insight
 ---
 - 
 
@@ -33,5 +33,5 @@ class Solution:
 - **Lessons Learned?**
 - **Aha Moments?**
 
-#### Analysis
+#### Insight
 ---

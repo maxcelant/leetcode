@@ -40,7 +40,7 @@ class Solution:
 		return res
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

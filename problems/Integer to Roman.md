@@ -38,7 +38,7 @@ class Solution:
         return "".join(res)
 ```
 
-#### Analysis
+#### Insight
 ---
 - With this greedy approach, we start from the highest roman numeral (`M`) and work our way down. 
 - On each iteration of the loop, we divide by roman numeral digit and keep both the quotient and remainder.

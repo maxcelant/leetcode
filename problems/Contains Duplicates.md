@@ -18,7 +18,7 @@ class Solution:
       return len(nums) != len(set(nums))
 ```
 
-#### Analysis
+#### Insight
 ---
 - 
 
@@ -28,8 +28,8 @@ class Solution:
 - **Lessons Learned?**
 - **Aha Moments?**
 
-#### Analysis
+#### Insight
 ---
 
-#### Analysis
+#### Insight
 ---

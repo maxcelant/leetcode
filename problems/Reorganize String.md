@@ -46,7 +46,7 @@ class Solution:
     return "".join(res)
 ```
 
-#### Analysis
+#### Insight
 ---
 - We should immediately null out our `prev` value, since this could be the last time it's needed.
 - Only assign `prev` if there is a value to assign it to.

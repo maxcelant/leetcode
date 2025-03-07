@@ -14,7 +14,7 @@ tags:
 ---
 ```
 
-#### Analysis
+#### Insight
 ---
 CREATE stack []
 CREATE operand (+,-,/,*)
@@ -30,7 +30,7 @@ FOR value IN input
 RETURN stack[0]
 ```
 
-#### Analysis
+#### Insight
 ---
 
 #### Code
@@ -58,7 +58,7 @@ class Solution:
 		return stack[0]
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

@@ -44,7 +44,7 @@ class Solution:
         return 0
 ```
 
-#### Analysis
+#### Insight
 ---
 - "Find shortest path" was a good indicator that BFS was the answer here.
 - Creating that `all_combo_dict` is super interesting, it allows you to find "alike words". 

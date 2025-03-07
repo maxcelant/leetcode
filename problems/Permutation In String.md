@@ -47,7 +47,7 @@ class Solution:
         return False
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

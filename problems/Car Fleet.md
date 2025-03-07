@@ -29,7 +29,7 @@ class Solution:
 		return len(stack)
 ```
 
-#### Analysis
+#### Insight
 ---
 
 #### Takeaways

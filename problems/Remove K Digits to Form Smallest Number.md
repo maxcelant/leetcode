@@ -27,7 +27,7 @@ def removeKdigits(num: str, k: int) -> str:
 	return "".join(stack.lstrip("0"))
 ```
 
-#### Analysis
+#### Insight
 ---
 
 

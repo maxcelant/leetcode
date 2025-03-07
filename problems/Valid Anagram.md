@@ -19,7 +19,7 @@ class Solution:
         return Counter(s) == Counter(t)
 ```
 
-#### Analysis
+#### Insight
 ---
 - 
 
@@ -29,5 +29,5 @@ class Solution:
 - **Lessons Learned?**
 - **Aha Moments?**
 
-#### Analysis
+#### Insight
 ---

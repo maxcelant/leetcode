@@ -24,7 +24,7 @@ def nextSmallerElement(nums):
 	return res
 ```
 
-#### Analysis
+#### Insight
 ---
 
 
