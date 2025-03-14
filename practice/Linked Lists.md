@@ -17,7 +17,7 @@ def reverse_list(head: ListNode):
 - Since we are popping off the stack, we don't lose access to the previous nodes.
 
 ###### Example
->![[Pasted image 20250310165855.png]]
+![[Pasted image 20250310165855.png|Reversing a Linked List]]
 
 #### Cycle Detection
 ###### Code

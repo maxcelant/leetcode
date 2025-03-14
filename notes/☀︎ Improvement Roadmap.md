@@ -9,8 +9,15 @@
 
 #### Current Goals
 ---
-- [ ] Become comfortable with linked lists
+- [ ] Linked Lists
 	- [ ] Reversing a linked list iteratively
 	- [x] Recursive solutions
 		- [x] Reversing a linked list using recursion
 	- [ ] Two pointers
+- [ ] Trees
+	- [ ] Bottom-up strategy
+	- [ ] Top-down strategy
+	- [ ] BFS traversals (recursive)
+	- [ ] DFS traversals (recursive)
+	- [ ] BFS traversals (iterative)
+	- [ ] DFS traversals (iterative)
