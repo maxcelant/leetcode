@@ -4,6 +4,7 @@ tags:
   - trees
   - dfs
   - top-down
+  - easy
 ---
 #### Intuition
 ---

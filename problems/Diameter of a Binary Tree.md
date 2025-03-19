@@ -4,6 +4,7 @@ tags:
   - recursion
   - dfs
   - bottom-up
+  - easy
 ---
  #### Intuition
 ---

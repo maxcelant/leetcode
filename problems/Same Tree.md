@@ -3,6 +3,7 @@ tags:
   - trees
   - dfs
   - bottom-up
+  - easy
 ---
 #### Intuition
 ---
