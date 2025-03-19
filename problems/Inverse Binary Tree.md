@@ -2,6 +2,7 @@
 tags:
   - trees
   - dfs
+  - easy
 ---
 #### Intuition
 ---

@@ -43,3 +43,21 @@ Example: Computing tree height
 
 ![[Pasted image 20250312204921.png|Depth and Height]]
 
+#### Level Order Traversals
+
+```python
+    def levelOrderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        q = deque([root])
+        res = []
+        while q:
+            n = len(q)
+            for _ in range(n):
+                node = q.popleft()
+                if node:
+                    q.append(node.left)
+                    q.append(node.right)
+```
+
+- While a standard BFS will traverse all nodes in a tree, it does **not** do all the nodes in a layer as a single step.
+- That's what this level order traversal accomplishes—it allows you to iterate through **all** nodes in a layer before moving on to the next one.
+- This is important when you need to look at all the nodes in a layer and get some value (like [[Binary Tree Right Side View]]).
