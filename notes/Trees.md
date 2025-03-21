@@ -61,3 +61,9 @@ Example: Computing tree height
 - While a standard BFS will traverse all nodes in a tree, it does **not** do all the nodes in a layer as a single step.
 - That's what this level order traversal accomplishes—it allows you to iterate through **all** nodes in a layer before moving on to the next one.
 - This is important when you need to look at all the nodes in a layer and get some value (like [[Binary Tree Right Side View]]).
+
+#### Binary Search Trees
+- By default, BST's are sorted!
+- Starting from the far-most left node to the right, we are in increasing order.
+
+![[Pasted image 20250319115227.png|BST]]
