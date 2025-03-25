@@ -5,7 +5,7 @@ tags:
 #### Intuition
 ---
 _"How could I make the insight that leads to discovering the solution?"_
-- Realize that you need to do a [[notes/Trees#Level Order Traversals|level order traversal]] because you need all the nodes of a given layer.
+- Realize that you need to do a [[plan/Trees#Level Order Traversals|level order traversal]] because you need all the nodes of a given layer.
 
 #### Code
 ---
