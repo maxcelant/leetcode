@@ -47,4 +47,4 @@ _"What are the important aspects of the solution?"_
 - Didn't know this algorithm prior to performing this problem.
 **Lessons Learned?**
 - You can use fast/slow pointers to find where they intersect to find cycles.
-- More info [[practice/Linked Lists|here]].
+- More info [[dsa/Linked Lists|here]].

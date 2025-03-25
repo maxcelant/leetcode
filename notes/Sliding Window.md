@@ -1,2 +1,0 @@
-- A good indicator is if you have a problem that asks you to find something within something else.
-- 

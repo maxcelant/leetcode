@@ -60,7 +60,7 @@ class Solution:
 ---
 _"What are the important aspects of the solution?"_
 - Using the `range(1, len(..))` is very powerful here because we can accumulate the merging of the lists into the final array cell of the original list.
-	- More on that [[practice/Arrays#Flattening a List of Lists|here]]
+	- More on that [[Arrays#Flattening a List of Lists|here]]
 
 #### Takeaways
 ---
