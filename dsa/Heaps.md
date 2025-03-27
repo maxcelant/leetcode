@@ -1,5 +1,18 @@
 #### Fundamentals
 - 
+
+#### Top K Greatest Elements
+- To get the largest K elements, we can just remove the top elements until we reach a size of `k`.
+```python
+def fn(arr, k):
+	heap = []
+	for num in arr:
+		heapq.heappush(heap, (key, num))
+		if len(heap) > k:
+			heapq.heappop(heap)
+	return [num for num in heap]
+```
+
 #### Two Heap Median
 - You can use two heaps to keep track of the median of a list.
 - One contains the greater top half elements and the other the lower half elements.
@@ -9,4 +22,7 @@
 	- Once we do this and there is an in-balance in which the `lower` is less than the `upper`, then we move the top element from the `upper` to the `lower`.
 		- Remember the rule above.
 
-![[Pasted image 20250325164334.png|Lift and Shift ]]
+![[Pasted image 20250325164334.png|Lift and Shift]]
+
+- **Examples**
+	- [[Find Median in Data Stream]]

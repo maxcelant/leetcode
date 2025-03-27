@@ -1,1 +1,0 @@
-- When you see `prev = cur`, think "assign `prev` to `cur`". Assign left value to the right value.

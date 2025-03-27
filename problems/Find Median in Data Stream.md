@@ -2,11 +2,12 @@
 tags:
   - hard
   - heaps
+  - retry
 ---
 #### Intuition
 ---
 _"How could I make the insight that leads to discovering the solution?"_
-- 
+- I need to maintain where the median is as I add more elements so i can use the [[Heaps#Two Heap Median|dual heap median]] method.
 
 #### Code
 ---
@@ -15,12 +16,6 @@ _"How could I make the insight that leads to discovering the solution?"_
 class MedianFinder:
 
     def __init__(self):
-        '''
-        - hi is the larger half  -> [8, 12, 15, 20]
-        - lo is the smaller half -> [7, 5,  3,  1]
-        - To make this work, `lo` needs to be a max heap, so all values will be negative
-        - `lo` may have 1 more element than `hi`
-        '''
         self.hi, self.lo = [], []
 
     def addNum(self, num: int) -> None:
@@ -41,7 +36,7 @@ class MedianFinder:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- 
+- Look at the dual heap median notes for details
 
 #### Takeaways
 ---
