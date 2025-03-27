@@ -153,4 +153,3 @@ def get_total_count(root: TreeNode):
 ###### Insight
 - Uses an outside variable and then reference it using `nonlocal`.
 
-#### 
