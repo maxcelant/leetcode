@@ -16,11 +16,11 @@ _"How could I make the insight that leads to discovering the solution?"_
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
-        def backtrack(n, set):
+        def backtrack(start, set):
             res.append(set[:])
-            for i in range(n, len(nums)):
+            for i in range(start, len(nums)):
                 set.append(nums[i])
-                backtrack(i + 1, set)
+                backtrack(start + 1, set)
                 set.pop()
         backtrack(0, [])
         return res

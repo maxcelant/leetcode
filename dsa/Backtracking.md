@@ -12,9 +12,9 @@ function dfs(start_index, path):
     path.pop()
 ```
 - A very small `n` value may indicate a backtracking problem.
-- 
 - Backtracking problems are usually exhaustive: "Find all X"
 - When looking at a backtracking problem, you should think about three things:
 	1. What is the target/end goal?
 	2. How do we generate possible children?
 	3. How do I prune bad nodes?
+- The non-for loop approach is more intuitive for me.

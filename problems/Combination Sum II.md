@@ -10,8 +10,8 @@ _"How could I make the insight that leads to discovering the solution?"_
 - **Base case:** We reach the target.
 - **Prune case:** We go above target OR `i` is larger than `len(nums)`
 - **Branching Paths:** 
-	1. Continue to include this number until we reach base case
-	2. Remove current number and move on to next number 
+	1. Include this number, increment total, and go to next number in sequence.
+	2. Don't include this number (loop to see if there are duplicates)
 
 #### Code
 ---
@@ -41,11 +41,14 @@ class Solution:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
+- Since we only include the same number once, we need to increment the `start` value on every recursive call, unlike [[Combination Sum]] which allowed the same value more than once.
+- The `if` condition allows us to skip the same value if it shows up multiple times.
 - 
 
 #### Takeaways
 ---
 **Where did I go wrong?**
+- I should have my `if` conditions flipped since python short-circuits its if statements.
 
 **Lessons Learned?**
 - ALWAYS put your out of bounds check BEFORE checking an index in a `if` statement.
