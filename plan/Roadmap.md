@@ -9,6 +9,8 @@
 
 #### Current Goals
 ---
+- [ ] Recursion I
+- [ ] Recursion II
 - [ ] Linked Lists
 	- [ ] Reversing a linked list iteratively
 	- [x] Recursive solutions
