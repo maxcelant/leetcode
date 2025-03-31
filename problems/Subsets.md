@@ -16,20 +16,23 @@ _"How could I make the insight that leads to discovering the solution?"_
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
-        def backtrack(start, set):
-            res.append(set[:])
+        def findAllSubsets(start: int, subset: List[int]):
+            res.append(subset.copy())
+            if start == len(nums):
+                return
+            
             for i in range(start, len(nums)):
-                set.append(nums[i])
-                backtrack(start + 1, set)
-                set.pop()
-        backtrack(0, [])
+                subset.append(nums[i])
+                findAllSubsets(i + 1, subset)
+                subset.pop()
+        findAllSubsets(0, [])
         return res
 ```
 
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- This sort of follows the boilerplate for backtracking that you can find [[Backtracking|here]].
+- This problem boils down to understanding [[Backtracking#Understanding the For Loop Approach|For Loop Backtracking DFS]] very well.
 - Except because we want **all** values, we are just going to `append` no matter what.
 - The key is that the `for` loop range decreases as we go on.
 
