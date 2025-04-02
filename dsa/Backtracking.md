@@ -51,6 +51,7 @@ def dfs(start_index, path):
 
 	- So you might be able to imagine that when we get to `[1]` as the parent, then the edges become `[1,1], [1,2], and [1,3]`.
 	- And since we are doing this DFS style, we would immediately drill into `[1,1]` which would have edges `[1, 1, 2] and [1, 1, 3]`.
+	- Note: the reason we do `total + arr[i]` is because we are saying "for these children, the total is already set to X from the parent.", with the parent being `arr[i]`.
 	- Picture below will help illustrate.
 
 ![[Pasted image 20250331172319.png|Backtracking For Loop Example]]

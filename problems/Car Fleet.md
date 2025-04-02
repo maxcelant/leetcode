@@ -1,6 +1,7 @@
 ---
 tags:
   - stack
+  - medium
 ---
 
 #### Intuition
