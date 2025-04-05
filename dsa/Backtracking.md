@@ -10,16 +10,20 @@
 - The non-for loop approach is more intuitive for me.
 - I'm saying pruning is optional because there are cases like [[Subsets]] and [[Subsets II]] where we want ALL of the subsets created.
 
+#### Formatting Tips
+- If you are always moving the first value, name the param `start`.
+- If you are creating groups and adding them the result, name the param it `subset`.
+
 #### Understanding the For Loop Approach
 ```python title:"Template for backtracking" 
-def dfs(start_index, path):
-  if is_leaf(start_index):
-    report(path)
+def dfs(start, subset):
+  if is_leaf(start):
+    report(subset)
     return
-  for edge in get_edges(start_index, len(input)):
-    path.add(edge)
-    dfs(start_index + 1, path)
-    path.pop()
+  for edge in get_edges(start, len(input)):
+    subset.add(edge)
+    dfs(start + 1, subset)
+    subset.pop()
 ```
 
 - The for loop represents all possibilities with the current path as a parent node. 
