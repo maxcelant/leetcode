@@ -25,4 +25,4 @@ def fn(arr, k):
 ![[Pasted image 20250325164334.png|Lift and Shift]]
 
 - **Examples**
-	- [[Find Median in Data Stream]]
+	- [[retry/Find Median in Data Stream]]

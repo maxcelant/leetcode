@@ -2,8 +2,8 @@
 - You always want to add to the visited set when you enqueue/push the node. 
 - Path finding / Exploration BFS problems, always figure out what you need to initialize the array with!
 	- Examples:
-		- [[Rotten Bananas]] — queueing all the rotten bananas and counting fresh
-		- [[Islands and Treasures]] — queueing all the treasure locations
+		- [[retry/Rotten Bananas]] — queueing all the rotten bananas and counting fresh
+		- [[retry/Islands and Treasures]] — queueing all the treasure locations
 - 
 
 #### Level Order BFS
