@@ -8,7 +8,7 @@
 	2. How do we generate possible children?
 	3. (optional) How do I prune bad nodes?
 - The non-for loop approach is more intuitive for me.
-- I'm saying pruning is optional because there are cases like [[Subsets]] and [[Subsets II]] where we want ALL of the subsets created.
+- I'm saying pruning is optional because there are cases like [[retry/Subsets]] and [[retry/Subsets II]] where we want ALL of the subsets created.
 
 #### Formatting Tips
 - If you are always moving the first value, name the param `start`.
