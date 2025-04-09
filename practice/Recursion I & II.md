@@ -1,0 +1,2 @@
+- When working through the [[Linked Lists#Reversing a Linked List using Recursion|Reverse Linked List]] question, I need to try to think backwards. 
+- Sometimes it's helpful to pick a part in the middle to see how a recursive step works.
