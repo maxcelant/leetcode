@@ -14,53 +14,41 @@ _"How could I make the insight that leads to discovering the solution?"_
 ---
 
 ```python
-
-'''
-
-'''
-
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        # Create the adjacency list [key prereq]: [courseA, courseB,...]
         prereqs = collections.defaultdict(list)
-        for course, prereq in prerequisites:
-            prereqs[prereq].append(course)
+		# Adjacency list of [key: course]: [val: listof prereqs]
+        for (course, prereq) in prerequisites:
+            prereqs[course].append(prereq)
         
-        # Return true if we find a cycle
-        def dfs(course, visited, recstack) -> bool:
-            if course in recstack:
+        visited, recstack = set(), set()
+        def dfs(course) -> bool:
+            if course in recstack: # We found a cycle!
                 return True
             if course in visited:
                 return False
             
             visited.add(course)
             recstack.add(course)
-            
             for c in prereqs[course]:
-                if dfs(c, visited, recstack):
+                if dfs(c):
                     return True
-            # Remove from the recstack when we backtrack
             recstack.remove(course)
             return False
 
-        visited = set()
-        recstack = set()
-        # DFS through all of the courses until we find one that 
-        # completes the correct amount of courses required.
+		# Go through each course
         for course in range(numCourses):
-            if dfs(course, visited, recstack):
+            if dfs(course):
                 return False
-        
         return True
-
 
 ```
 
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- We need to construct the adjacency list for this traversal by finding all courses for a given requisite. 
-- We use a `recstack` and visited set to find a cycle in the graph
+- We need to construct the adjacency list for this traversal which maps a course with ALL of it's prerequisites. This allows us to basically "go backwards" from a course and find all that need to come before it. 
+- We use a `recstack` and visited set to find a cycle in the graph.
 
 #### Takeaways
 ---
