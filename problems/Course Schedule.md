@@ -47,6 +47,7 @@ class Solution:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
+- We use `for course in range(numCourses)` because we need to check all the courses, not matter what.
 - We need to construct the adjacency list for this traversal which maps a course with ALL of it's prerequisites. This allows us to basically "go backwards" from a course and find all that need to come before it. 
 - We use a `recstack` and visited set to find a cycle in the graph.
 
