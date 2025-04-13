@@ -2,6 +2,7 @@
 tags:
   - linked-list
   - medium
+insight: Use dummy, get value and store carry for next nodes.
 ---
 #### Intuition
 ---

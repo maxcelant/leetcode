@@ -1,6 +1,7 @@
 ---
 tags:
   - two-pointers
+insight: Sort and use two pointers
 ---
 
 #### Intuition

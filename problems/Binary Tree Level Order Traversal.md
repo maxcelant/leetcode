@@ -3,6 +3,7 @@ tags:
   - trees
   - bfs
   - hashing
+insight:
 ---
 #### Intuition
 ---
