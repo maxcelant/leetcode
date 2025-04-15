@@ -1,7 +1,7 @@
 ---
 tags:
   - sliding-window
-insight: Subtract smallest from current
+pattern: Subtract smallest from current
 ---
 
 #### Intuition

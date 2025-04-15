@@ -4,7 +4,7 @@ tags:
   - dfs
   - bottom-up
   - easy
-insight: Bottom-up return depth, check diff in left and right
+pattern: Bottom-up return depth, check diff in left and right
 ---
 #### Intuition
 ---

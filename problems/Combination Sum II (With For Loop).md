@@ -2,6 +2,7 @@
 tags:
   - backtracking
   - medium
+insight: backtracking, sort and skip duplicates, base case is total equals target
 ---
 #### Intuition
 ---

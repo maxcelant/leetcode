@@ -1,6 +1,8 @@
 ---
 tags:
   - trees
+  - medium
+pattern: Use level order traversal, store last node of that layer seen.
 ---
 #### Intuition
 ---

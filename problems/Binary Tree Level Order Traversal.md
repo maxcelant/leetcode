@@ -3,7 +3,7 @@ tags:
   - trees
   - bfs
   - hashing
-insight:
+pattern: Use tuple of value and layer, group layer of nodes using dict
 ---
 #### Intuition
 ---

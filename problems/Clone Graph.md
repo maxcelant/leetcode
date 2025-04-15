@@ -3,6 +3,7 @@ tags:
   - graphs
   - medium
   - retry
+pattern:
 ---
 #### Intuition
 ---
