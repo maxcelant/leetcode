@@ -1,7 +1,7 @@
 ---
 tags:
   - two-pointers
-insight: Sort and use two pointers
+pattern: Sort and use two pointers
 ---
 
 #### Intuition

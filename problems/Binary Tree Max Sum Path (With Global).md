@@ -4,6 +4,7 @@ tags:
   - hard
   - recursion
   - dfs
+pattern: Store the result of the root as the fork. Prop up the value + the max of left and right
 ---
 #### Intuition
 ---

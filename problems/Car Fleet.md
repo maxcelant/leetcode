@@ -2,6 +2,7 @@
 tags:
   - stack
   - medium
+pattern:
 ---
 
 #### Intuition
@@ -41,7 +42,7 @@ class Solution:
 	- We can do this doing `target - starting_position / speed`.
 - If a car with an earlier starting position reaches the target at a time step _before_ a later car, then they will collide into a car fleet.
 - This means that the time step of the following car needs to be _smaller_ than the leading car, because that means it reached the target _faster_.
-	- Ex: Blue car reached the ending in 2.3 time steps, whereas Red car reached it in 2.5 seconds, so now Blue car is behind Red car.
+	- Ex: Blue car reached the ending in 2.3 time steps, whereas Red car reached it in 2.5 seconds, so now Blue car is stuck behind Red car.
 
 ![[Pasted image 20250213172320.png|]]
 

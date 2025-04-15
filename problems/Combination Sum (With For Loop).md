@@ -2,6 +2,7 @@
 tags:
   - backtracking
   - medium
+insight: backtracking, base case is we reach target, prune if we go over target.
 ---
 #### Intuition
 ---
