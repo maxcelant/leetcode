@@ -4,7 +4,9 @@ tags:
   - medium
 pattern:
 ---
-
+#### Video Breakdown
+---
+![[carfleet.mov]]
 #### Intuition
 ---
 - 
