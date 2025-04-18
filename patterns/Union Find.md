@@ -1,0 +1,6 @@
+- You can do a rank based union find or a size based union find.
+	- `rank`: is determined by the height of the tree.
+		- Example: [[Redundant Connection]]
+	- `size`: is determined by number of nodes in that tree.
+		- Example: [[Min Cost to Connect Points]]
+- 
