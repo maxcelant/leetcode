@@ -73,6 +73,7 @@ _"What are the important aspects of the solution?"_
 
 #### Takeaways
 ---
-**Where did I go wrong?**
-
 **Lessons Learned?**
+- I can use the positions of the points (`i` and `j`) as my "union" values.
+- Using union by size instead of rank is new.
+- Didn't think of brute forcing all the distances.

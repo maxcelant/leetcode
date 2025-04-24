@@ -1,5 +1,5 @@
 ```dataview
-table pattern, tags
+table pattern
 where pattern
 sort tags
 ```
