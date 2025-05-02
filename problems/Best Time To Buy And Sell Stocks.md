@@ -1,7 +1,10 @@
 ---
 tags:
   - sliding-window
-pattern: Subtract smallest from current
+  - easy
+pattern: if right pointer is smaller than left, move pointer forward, calc max of cur and max
+rating: 5
+last attempted: 2025-05-02
 ---
 
 #### Intuition
@@ -13,13 +16,14 @@ pattern: Subtract smallest from current
 
 ```python
 class Solution:
-  def maxProfit(self, prices: List[int]) -> int:
-    res = 0
-    smallest = float('inf')
-    for p in prices:
-      smallest = min(smallest, p)
-      res = max(res, p - smallest)
-    return res
+    def maxProfit(self, prices: List[int]) -> int:
+        l = 0
+        res = 0
+        for r in range(len(prices)):
+            if prices[r] < prices[l]:
+                l = r
+            res = max(res, prices[r] - prices[l])
+        return res
 ```
 
 #### Insight

@@ -1,9 +1,10 @@
 ---
 tags:
-  - 1d-dynamic-programming
   - medium
-pattern: 
-link:
+  - 2d-dynamic-programming
+pattern: Use 2D dp table, fill in default palindromes, traverse all substrings and look at bottom left value to see if that one is also a palindrome
+link: https://neetcode.io/problems/longest-palindromic-substring
+rating: 3
 ---
 #### Video Breakdown
 ![[longest-pali-substring.mov]]
@@ -53,7 +54,7 @@ class Solution:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- 
+- We 
 
 #### Takeaways
 ---

@@ -2,6 +2,8 @@
 tags:
   - arrays
   - easy
+rating: 5
+last attempted: 2025-04-30
 ---
 
 
