@@ -1,6 +1,8 @@
 ---
 tags:
   - sliding-window
+rating: 3
+pattern: Use a counter for s1, create a counter for window. If length of window is greater than s1, then shrink window.
 ---
 
 #### Intuition
