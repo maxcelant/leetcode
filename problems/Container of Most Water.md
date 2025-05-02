@@ -1,6 +1,9 @@
 ---
 tags:
   - two-pointers
+pattern: use two pointers, get min of two sides * the distance between l and r
+rating: 5
+last attempted: 2025-05-02
 ---
 
 #### Intuition
@@ -14,19 +17,17 @@ tags:
 
 ```python
 class Solution:
-  def maxArea(self, height: List[int]) -> int:
-    max_area = 0
-    l, r = 0, len(height) - 1
-    while l < r:
-      min_height = min(height[l], height[r])
-      area = min_height * (r - l)
-      max_area = max(area, max_area)
-      if height[l] < height[r]:
-        l += 1
-      else:
-        r -= 1
-    return max_area
-
+    def maxArea(self, height: List[int]) -> int:
+        l, r = 0, len(height) - 1
+        res = 0
+        while l < r:
+            area = min(height[l], height[r]) * (r - l)
+            res = max(area, res)
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return res
 ```
 
 #### Insight

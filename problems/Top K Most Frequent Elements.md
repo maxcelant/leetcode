@@ -2,6 +2,8 @@
 tags:
   - arrays
   - medium
+rating: 5
+last attempted: 2025-04-30
 ---
 
 #### Intuition

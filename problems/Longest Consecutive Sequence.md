@@ -2,6 +2,8 @@
 tags:
   - arrays
   - medium
+rating: 4
+pattern: Use a set, and traverse the set. Only start if n - 1 is not in the set
 ---
 
 #### Intuition
