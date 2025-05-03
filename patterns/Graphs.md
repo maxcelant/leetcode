@@ -1,4 +1,3 @@
-#### Fundamental
 - You always want to add to the visited set when you enqueue/push the node. 
 - With Pathfinding / Exploration BFS problems, always figure out what you need to initialize the array with!
 	- Examples:
@@ -15,7 +14,8 @@
 - I want to get a path from the bottom up, then I need to add the nodes in a "post-order" fashion.
 	- Examples:
 		- [[Course Schedule II]] — We need to build the dependencies in order from the one that doesn't have any to the most dependent.
-#### Level Order BFS
+#### Specific Algorithms
+##### Level Order BFS
 - To perform true level order bfs, you need to loop through the queue all at once.
 
 ```python

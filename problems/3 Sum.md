@@ -3,7 +3,7 @@ tags:
   - two-pointers
 pattern: Sort and use two pointers, use a set for the result to get rid of duplicates
 rating: 5
-last attempted: 2025-05-02
+last_attempt: 2025-05-02
 ---
 
 #### Intuition

@@ -19,33 +19,20 @@ pattern: Use a counter for s1, create a counter for window. If length of window 
 ---
 
 ```python
-
-from collections import Counter
-
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        if len(s1) > len(s2):
-            return False
-        
-        s1_count = Counter(s1)
-        window_count = Counter()
+        if len(s2) < len(s1): return False
+        # we need to check if the counter of s1 == window
+        s1cnt = Counter(s1)
+        window = Counter()
         l = 0
-
         for r in range(len(s2)):
-            window_count[s2[r]] += 1
-            
-            # Maintain the window size equal to s1's length
+            window[s2[r]] += 1
             if (r - l + 1) > len(s1):
-                if window_count[s2[l]] == 1:
-                    del window_count[s2[l]]
-                else:
-                    window_count[s2[l]] -= 1
+                window[s2[l]] -= 1
                 l += 1
-
-            # Compare window count with s1_count
-            if window_count == s1_count:
+            if s1cnt == window:
                 return True
-        
         return False
 ```
 

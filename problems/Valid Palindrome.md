@@ -5,7 +5,7 @@ tags:
 pattern: remove any non alnum values, use reverse list comparison
 link: https://leetcode.com/problems/valid-palindrome/description/
 rating: 5
-last attempted: 2025-05-02
+last_attempt: 2025-05-02
 ---
 #### Video Breakdown
 

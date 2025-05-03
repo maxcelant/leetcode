@@ -3,7 +3,7 @@ tags:
   - two-pointers
 pattern: use two pointers, get min of two sides * the distance between l and r
 rating: 5
-last attempted: 2025-05-02
+last_attempt: 2025-05-02
 ---
 
 #### Intuition
