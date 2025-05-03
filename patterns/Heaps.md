@@ -1,5 +1,3 @@
-#### Fundamentals
-- 
 
 #### Top K Greatest Elements
 - To get the largest K elements, we can just remove the top elements until we reach a size of `k`.

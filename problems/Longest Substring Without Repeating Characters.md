@@ -2,7 +2,7 @@
 tags:
   - sliding-window
 rating: 4
-last attempted: 2025-05-02
+last_attempt: 2025-05-02
 pattern: Use a set, remove from set until window doesnt have s[r] in it, then get max length
 ---
 

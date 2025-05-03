@@ -1,6 +1,8 @@
 ---
 tags:
   - stack
+rating: 4
+last_attempt: 2025-05-02
 ---
 
 #### Intuition
@@ -9,29 +11,6 @@ tags:
 - When you see an operator, pop the top two from the stack and perform the operation which was found.
 - Add that value back into the stack.
 - Do this until all tokens are expended.
-
-#### Pseudocode
----
-```
-
-#### Insight
----
-CREATE stack []
-CREATE operand (+,-,/,*)
-FOR value IN input
-	IF value is NOT operand
-		THEN push onto stack
-	IF value is operand
-		THEN 
-			pop left value from stack
-			pop right value from stack
-			calculate left (operand) right
-			push result onto stack
-RETURN stack[0]
-```
-
-#### Insight
----
 
 #### Code
 ---

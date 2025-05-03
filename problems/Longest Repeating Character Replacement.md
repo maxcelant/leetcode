@@ -4,7 +4,7 @@ tags:
   - hashing
 rating: 2
 pattern: Use a table to keep track of frequency, on each iteration, check if current char is the most frequent. Shrink the window if the length - most frequent is greater than K
-last attempted: 2025-05-02
+last_attempt: 2025-05-02
 ---
 
 #### Intuition

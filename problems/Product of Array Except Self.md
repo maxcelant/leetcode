@@ -3,7 +3,7 @@ tags:
   - arrays
   - medium
 rating: 4
-last attempted: 2025-05-30
+last_attempt: 2025-04-30
 ---
 
 #### Intuition
