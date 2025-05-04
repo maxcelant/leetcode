@@ -1,6 +1,11 @@
 #### Fundamentals
 
-#### Monotonic Increasing Stack
+
+#### Helpful Tidbits
+- Monotonic stacks want to maintain a certain order. For decreasing stacks, the top element always needs to be the smallest, so it will kick out any bigger ones.
+
+#### Boilerplate
+##### Monotonic Increasing Stack
 - Two things need to be true:
 	1. The stack needs to always be increasing.
 	2. The current element always needs to be added to the stack.

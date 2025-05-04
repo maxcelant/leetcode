@@ -2,6 +2,8 @@
 tags:
   - backtracking
   - medium
+rating: 3
+last_attempt: 2025-05-03
 ---
 
 #### Intuition
@@ -14,21 +16,28 @@ tags:
 ```python
 
 class Solution:
-	def generateParenthesis(self, n: int) -> List[str]:
-		res = []
-
-		def backtrack(open_paren, closed_paren, s):
-			if open_paren == n and closed_paren == n:
-				res.append(s)
-				return
-
-			if open_paren < n:
-				backtrack(open_paren + 1, closed_paren, s + "(")
-			if closed_paren < n and open_paren > closed_paren:
-				backtrack(open_paren, closed_paren + 1, s + ")")
-
-		backtrack(0, 0, "")
-		return res
+    def generateParenthesis(self, n: int) -> List[str]:
+        res = []
+        cur = []
+        
+        def dfs(o, c):
+            if o == c == n:
+                print(cur)
+                res.append("".join(cur))
+                return
+            
+            if o < n:
+                cur.append("(")
+                dfs(o + 1, c)
+                cur.pop()
+            
+            if c < n and c < o:
+                cur.append(")")
+                dfs(o, c + 1)
+                cur.pop()
+        
+        dfs(0, 0)
+        return res
 ```
 
 #### Insight
