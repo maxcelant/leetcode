@@ -1,6 +1,9 @@
 ---
 tags:
   - stack
+  - medium
+rating: 3
+pattern: Use monotonic
 ---
 
 #### Intuition
@@ -12,20 +15,23 @@ tags:
 ---
 ```python
 class Solution:
-	def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-		stack = []
-		# We need to pre-fill this so we can later update them.
-		res = [0] * len(temperatures)
-		for i, temp in enumerate(temperatures):
-			# If the current temperature is greater than the top of the stack
-			# Then we will continously pop until we hit a value larger than current
-			while stack and temp > stack[-1][1]:
-				j, _ = stack.pop()
-				res[j] = i - j
-			# No matter what, we add the value to the stack
-            # We just need to do so once when we can guarentee that it's the smallest
-			stack.append((i, temp))  
-		return res	
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        # We keep track of the position as well as the temperature of that position
+        # When we pop, that means WE HAVE FOUND A WARMER TEMPERATURE
+        # so that means that the value for that popped temp is the distance between itself and the 
+        # temperature that popped it
+        
+        res = [0] * len(temperatures)
+        stk = [] # stored as (temp, index position)
+
+        for i in range(len(temperatures)):
+            while stk and stk[-1][0] < temperatures[i]:
+                _, idx = stk.pop()
+                res[idx] = i - idx 
+            stk.append((temperatures[i], i))
+
+        return res
+
 ```
 
 #### Insight
