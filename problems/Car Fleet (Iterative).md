@@ -3,6 +3,8 @@ tags:
   - iteration
   - arrays
 pattern: sort cars and find finish time, keep track of slowest, any time you see a new slowest, increment fleets by 1
+rating: 2
+last_attempt: 2025-05-05
 ---
 #### Video Breakdown
 ![[carfleet.mov]]

@@ -2,7 +2,9 @@
 tags:
   - stack
   - medium
-pattern:
+pattern: 
+rating: 2
+last_attempt: 2025-05-05
 ---
 #### Video Breakdown
 ---
