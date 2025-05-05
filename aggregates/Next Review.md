@@ -4,5 +4,4 @@ table last_attempt, rating,
 from ""
 where last_attempt and rating
 sort date(last_attempt + dur(rating + " days")) asc
-
 ```
