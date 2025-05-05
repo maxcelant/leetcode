@@ -1,6 +1,8 @@
 ---
 tags:
   - binary-search
+rating: 4
+last_attempt: 2025-05-05
 ---
 
 #### Intuition
