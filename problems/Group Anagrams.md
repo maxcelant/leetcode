@@ -2,7 +2,7 @@
 tags:
   - arrays
   - medium
-rating: 5
+rating: 1000
 last_attempt: 2025-04-30
 ---
 
