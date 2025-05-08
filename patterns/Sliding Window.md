@@ -11,15 +11,17 @@
 #### Boilerplate
 
 ```python
+# Reset the window to R
 def func(s):
-	l = 0
-	for r in range(len(s)):
+	L = 0
+	for R in range(len(s)):
 		if (SOME CONDITION):
-			l = r
+			L = R
 
+# Shrink the window by 1
 def func(s):
-	l = 0
-	for r in range(len(s)):
+	L = 0
+	for R in range(len(s)):
 		if (SOME CONDITION)
-			l += 1
+			L += 1
 ```
