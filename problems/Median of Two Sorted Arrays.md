@@ -2,6 +2,9 @@
 tags:
   - two-pointers
   - hard
+rating: 4
+pattern: Use two pointers and a helper func that returns the next smallest value. Loop through n+m/2 times and return answer
+last_attempt: 2025-05-10
 ---
 #### Intuition
 ---
