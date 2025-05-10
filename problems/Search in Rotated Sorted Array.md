@@ -1,9 +1,14 @@
 ---
 tags:
+  - binary-search
+  - medium
+rating: 3
+last_attempt: 2025-05-10
+pattern: Determine which side you are on, then figure out how to shrink depending on where the target is.
 ---
 #### Intuition
 ---
-- 
+- Use binary search, duh.
 
 #### Code
 ---

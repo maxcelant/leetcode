@@ -4,8 +4,8 @@ tags:
   - medium
 pattern: Use reverse dynamic programming where each position represents the number of ways to decode the remaining string, combining single- and valid double-digit steps.
 link: https://leetcode.com/problems/decode-ways/description/
-rating: 2
-last_attempt: 2025-05-03
+rating: 4
+last_attempt: 2025-05-09
 ---
 #### Video Breakdown
 
@@ -19,6 +19,7 @@ _"How could I make the insight that leads to discovering the solution?"_
 #### Code
 ---
 
+Top down approach
 ```python
 class Solution:
     def numDecodings(self, s: str) -> int:
@@ -42,6 +43,34 @@ class Solution:
                 if (i + 1 < n) and (10 <= int(s[i:i+2]) <= 26):
                     dp[i] += dp[i + 2]
         return dp[0]
+```
+
+Bottom up approach 
+```python
+class Solution:
+    def numDecodings(self, s: str) -> int:
+        n = len(s)
+        dp = {}
+
+        def dfs(i):
+            if i == n:
+                return 1
+            if i in dp:
+                return dp[i]
+            
+            if s[i] == '0':
+                dp[i] = 0
+                return dp[i]
+            
+            dp[i] = dfs(i + 1)
+
+            if i + 1 < n and (10 <= int(s[i:i+2]) <= 26):
+                dp[i] += dfs(i + 2)
+
+            return dp[i]
+        
+        return dfs(0)
+
 ```
 
 #### Insight  

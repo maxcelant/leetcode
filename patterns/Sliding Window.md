@@ -5,7 +5,7 @@
 	2. Something is in the window that shouldn't be.
 	3. The value of the left pointer is made invalid in some way.
 
-#### Helpful Tidbits
+#### Advice
 - Typically sliding window problems will include a `Counter`, `Dict`, or `Set`. Since they typically need to store some information about frequencies, or about what's inside in the window.
 
 #### Boilerplate

@@ -2,6 +2,10 @@
 tags:
   - binary-search
   - medium
+rating: 3
+pattern: Use binary search to find the optimal k rate, from 0-max(piles). Keep track of the min result
+link: https://neetcode.io/problems/eating-bananas
+last_attempt: 2025-05-09
 ---
 #### Intuition
 ---
