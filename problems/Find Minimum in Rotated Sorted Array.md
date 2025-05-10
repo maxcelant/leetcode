@@ -2,6 +2,9 @@
 tags:
   - binary-search
   - medium
+rating: 2
+pattern: Use right value compared to middle value to decrement until you find smallest element.
+last_attempt: 2025-05-09
 ---
 #### Intuition
 ---
@@ -34,7 +37,8 @@ class Solution:
 
 #### Insight
 ---
-- Since in a rotated array, the min will be normally less than the right value, it makes sense to decrement the right value until we get to the min.
+- We return `nums[l]` because that is the last updated value that points to the minimum. Since we stop when `l == r`, this occurs BEFORE we update `m` again, so to have the correct min, we return `nums[l]`.
+- 
 
 #### Takeaways
 ---

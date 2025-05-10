@@ -1,7 +1,7 @@
 #### Intuition
 - 
 
-#### Helpful Tidbits
+#### Advice
 - Monotonic stacks want to maintain a certain order. For decreasing stacks, the top element always needs to be the smallest, so it will kick out any bigger ones.
 
 #### Boilerplate

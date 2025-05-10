@@ -1,7 +1,7 @@
 ---
 tags:
   - stack
-rating: 4
+rating: 1000
 last_attempt: 2025-05-02
 ---
 
