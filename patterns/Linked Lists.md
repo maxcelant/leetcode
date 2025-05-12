@@ -1,3 +1,9 @@
+#### Intuition
+- If you need to keep track of the start of list, use a `dummy` node.
+
+
+
+
 #### Reversing a Linked List using Recursion
 ###### Code
 ```python title="Reversing a linked list (recursive)"
