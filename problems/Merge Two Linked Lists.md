@@ -2,6 +2,9 @@
 tags:
   - linked-list
   - easy
+rating: 5
+pattern: Use dummy node. Go through each list, add the smaller node, stop when both are empty.
+last_attempt: 2025-05-10
 ---
 #### Intuition
 ---

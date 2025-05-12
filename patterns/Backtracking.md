@@ -1,4 +1,4 @@
-#### Fundamentals
+#### Intuition
 - The idea is that it incrementally builds candidates towards a solution and prunes them when a it is determined that a candidate cannot lead to a valid solution.
 - A very small `n` value may indicate a backtracking problem.
 - The idea behind the `for` loop approach is that the children of a node

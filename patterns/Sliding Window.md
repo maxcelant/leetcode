@@ -7,6 +7,10 @@
 
 #### Advice
 - Typically sliding window problems will include a `Counter`, `Dict`, or `Set`. Since they typically need to store some information about frequencies, or about what's inside in the window.
+- Size of the window will always be `r - l + 1`.
+- `Counter` will ignore `0` values in the sets when doing comparisons, this is nice when you need to compare dictionaries.
+	- **Example**
+		- [[Permutation In String]]
 
 #### Boilerplate
 
@@ -22,6 +26,6 @@ def func(s):
 def func(s):
 	L = 0
 	for R in range(len(s)):
-		if (SOME CONDITION)
+		while (SOME CONDITION)
 			L += 1
 ```

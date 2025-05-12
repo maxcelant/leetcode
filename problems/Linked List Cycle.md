@@ -3,6 +3,9 @@ tags:
   - linked-list
   - easy
   - hashing
+pattern: Use a set to keep track of seen values, return True if you see the same one again.
+rating: 1000
+last_attempt: 2025-05-10
 ---
 #### Intuition
 ---
@@ -16,12 +19,12 @@ _"How could I make the insight that leads to discovering the solution?"_
 ```python
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        seen = set()
+        visited = set()
         cur = head
         while cur:
-            if id(cur) in seen:
+            if cur.val in visited:
                 return True
-            seen.add(id(cur))
+            visited.add(cur.val)
             cur = cur.next
         return False
 ```
@@ -29,8 +32,7 @@ class Solution:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- I keep track of seen nodes by using `id()` and a `set`.
-
+- Use the values seen so far.
 #### Takeaways
 ---
 **Where did I go wrong?**
