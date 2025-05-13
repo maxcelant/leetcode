@@ -2,6 +2,9 @@
 tags:
   - linked-list
   - medium
+rating: 2
+pattern: Use fast-slow to find halfway point, reverse second half, merge two halves.
+last_attempt: 2025-05-13
 ---
 #### Intuition
 ---
