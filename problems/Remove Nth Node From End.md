@@ -2,6 +2,8 @@
 tags:
   - linked-list
   - medium
+rating: 3
+pattern: Move fast pointer N ahead, the move both slow and fast until we reach the end. Use dummy node.
 ---
 #### Intuition
 ---

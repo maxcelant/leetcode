@@ -2,6 +2,9 @@
 tags:
   - two-pointers
   - medium
+target: "3"
+pattern: Use floyds tortoise and hare algorithm
+last_attempt: 2025-05-13
 ---
 #### Intuition
 ---

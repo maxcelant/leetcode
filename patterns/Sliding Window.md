@@ -1,4 +1,5 @@
 #### Intuition
+- Use it for contiguous elements that aren't necessarily sorted.
 - Find out the condition to move the left pointer forward to the right's position or shrinking the window by 1
 - Usually that condition will be:
 	1. Window size is too large.

@@ -2,7 +2,9 @@
 tags:
   - linked-list
   - medium
-pattern: Use dummy, get value and store carry for next nodes.
+pattern: Traverse both lists, keep going while both arent null or we have carry, Use divmod.
+rating: 4
+last_attempt: 2025-05-13
 ---
 #### Intuition
 ---
