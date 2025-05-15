@@ -2,8 +2,9 @@
 tags:
   - backtracking
   - medium
-rating: 3
-last_attempt: 2025-05-03
+rating: 1000
+last_attempt: 2025-05-14
+pattern: Use dfs/backtracking approach, add a parenthesis and recursively call, add a closing only if closing num is less than open, append to result when both equal N
 ---
 
 #### Intuition

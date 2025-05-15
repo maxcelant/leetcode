@@ -6,4 +6,5 @@
 - Get comfortable with reversing a linked list iteratively.
 - Use iteration if possible, it's simpler in most cases.
 - Use [[Floyd's Tortoise and Hare]] to locate cycles.
+- In situations where you need a doubly-linked list, use dummy `head` and `tail`.
 

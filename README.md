@@ -8,6 +8,7 @@ This repository is meant to be created into an Obsidian vault. If you want to cr
 ```
 .
 ├── aggregates   // Dataview driven aggregates for certain criteria 
+├── algorithms   // Specific algorithms to understand 
 ├── in progress  // Problems currently working on
 ├── patterns     // Notes on each DSA pattern
 ├── problems     // All of my completed leetcode problems
