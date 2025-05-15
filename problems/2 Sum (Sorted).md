@@ -3,7 +3,7 @@ tags:
   - two-pointers
 pattern: Use two pointers, if above target decrement right pointer...
 link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-rating: 5
+rating: 1000
 last_attempt: 2025-05-02
 ---
 #### Video Breakdown

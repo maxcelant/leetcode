@@ -8,6 +8,7 @@
 - In iterative solutions, we typically want to get `N+1` locations and set the `0-th` position to a default—this is the placeholder for empty sets which are typically "true"/the equivalent for a given problem.
 
 #### Advice
+- Usually the return type is equal to the type of DP table you need to create.
 - In scenarios where you have two values you are keeping track of—one that is `N-1` and the other that is `N-2`, I think naming them `prev` and `prevprev` is a clear approach.
 	- **Examples:**
 		- [[Climbing Stairs]]
