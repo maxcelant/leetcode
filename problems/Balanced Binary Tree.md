@@ -4,7 +4,9 @@ tags:
   - dfs
   - bottom-up
   - easy
-pattern: Bottom-up return depth, check diff in left and right
+pattern: Bottom-up return depth, check abs diff in left and right
+rating: 5
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

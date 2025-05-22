@@ -4,6 +4,9 @@ tags:
   - dfs
   - bottom-up
   - easy
+pattern: Use recursion, check if values are the same and return bool of both subtrees using AND
+rating: 5
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

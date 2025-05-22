@@ -5,6 +5,10 @@ tags:
   - dfs
   - bottom-up
   - easy
+pattern: Recursively find the left and right depths, return the max of the two depths + 1, use a global value for the result which calculates the max at every subproblem.
+rating: 4
+link: https://neetcode.io/problems/binary-tree-diameter
+last attempted: 2025-05-22
 ---
  #### Intuition
 ---
