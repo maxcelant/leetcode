@@ -3,9 +3,9 @@ tags:
   - linked-list
   - medium
   - dfs
-rating: 2
+rating: 5
 pattern: Use a cache and recursion, create a new node and store it, if you see it again, grab it from cache. The key should be the original node
-last_attempt: 2025-05-13
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

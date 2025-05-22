@@ -1,10 +1,18 @@
-#### Intuition
 - Use a `dummy` node to handle edge cases like removing the first node from the list, or in situations where there is just one node in the linked list.
 - Use recursion + cache if you need to build a new linked list from an existing one.
-
-#### Advice
+- Use fast/slow pointers if you need to find the middle of the linked list.
+	- Examples:
+		- [[Reorder Linked List]]
+- Use left/right pointers if you need a finite distance between nodes.
+	- Example:
+		- [[Remove Nth Node From End]]
 - Get comfortable with reversing a linked list iteratively.
 - Use iteration if possible, it's simpler in most cases.
 - Use [[Floyd's Tortoise and Hare]] to locate cycles.
+	- Examples:
+		- [[Find the Duplicate Number]]
 - In situations where you need a doubly-linked list, use dummy `head` and `tail`.
+- Doing `head.next = l1` does technically add the entire linked list to `head.next`, but we will probably continue to update it, so you can think of it as only adding the next node in most scenarios.
+- When you use fast / slow pointer, set `fast = head.next` if you want to slow pointer to end in the first half of the the list.
+- An alternate approach to start the left pointer.
 
