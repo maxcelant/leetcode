@@ -4,6 +4,9 @@ tags:
   - easy
   - dfs
   - top-down
+rating: 5
+pattern: Use two helpers, one to traverse the main tree and the other two compare the two trees. Return true if the trees match exactly, continue to search each subtree.
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---
