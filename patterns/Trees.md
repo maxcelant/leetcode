@@ -1,11 +1,13 @@
-#### Fundamentals
-- When looking a tree problem, you should think _"is bottom-up or top-down a better approach here?"_
-- When looking a tree problem, you should think _"is recursive or iterative better here?"_
-- When looking at a recursive problem, you should think _"what is the subproblem here?"_
-- Ask yourself _"What should I return to my parent?"_
-	- And remember—with recursive solutions there are going to be numerous possible returns, whether it's a base case or not.
+- Try to answer these questions:
+	- Is bottom-up or top-down a better approach here?
+	- Is recursive or iterative better here?
+	- What is the subproblem here?
+	- What should I return to my parent?
+- With recursive solutions there are going to be numerous possible returns, whether it's a base case or not.
 - Bottom-up and top-down are strategies that can both be accomplished through recursion and iteration.
 - If the result does not necessarily get computed from the final response, this is a great indicator to use a closure value.
+- With recursive problems, it's paramount to show be explicit about the return value.
+- 
 #### About Top-down
 The idea is that when you need the parent data before the children, then a bottom-up strategy is the way to go.
 
