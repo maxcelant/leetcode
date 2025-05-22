@@ -2,9 +2,10 @@
 tags:
   - two-pointers
   - medium
-target: "3"
+  - linked-list
+target: "1000"
 pattern: Use floyds tortoise and hare algorithm
-last_attempt: 2025-05-13
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

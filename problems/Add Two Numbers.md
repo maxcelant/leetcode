@@ -3,8 +3,8 @@ tags:
   - linked-list
   - medium
 pattern: Traverse both lists, keep going while both arent null or we have carry, Use divmod.
-rating: 4
-last_attempt: 2025-05-13
+rating: 1000
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

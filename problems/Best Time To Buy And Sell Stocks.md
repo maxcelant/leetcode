@@ -3,7 +3,7 @@ tags:
   - sliding-window
   - easy
 pattern: if right pointer is smaller than left, move pointer forward, calc max of cur and max
-rating: 5
+rating: 1000
 last_attempt: 2025-05-02
 ---
 

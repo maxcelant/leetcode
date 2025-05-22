@@ -3,6 +3,9 @@ tags:
   - trees
   - dfs
   - easy
+rating: 1000
+pattern: Use recursion, flip the left and right, recursively call on left and right, return root
+last_attempt: 2025-05-22
 ---
 #### Intuition
 ---

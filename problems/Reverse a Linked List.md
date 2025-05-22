@@ -2,9 +2,9 @@
 tags:
   - linked-list
   - easy
-rating: 4
+rating: 5
 pattern: use temp node for next, swap until you reach end of list
-last_attempt: 2025-05-10
+last_attempt: 2025-05-20
 ---
 #### Intuition
 ---
