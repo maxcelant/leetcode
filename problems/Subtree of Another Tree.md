@@ -50,3 +50,11 @@ _"What are the important aspects of the solution?"_
 **Where did I go wrong?**
 - I tried to use a global variable for `found`, but that ended up being way too messy.
 **Lessons Learned?**
+
+
+![[Pasted image 20250527100838.png]]
+
+
+`export PATH="~/bin:\$PATH"`
+
+`export PATH="~/bin:\$PATH"`
