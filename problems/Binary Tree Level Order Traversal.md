@@ -3,7 +3,9 @@ tags:
   - trees
   - bfs
   - hashing
-pattern: Use tuple of value and layer, group layer of nodes using dict
+pattern: Use BFS algorithm, go layer at a time using for loop of length queue. and sublist to result
+rating: 1000
+last_attempt: 2025-05-31
 ---
 #### Intuition
 ---
@@ -13,7 +15,7 @@ _"How could I make the insight that leads to discovering the solution?"_
 
 #### Code
 ---
-
+First approach
 ```python
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
@@ -28,6 +30,27 @@ class Solution:
             if node.right:
                 q.append((node.right, layer + 1))
         return [v for v in layers.values()] 
+```
+
+Simpler Approach w/ out dict
+```python
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root: return []
+        q = collections.deque([root])
+        res = []
+
+        while q:
+            level = []
+            for _ in range(len(q)):
+                n = q.popleft()
+                if n.left:
+                    q.append(n.left)
+                if n.right:
+                    q.append(n.right)
+                level.append(n.val)
+            res.append(level)
+        return res
 ```
 
 #### Insight  
