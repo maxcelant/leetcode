@@ -2,7 +2,9 @@
 tags:
   - trees
   - medium
-pattern: Use level order traversal, store last node of that layer seen.
+pattern: Use level order traversal, store last node of that layer seen. Make sure to append left and then right
+rating: 5
+last_attempt: 2025-05-31
 ---
 #### Intuition
 ---
