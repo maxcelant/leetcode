@@ -3,6 +3,8 @@ tags:
   - trees
   - top-down
   - dfs
+rating: 4
+pattern: DFS and keep track of max node seen thus far, top down approach. Use global var for tracking
 ---
 #### Intuition
 ---
@@ -17,22 +19,21 @@ _"How could I make the insight that leads to discovering the solution?"_
 ```python
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-        count = 0
-        def dfs(root: Optional[TreeNode], last_valid: int):
-            nonlocal count
+        res = 0
+        def dfs(root, curmax):
+            nonlocal res
             if not root:
-                return 
-            # We found a bad node
-            if root.val < last_valid:
-                dfs(root.left, last_valid)
-                dfs(root.right, last_valid)
-            else:
-                count += 1
-                dfs(root.left, root.val)
-                dfs(root.right, root.val)
-        
-        dfs(root, root.val)
-        return count
+                return
+            
+            if curmax <= root.val:
+                res += 1
+            
+            dfs(root.left, max(curmax, root.val))
+            dfs(root.right, max(curmax, root.val))
+                
+
+        dfs(root, float('-inf'))
+        return res
 ```
 
 #### Insight  
