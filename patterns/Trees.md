@@ -8,6 +8,7 @@
 - If the result does not necessarily get computed from the final response, this is a great indicator to use a closure value.
 - With recursive problems, it's paramount to show be explicit about the return value.
 - When doing level order / bfs traversal, if you need to be strict with the levels, make sure to `for _ in range(len(Q))` also use `deque`.
+- When using a global counter or result, make it a class variable to avoid doing `nonlocal res`. It's slightly cleaner.
 #### About Top-down
 The idea is that when you need the parent data before the children, then a bottom-up strategy is the way to go.
 
