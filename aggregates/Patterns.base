@@ -1,0 +1,19 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("problems")
+    order:
+      - rating
+      - file.name
+      - tags
+      - pattern
+    sort:
+      - property: rating
+        direction: ASC
+    cardSize: 280
+    imageFit: contain
+    imageAspectRatio: 0.7
+    columnSize:
+      note.pattern: 974
