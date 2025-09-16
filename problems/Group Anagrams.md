@@ -25,6 +25,29 @@ class Solution:
     return [ g for g in groups.values() ]
 ```
 
+```go
+func groupAnagrams(strs []string) [][]string {
+	groups := make(map[string][]string)
+	for _, s := range strs {
+		ss := strings.Split(s, "")
+		slices.Sort(ss)
+		sw := strings.Join(ss, "")
+		gr, ok := groups[sw]
+		if !ok {
+			gr = make([]string, 0)
+		}
+		gr = append(gr, s)
+		groups[sw] = gr
+	}
+
+	res := make([][]string, 0)
+	for _, v := range groups {
+		res = append(res, v)
+	}
+	return res
+}
+
+```
 #### Insight
 ---
 - 
