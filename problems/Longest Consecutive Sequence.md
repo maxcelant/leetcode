@@ -18,16 +18,15 @@ pattern: Use a set, and traverse the set. Only start if n - 1 is not in the set
 ```python
 class Solution:
   def longestConsecutive(self, nums: List[int]) -> int:
-    longest_seq = 0
-    nums = set(nums)
+    nums = set(nums) # Remove duplicates, they dont serve a purpose here
+    res = 0
     for n in nums:
-      cur = n
-      cur_seq = 0
-      while cur in nums:
-        cur += 1
-        cur_seq += 1
-      longest_seq = max(longest_seq, cur_seq)
-    return longest_seq
+        cur = n
+        acc = 0
+        while cur + acc in nums:
+            acc += 1
+        res = max(res, acc)
+    return res
 
 ```
 
