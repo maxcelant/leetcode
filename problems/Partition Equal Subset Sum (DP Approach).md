@@ -1,7 +1,7 @@
 ---
 tags:
   - 1d-dynamic-programming
-pattern: 
+pattern:
 link: https://neetcode.io/problems/partition-equal-subset-sum
 rating: 1
 last_attempt: 2025-05-13
