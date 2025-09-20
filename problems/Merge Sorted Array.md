@@ -1,18 +1,17 @@
 ---
-tags: 
-pattern: 
-link: 
-rating: 
-last_attempt:
+tags:
+  - easy
+  - two-pointers
+pattern:
+link:
+rating: 3
+last_attempt: 2025-09-20
 ---
 #### Problem
 You are given two integer arrays `nums1` and `nums2`, both sorted in **non-decreasing order**, along with two integers `m` and `n`, where:
-
 - `m` is the number of valid elements in `nums1`,
-    
 - `n` is the number of elements in `nums2`.
     
-
 The array `nums1` has a total length of `(m+n)`, with the first `m` elements containing the values to be merged, and the last `n` elements set to `0` as placeholders.
 
 Your task is to merge the two arrays such that the final merged array is also sorted in **non-decreasing order** and stored entirely within `nums1`.  
@@ -36,7 +35,7 @@ Output: [1,2]
 
 #### Notes
 ---
-- 
+- We start from the end of `nums1` and build the correct string by comparing the values of `nums1` and `nums2` starting from `m` and `n`.
 
 #### Code
 ---

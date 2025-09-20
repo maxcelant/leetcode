@@ -11,3 +11,7 @@ def test(arr1, arr2):
 	while p2 < len(arr2):
 		# Clean up arr 2
 ```
+
+Examples:
+- [[Merge Sorted Arrays]]
+- [[Merge Strings Alternatively]]
