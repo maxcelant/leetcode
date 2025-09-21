@@ -1,4 +1,9 @@
-- When you need to merge two lists into one, this is what you usually need to do:
+Use `l <= r`, when you want to include when `l == r`. This will be important for certain questions in which you don't need to distinct values for a grouping.
+
+Cases:
+- 
+
+When you need to merge two lists into one, this is what you usually need to do:
 
 ```python
 def test(arr1, arr2):
@@ -12,6 +17,6 @@ def test(arr1, arr2):
 		# Clean up arr 2
 ```
 
-Examples:
+Cases:
 - [[Merge Sorted Arrays]]
 - [[Merge Strings Alternatively]]
