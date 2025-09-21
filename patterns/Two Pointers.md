@@ -20,3 +20,5 @@ def test(arr1, arr2):
 Cases:
 - [[Merge Sorted Arrays]]
 - [[Merge Strings Alternatively]]
+
+No always, but usually two pointers problems are used on arrays that are sorted.
