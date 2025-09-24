@@ -2,7 +2,6 @@
 tags:
   - heaps
   - easy
-  - min-heap
 ---
 #### Intuition
 ---
