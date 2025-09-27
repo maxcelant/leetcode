@@ -1,8 +1,8 @@
 - You always want to add to the visited set when you enqueue/push the node. 
 - With Pathfinding / Exploration BFS problems, always figure out what you need to initialize the array with!
 	- Examples:
-		- [[problems/Rotten Bananas|Rotten Bananas]] — queueing all the rotten bananas and counting fresh
-		- [[problems/Islands and Treasures|Islands and Treasures]] — queueing all the treasure locations
+		- [[Rotten Bananas|Rotten Bananas]] — queueing all the rotten bananas and counting fresh
+		- [[Islands and Treasures|Islands and Treasures]] — queueing all the treasure locations
 - When I read **"undirected graph"**, I should remember that I need to add each others values to the adjacency list.
 	- Examples:
 		- [[Valid Tree]]
