@@ -47,4 +47,4 @@ _"What are the important aspects of the solution?"_
 **Where did I go wrong?**
 - Didn't sort at the beginning.
 **Lessons Learned?**
-- This is similar to the [[problems/Subsets]] problem + the added condition + sorted list.
+- This is similar to the [[Subsets]] problem + the added condition + sorted list.

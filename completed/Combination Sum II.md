@@ -41,7 +41,7 @@ class Solution:
 #### Insight  
 ---
 _"What are the important aspects of the solution?"_
-- Since we only include the same number once, we need to increment the `start` value on every recursive call, unlike [[problems/Combination Sum (Without For Loop)]] which allowed the same value more than once.
+- Since we only include the same number once, we need to increment the `start` value on every recursive call, unlike [[Combination Sum (Without For Loop)]] which allowed the same value more than once.
 - The `if` condition allows us to skip the same value if it shows up multiple times.
 - 
 
