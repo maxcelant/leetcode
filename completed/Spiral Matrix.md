@@ -1,9 +1,9 @@
 ---
 tags:
-  - graphs
   - two-pointers
+  - 2d-matrix
 link: https://leetcode.com/problems/spiral-matrix/description/
-rating: 2
+rating: 3
 last_attempt: 2025-09-27
 ---
 #### Problem
@@ -24,6 +24,7 @@ The important part about this problem is bounds checking when traversing the bot
 
 >![[Pasted image 20250927174625.png|600]]
 
+Also, be careful with your right and bottom pointers, they are technically out of bounds if you loop starting from those positions so make sure to subtract one.
 
 #### Code
 ---
@@ -31,27 +32,29 @@ The important part about this problem is bounds checking when traversing the bot
 ```python
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        left, right = 0, len(matrix[0]) - 1
-        top, bot = 0, len(matrix) - 1
+        L, R = 0, len(matrix[0])
+        TOP, BOT = 0, len(matrix)
         res = []
-        while left <= right and top <= bot:
-            # Go from left to right on the top row
-            for i in range(left, right+1):
-                res.append(matrix[top][i])
-            top += 1
-            # Go from top right to bottom right
-            for i in range(top, bot+1):
-                res.append(matrix[i][right])
-            right -= 1
-            if top <= bot:
-                # Go from bot right to bot left
-                for i in range(right, left - 1, -1):
-                    res.append(matrix[bot][i])
-                bot -= 1
-            if left <= right:
-                # Go from bot left to top left
-                for i in range(bot, top - 1, -1):
-                    res.append(matrix[i][left])
-                left += 1
+        while L < R and TOP < BOT:
+            # Top row
+            for i in range(L, R):
+                res.append(matrix[TOP][i])
+            TOP += 1
+            # Right col
+            for i in range(TOP, BOT):
+                res.append(matrix[i][R-1])
+            R -= 1
+            # If the top and right pointers or the left and right pointers
+            # are pointing to the same row, then we can skip since it
+            # would be doing repetitive work
+            if TOP < BOT:
+                # ? might be off by 1
+                for i in range(R-1, L-1, -1):
+                    res.append(matrix[BOT-1][i])
+                BOT -= 1
+            if L < R:
+                for i in range(BOT-1, TOP-1, -1):
+                    res.append(matrix[i][L])
+                L += 1
         return res
 ```
