@@ -4,8 +4,8 @@ tags:
   - two-pointers
 pattern: Traverse string, if no match, check L + 1 and R - 1 versions of match
 link: https://neetcode.io/problems/valid-palindrome-ii?list=neetcode250
-rating: 4
-last_attempt: 2025-09-20
+rating: 5
+last_attempt: 2025-10-10
 ---
 #### Problem
 You are given a string `s`, return true if the `s` can be a palindrome after deleting at most one character from it.
@@ -46,7 +46,7 @@ Explanation: "We can delete the character 'd'.
 
 #### Notes
 ---
-- 
+Try to perform classic palindrome test. If that fails, split into r + 1 and l - 1 variants and see if either succeeds.
 
 #### Code
 ---
@@ -54,18 +54,19 @@ Explanation: "We can delete the character 'd'.
 ```python
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        def is_pali(l, r):
+        l, r = 0, len(s) - 1
+
+        def is_palindrome(l, r):
             while l < r:
                 if s[l] != s[r]:
                     return False
                 l, r = l + 1, r - 1
             return True
-        
-        l, r = 0, len(s) - 1
+
         while l < r:
-            if s[l] != s[r]:
-                return is_pali(l + 1, r) or is_pali(l, r - 1)
-            l, r = l + 1, r - 1
-        return True
-        
+            if s[l] == s[r]:
+                l, r = l + 1, r - 1
+            else:
+                return is_palindrome(l + 1, r) or is_palindrome(l, r - 1)
+        return True 
 ```

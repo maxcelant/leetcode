@@ -3,6 +3,7 @@ tags:
   - trees
   - dfs
   - top-down
+  - medium
 rating: 4
 pattern: Check whether the node is bigger than both p an q or smaller, move the node down the tree.
 last_attempt: 2025-05-28

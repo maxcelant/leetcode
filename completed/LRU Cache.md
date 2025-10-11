@@ -1,27 +1,35 @@
 ---
 tags:
   - linked-list
-pattern: Use a dict and a doubly-linked list. Use dummy head and tail. Use helper remove and add methods.
+  - medium
+  - meta
 link: https://neetcode.io/problems/lru-cache
-rating: 2
+rating: 3
 last_attempt: 2025-05-13
 ---
-#### Video Breakdown
+#### Problem
+Design a data structure that follows the constraints of a **[Least Recently Used (LRU) cache](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU)**.
 
+Implement the `LRUCache` class:
 
-#### Intuition
+- `LRUCache(int capacity)` Initialize the LRU cache with **positive** size `capacity`.
+- `int get(int key)` Return the value of the `key` if the key exists, otherwise return `-1`.
+- `void put(int key, int value)` Update the value of the `key` if the `key` exists. Otherwise, add the `key-value` pair to the cache. If the number of keys exceeds the `capacity` from this operation, **evict** the least recently used key.
+
+The functions `get` and `put` must each run in `O(1)` average time complexity.
+
+#### Notes
 ---
-_"How could I make the insight that leads to discovering the solution?"_
-- If we want `O(1)` to get and put, then we need to use a dictionary for the look up and a doubly linked list to update the node in `O(1)` time.
+In this problem, the `head` acts as the back of the list and the `tail` is the front of the list. The LRU would be the `head.next` value since `head` and `tail` are both dummy nodes.
 
 #### Code
 ---
 
 ```python
-class ListNode:
-    def __init__(self, key, value):
+class Node:
+    def __init__(self, key, val):
         self.key = key
-        self.value = value
+        self.val = val
         self.prev = None
         self.next = None
 
@@ -29,53 +37,44 @@ class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = {}
-        # These are dummy nodes (not meant to hold values)
-        self.head = self.tail = ListNode(0, 0)
+        self.head, self.tail = Node(-1,-1), Node(-1,-1)
+		# Link the head and tail together
         self.head.next = self.tail
         self.tail.prev = self.head
-        
-    def _remove(self, node: ListNode):
-        prv, nxt = node.prev, node.next
-        prv.next = nxt
-        nxt.prev = prv
+
+    def _remove(self, node: Node):
+		# Make the prev pointer point to the next
+		# And vice versa
+        node.prev.next = node.next
+        node.next.prev = node.prev
     
-    def _add_to_front(self, node: ListNode):
-        oldhead = self.head.next
-        self.head.next = node
-        node.next = oldhead
-        node.prev = self.head
-        oldhead.prev = node
+    def _add(self, node: Node):
+		# Shift the tail by one
+        prev_tail = self.tail.prev
+        prev_tail.next = node
+        node.prev = prev_tail
+        node.next = self.tail
+        self.tail.prev = node
 
     def get(self, key: int) -> int:
         if key not in self.cache:
             return -1
-        
         node = self.cache[key]
         self._remove(node)
-        self._add_to_front(node)
-        return node.value
-        
+        self._add(node)
+        return node.val
+
     def put(self, key: int, value: int) -> None:
+		# Remove if before re-adding it
         if key in self.cache:
-            self._remove(self.cache[key])       
+            old_node = self.cache[key]
+            self._remove(old_node)
         
-        node = ListNode(key, value)
-        self.cache[key] = node
-        self._add_to_front(node)
-
+        new_node = Node(key, value)
+        self._add(new_node)
+        self.cache[key] = new_node
         if len(self.cache) > self.capacity:
-            node_to_remove = self.tail.prev
-            self._remove(node_to_remove)
-            del self.cache[node_to_remove.key]
+            lru = self.head.next
+            self._remove(lru)
+            del self.cache[lru.key]
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- Make sure that you attach the dummy head to the tail in the initialization step.
-- Use the helper methods, they simplify the logic greatly.
-
-#### Takeaways
----
-**Lessons Learned?**
-Use dummy head and tail nodes.

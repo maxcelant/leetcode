@@ -2,10 +2,10 @@
 tags:
   - easy
   - two-pointers
-pattern:
+  - meta
 link:
-rating: 3
-last_attempt: 2025-09-20
+rating: 4
+last_attempt: 2025-10-09
 ---
 #### Problem
 You are given two integer arrays `nums1` and `nums2`, both sorted in **non-decreasing order**, along with two integers `m` and `n`, where:
@@ -35,7 +35,7 @@ Output: [1,2]
 
 #### Notes
 ---
-- We start from the end of `nums1` and build the correct string by comparing the values of `nums1` and `nums2` starting from `m` and `n`.
+We start from the end of `nums1` and build the correct string by comparing the values of `nums1` and `nums2` starting from `m` and `n`.
 
 #### Code
 ---
