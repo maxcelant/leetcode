@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasTag("meta")
+    order:
+      - file.name
+      - rating
+      - file.tags
+      - last_attempt
+    sort:
+      - property: rating
+        direction: ASC
