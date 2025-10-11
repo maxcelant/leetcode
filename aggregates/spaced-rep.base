@@ -1,0 +1,19 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasProperty("rating")
+    order:
+      - file.name
+      - rating
+      - last_attempt
+      - tags
+    sort:
+      - property: rating
+        direction: ASC
+      - property: last_attempt
+        direction: ASC
+    columnSize:
+      file.name: 422
+      note.rating: 145
