@@ -2,44 +2,69 @@
 tags:
   - arrays
   - medium
-rating: 1000
-last_attempt: 2025-04-30
+  - meta
+  - bucket-sort
+rating: 4
+last_attempt: 2025-10-13
+link: https://leetcode.com/problems/top-k-frequent-elements/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
+rate:
+  - ★★★★
 ---
+#### Problem
+Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
 
-#### Intuition
+Example 1:
+
+>Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+
+Example 2:
+
+>Input: nums = [1], k = 1
+Output: [1]
+
+Example 3:
+
+>Input: nums = [1,2,1,2,1,2,3,1,3,2], k = 2
+Output: [1,2]
+
+#### Notes
 ---
-- Keep track of the value and its frequency.
-- Use a heap to continuously keep the most frequent at the top
-- Heaps are min heap by default, so we can make it negative to fix it.
-- Find frequencies first 
-- Then insert them in heap.
+Use bucket sort where each bucket is the frequency of that element in the list.
 
+The buckets go from 1 to N, where N is the length of the nums array. Each bucket is a list, because it can hold multiple values.
+
+>[!important]
+>We create N buckets because AT MOST an element can show up N times in the list.
+
+To get the top K elements, we simply iterate over the buckets in reverse order (top to bottom).
 #### Code
 ---
-```python
-import heapq
-from collections import defaultdict
+**Time Complexity**:
+**Space Complexity**: 
 
+```python
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        h = []
-        freqs = defaultdict(int)
-        for n in nums:
-            freqs[n] += 1
-
-        for v, f in freqs.items():
-            heapq.heappush(h, (-f, v))
-
+        if k == len(nums): 
+            return nums
+        # Get frequencies of all the elements
+        freqs = Counter(nums)
+		# Create N buckets
+        buckets = [[] for _ in range(len(nums) + 1)]
+        # Add the element to the correct bucket based on its frequency
+        for n, f in freqs.items():
+            buckets[f].append(n)
         res = []
-        while k > 0:
-            res.append(heapq.heappop(h)[1])
-            k -= 1
-        return re
+        # Flatten the buckets from highest to lowest
+        for b in reversed(buckets):
+            res.extend(b)
+        return res[:k]
 ```
 
-#### Insight
----
 
-#### Takeaways
----
-- 
+#### Follow Up: *""*
+
+```python
+
+```

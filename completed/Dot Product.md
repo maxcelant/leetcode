@@ -6,6 +6,8 @@ tags:
 link: https://leetcode.com/problems/dot-product-of-two-sparse-vectors/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 rating: 4
 last_attempt: 2025-10-10
+rate:
+  - ★★★★
 ---
 #### Problem
 Given two sparse vectors, compute their dot product.

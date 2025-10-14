@@ -4,8 +4,10 @@ tags:
   - stack
   - meta
 link: https://neetcode.io/problems/minimum-remove-to-make-valid-parentheses?list=neetcode250
-rating: 4
-last_attempt: 2025-10-02
+rating: 3
+last_attempt: 2025-10-11
+rate:
+  - ★★★
 ---
 #### Problem
 You are given a string `s` consisting of lowercase English characters, as well as opening and closing parentheses, `(` and `)`.
@@ -55,18 +57,55 @@ class Solution:
         removals = set()
         stack = []
         for i, c in enumerate(s):
-            if c == "(":
+            if c == "(": 
                 stack.append(i)
-            if c == ")":
-                if not stack:
-                    removals.add(i)
-                else:
-                    stack.pop()
-        for i in stack:
-            removals.add(i)
+            elif c == ")" and not stack:
+                removals.add(i)
+            elif c == ")" and stack:
+                stack.pop()
+            
+        while stack:
+            removals.add(stack.pop())
+        
+        return "".join([c for i, c in enumerate(s) if i not in removals])
+```
+
+#### Follow up: *"What if you can't use the stack"*
+
+This can be solved by using 2 passes on the string. 
+Use `count` to keep track of open parens seen.
+
+On first pass:
+1. If its an open parens then increment `count`
+2. If its a closing parens AND `count` is not zero, then reduce `count` by 1 and add the char to the result string
+3. If its a closing parens AND `count` IS zero, then don't add that value
+4. In all other cases, add the character
+
+On second pass:
+1. We reverse the result because we want to take off all the dangling open parenthesis until `count` is zero.
+2. The reason we take the open parenthesis from the end because it'll always end up being a valid string in that case—the same can not be said about taking from the beginning.
+
+```python
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        count = 0
+        tmp = []
+        for c in s:
+            if c == "(":
+                count += 1
+                tmp.append(c)
+            elif c == ")":
+                if count > 0:
+                    count -= 1
+                    tmp.append(c)
+            else:
+                tmp.append(c)
+        
         res = []
-        for i, c in enumerate(s):
-            if i not in removals:
+        for c in reversed(tmp):
+            if c == "(" and count > 0:
+                count -= 1
+            else:
                 res.append(c)
-        return "".join(res)
+        return "".join(res[::-1])
 ```

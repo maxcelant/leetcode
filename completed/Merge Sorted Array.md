@@ -6,6 +6,8 @@ tags:
 link:
 rating: 4
 last_attempt: 2025-10-09
+rate:
+  - ★★★★
 ---
 #### Problem
 You are given two integer arrays `nums1` and `nums2`, both sorted in **non-decreasing order**, along with two integers `m` and `n`, where:

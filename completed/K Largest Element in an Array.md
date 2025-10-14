@@ -6,6 +6,8 @@ tags:
 link: https://leetcode.com/problems/kth-largest-element-in-an-array/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 rating: 5
 last_attempt: 2025-10-10
+rate:
+  - ★★★★★
 ---
 #### Problem
 Given an integer array nums and an integer k, return the kth largest element in the array.

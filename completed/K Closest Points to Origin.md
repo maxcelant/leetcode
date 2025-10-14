@@ -2,12 +2,35 @@
 tags:
   - heaps
   - medium
+  - meta
+link: https://leetcode.com/problems/k-closest-points-to-origin/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
+rating: 5
+last_attempt: 2025-10-11
+rate:
+  - ★★★★★
 ---
-#### Intuition
+#### Problem
+Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
+
+The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2).
+
+You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
+
+ 
+
+Example 1:
+>Input: points = [[1,3],[-2,2]], k = 1
+Output: [[-2,2]]
+Explanation:
+The distance between (1, 3) and the origin is sqrt(10).
+The distance between (-2, 2) and the origin is sqrt(8).
+Since sqrt(8) < sqrt(10), (-2, 2) is closer to the origin.
+We only want the closest k = 1 points from the origin, so the answer is just [[-2,2]].
+
+
+#### Notes
 ---
-_"How could I make the insight that leads to discovering the solution?"_
-- Since we need the K smallest, let's use a min heap.
-- We should use the euclidean distance as our min heap key.
+Calculate the distance and store the distance and original index in a `minheap`. Pop `k` values from the `minheap` and use index to get original pair.
 
 #### Code
 ---
@@ -15,34 +38,25 @@ _"How could I make the insight that leads to discovering the solution?"_
 ```python
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        '''
-        For each pair of points, calc euclidean distance
-        Create a min heap
-        data struct in heap is (dist, [x, y]) for each val, where dist is the sorting key
-        Pop k points
-        '''
-        def euclidean(pair) -> int:
-            x, y = pair
-            return abs(math.sqrt((x ** 2) + (y ** 2)))
-
-        heap = [(euclidean(pair), pair) for pair in points]
-        heapq.heapify(heap)
-        k_smallest = heapq.nsmallest(k, heap)
-        return [pair for (dist, pair) in k_smallest]
+        def euclidean(x, y):
+            return sqrt(pow(x, 2) + pow(y, 2))
+            
+        minheap = []
+        for i, p in enumerate(points): 
+            x, y = p
+            heapq.heappush(minheap, (euclidean(x, y), i))
+        
+        res = []
+        while k:
+            i = heapq.heappop(minheap)[1]
+            res.append(points[i])
+            k -= 1
+        return res
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- For each pair of points, calculate the euclidean distance.
-- Create a min heap
-- Since min heap needs a key, we will use the euclidean distance as the key.
-- We still want to store the pair so our data structure in the heap will be `(dist, [x, y])`, since `heapq` uses the first value as the key.
-- Use `heapq.nsmallest` to get the K smallest values from heap.
-- Grab the pairs from the data structure.
 
-#### Takeaways
----
-**Where did I go wrong?**
+#### Follow Up: *""*
 
-**Lessons Learned?**
+```python
+
+```

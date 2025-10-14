@@ -2,61 +2,75 @@
 tags:
   - trees
   - medium
-pattern: Use level order traversal, store last node of that layer seen. Make sure to append left and then right
+  - meta
 rating: 5
-last_attempt: 2025-05-31
+last_attempt: 2025-10-12
+link: https://leetcode.com/problems/binary-tree-right-side-view/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
+rate:
+  - ★★★★★
 ---
-#### Intuition
+#### Problem
+Given the `root` of a binary tree, imagine yourself standing on the **right side** of it, return _the values of the nodes you can see ordered from top to bottom_.
+
+**Example 1:**
+```
+**Input:** root = [1,2,3,null,5,null,4]
+**Output:** [1,3,4]
+```
+
+**Explanation:**
+
+![](https://assets.leetcode.com/uploads/2024/11/24/tmpd5jn43fs-1.png)
+
+#### Notes
 ---
-_"How could I make the insight that leads to discovering the solution?"_
-- Realize that you need to do a [[plan/Trees#Level Order Traversals|level order traversal]] because you need all the nodes of a given layer.
+Use BFS with a level order traversal so that you are looping through all the nodes on a particular level before moving on. Store the last one you see on that level.
 
 #### Code
 ---
+**Time Complexity**: O(N)
+**Space Complexity**: O(D) where D is the diameter of the tree since each level can have at most one node.
 
 ```python
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         res = []
-        q = deque([root])
-
+        q = deque([])
+        if root:
+            q.append(root)
         while q:
-            rightSide = None
-            qLen = len(q)
-
-            for _ in range(qLen):
+            rightmost = None
+            for _ in range(len(q)):
                 node = q.popleft()
-                if node:
-                    rightSide = node
+                rightmost = node.val
+                if node.left:
                     q.append(node.left)
+                if node.right:
                     q.append(node.right)
-            if rightSide:
-                res.append(rightSide.val)
+            res.append(rightmost)
         return res
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- The most important part of this problem is the pattern where we add all the children of a layer to the queue at the same time.
+
+#### Follow Up: *"What if we wanted left side view?"*
 
 ```python
-	for _ in range(qLen):
-		node = q.popleft()
-		if node:
-			rightSide = node
-			q.append(node.left)
-			q.append(node.right)
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
+        q = deque([])
+        if root:
+            q.append(root)
+        while q:
+            leftmost = None
+            for _ in range(len(q)):
+                node = q.popleft()
+				if not leftmost:
+	                leftmost = node.val
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            res.append(leftmost)
+        return res
 ```
-
-- This is crucial to get down and understand.
-	1. We pop all the nodes currently in the queue.
-	2. For each one of those nodes, we add all their children.
-- You do not make the `right_side` equal to the children—you make it equal to the node itself (aka the layer you are checking!) Otherwise you will basically skip the layer you are on.
-#### Takeaways
----
-**Where did I go wrong?**
-- I was trying to set the children of the current node to `right_side`  instead of just setting the node itself as i traversed that layer. 
-- I was setting `right_side` to `node.val` instead of `node`, which caused my `if right_side` to fail when the node value was `0`! This was a good edge case to find and remember.
-**Lessons Learned?**
-- If you are going to use `if X`, then make sure that `X` should just be `None` and not falsey.

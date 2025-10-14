@@ -4,8 +4,10 @@ tags:
   - trees
   - meta
 link: https://neetcode.io/problems/binary-tree-vertical-order-traversal?list=neetcode250
-rating: 4
-last_attempt: 2025-10-02
+rating: 5
+last_attempt: 2025-10-11
+rate:
+  - ★★★★★
 ---
 #### Problem
 You are given the `root` node of a binary tree, return the `vertical order traversal` of its nodes' values.
@@ -37,14 +39,14 @@ If you use a dictionary and mark the root column as `0`, then you can keep track
 class Solution:
     def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         cols = defaultdict(list)
-        q = collections.deque([])
+        q = deque([])
         if root:
             q.append((root, 0))
         while q:
-            cur, col = q.popleft()
-            if cur:
-                cols[col].append(cur.val)
-                q.append((cur.left, col - 1))
-                q.append((cur.right, col + 1))
-        return [ l for _, l in sorted(cols.items()) ]
+            node, col = q.popleft()
+            if node:
+                cols[col].append(node.val)
+                q.append((node.left, col - 1))
+                q.append((node.right, col + 1))
+        return [col for _, col in sorted(cols.items())]
 ```
