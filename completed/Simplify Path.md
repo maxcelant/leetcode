@@ -6,6 +6,8 @@ tags:
 link: https://leetcode.com/problems/simplify-path/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 rating: 4
 last_attempt: 2025-10-09
+rate:
+  - ★★★★
 ---
 #### Problem
 You are given an _absolute_ path for a Unix-style file system, which always begins with a slash `'/'`. Your task is to transform this absolute path into its **simplified canonical path**.

@@ -6,6 +6,8 @@ tags:
 link:
 rating: 3
 last_attempt: 2025-10-10
+rate:
+  - ★★★
 ---
 #### Problem
 A valley element is an element strictly less than its neighbors.

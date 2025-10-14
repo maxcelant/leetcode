@@ -2,9 +2,12 @@
 tags:
   - trees
   - medium
+  - meta
 link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 2
-last_attempt: 2025-10-10
+rating: 3
+last_attempt: 2025-10-11
+rate:
+  - ★★★
 ---
 #### Problem
 Given two nodes of a binary tree `p` and `q`, return _their lowest common ancestor (LCA)_.
@@ -40,7 +43,7 @@ According to the **[definition of LCA on Wikipedia](https://en.wikipedia.org/wi
 3. Make `q` walk the difference between the two heights.
 4. They are now the same height! So we can walk them simultaneously until they meet.
 
-#### Code — O(n) space complexity solution
+#### Code — Set-based Solution
 ---
 
 ```python
@@ -57,7 +60,7 @@ class Solution:
             q = q.parent
 ```
 
-#### Code — O(1) space complexity solution
+#### Code — Tree-walking Solution
 ---
 
 ```python

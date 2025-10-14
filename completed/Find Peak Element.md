@@ -4,8 +4,10 @@ tags:
   - medium
   - binary-search
 link: https://leetcode.com/problems/find-peak-element/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 2
-last_attempt: 2025-10-10
+rating: 4
+last_attempt: 2025-10-11
+rate:
+  - ★★★★
 ---
 #### Problem
 A peak element is an element that is strictly greater than its neighbors.

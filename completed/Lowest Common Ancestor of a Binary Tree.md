@@ -4,8 +4,10 @@ tags:
   - medium
   - trees
 link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 2
-last_attempt: 2025-10-10
+rating: 3
+last_attempt: 2025-10-11
+rate:
+  - ★★★
 ---
 #### Problem
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
@@ -42,15 +44,15 @@ class Solution:
             left = traverse(root.left)
             right = traverse(root.right)
             # See if current node is p or q 
-            mid = root is q or root is p
+		    cur = root is q or root is p
             # This is important! The LCS can be q or p!
             # As long as two of these are true, then we've found the LCS
 			# This will only be true for the LCA
-            if mid + left + right >= 2:
+            if cur + left + right >= 2:
                 self.res = root
             # Propagate up True if one of these has been found otherwise 
             # it'll be False for deadends or dead branches
-            return mid or left or right
+            return cur or left or right
         traverse(root)
         return self.res
 ```

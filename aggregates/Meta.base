@@ -6,9 +6,11 @@ views:
         - file.hasTag("meta")
     order:
       - file.name
-      - rating
       - file.tags
       - last_attempt
+      - rate
     sort:
-      - property: rating
+      - property: rate
         direction: ASC
+    columnSize:
+      file.name: 461
