@@ -6,7 +6,7 @@ tags:
 link: https://leetcode.com/problems/random-pick-with-weight/submissions/1802015201/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 last_attempt: 2025-10-14
 rate:
-  - ★★
+  - ★★★
 ---
 #### Problem
 You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index.
