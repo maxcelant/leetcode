@@ -78,3 +78,32 @@ class Solution:
         traverse(root)
         return self.res
 ```
+
+Follow Up: *"Can you solve it iteratively?"*
+
+The approach is that we use a stack and traverse down the tree. As we go, we keep track of a `parent` dict which maps a node to its parent (key: node, val: parent).
+
+This will allow us to basically start from p and walk up its tree, add those to a set and then let us do a similar thing for q until we find a match
+
+```python
+def LCA(root, p, q) -> int:
+  stack = [root]
+  parent = { root: None }
+  while p not in parent or q not in parent:
+    node = stack.pop()
+    if node.left:
+      parent[node.left] = node
+      stack.append(node.left)
+    if node.right:
+      parent[node.right] = node
+      stack.append(node.right)
+  
+  ancestors = set()
+  while p:
+    ancestors.add(p)
+    p = parent[p]
+  
+  while q not in ancestors:
+    q = parent[q]
+  return q
+```

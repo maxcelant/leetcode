@@ -4,9 +4,9 @@ tags:
   - medium
   - hashing
 link: https://leetcode.com/problems/custom-sort-string/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-14
+last_attempt: 2025-10-17
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 You are given two strings `order` and `s`. All the characters of `order` are **unique** and were sorted in some custom order previously.
