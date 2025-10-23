@@ -4,10 +4,9 @@ tags:
   - stack
   - meta
 link: https://neetcode.io/problems/minimum-remove-to-make-valid-parentheses?list=neetcode250
-rating: 3
-last_attempt: 2025-10-11
+last_attempt: 2025-10-19
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 You are given a string `s` consisting of lowercase English characters, as well as opening and closing parentheses, `(` and `)`.
@@ -88,24 +87,25 @@ On second pass:
 ```python
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        count = 0
-        tmp = []
-        for c in s:
-            if c == "(":
-                count += 1
-                tmp.append(c)
-            elif c == ")":
-                if count > 0:
-                    count -= 1
-                    tmp.append(c)
-            else:
-                tmp.append(c)
-        
+        open_parens = 0
         res = []
-        for c in reversed(tmp):
-            if c == "(" and count > 0:
-                count -= 1
+        for c in s:
+            if c == '(':
+                open_parens += 1
+                res.append(c)
+            elif c == ')':
+                if open_parens > 0:
+                    res.append(c)
+                    open_parens -= 1
             else:
                 res.append(c)
-        return "".join(res[::-1])
+        
+        i = len(res) - 1
+        while open_parens > 0:
+            if res[i] == '(':
+                res.pop(i)
+                open_parens -= 1
+            i -= 1
+
+        return ''.join(res)
 ```

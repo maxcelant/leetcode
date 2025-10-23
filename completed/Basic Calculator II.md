@@ -2,9 +2,11 @@
 tags:
   - stack
   - medium
+  - meta
 link: https://neetcode.io/problems/basic-calculator-ii?list=neetcode250
-rating: 4
-last_attempt: 2025-10-13
+last_attempt: 2025-10-19
+rate:
+  - ★★★★
 ---
 #### Problem
 You are given a string `s` which represents an expression, evaluate this expression and return its value.
@@ -71,4 +73,36 @@ class Solution:
 
 
 
+```
+
+#### Follow Up: *"What about O(1) space?"*
+
+```python
+def calculator(s: str) -> int:
+  s = s.replace(' ', '')
+  prev = 0
+  total = 0
+  num = 0
+  op = '+'
+  for n in s + '+':
+    if n.isnumeric():
+      num = num * 10 + int(n)
+    else:
+      if op == '+':
+        prev = num
+        total += num
+      elif op == '-':
+        prev = -num
+        total -= num
+      elif op == '*':
+        total -= prev
+        prev = (prev * num)
+        total += prev
+      elif op == '/':
+        total -= prev
+        prev = int(prev / num)
+        total += prev
+      op = n
+      num = 0
+  return total
 ```
