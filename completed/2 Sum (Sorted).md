@@ -1,6 +1,8 @@
 ---
 tags:
   - two-pointers
+  - easy
+  - meta
 pattern: Use two pointers, if above target decrement right pointer...
 link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 rating: 1000

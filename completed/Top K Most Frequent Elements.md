@@ -4,11 +4,11 @@ tags:
   - medium
   - meta
   - bucket-sort
-rating: 4
-last_attempt: 2025-10-13
+  - heaps
+last_attempt: 2025-10-19
 link: https://leetcode.com/problems/top-k-frequent-elements/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 #### Problem
 Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
@@ -40,8 +40,8 @@ The buckets go from 1 to N, where N is the length of the nums array. Each bucket
 To get the top K elements, we simply iterate over the buckets in reverse order (top to bottom).
 #### Code
 ---
-**Time Complexity**:
-**Space Complexity**: 
+**Time Complexity**: O(NlogK)
+**Space Complexity**: O(K)
 
 ```python
 class Solution:
@@ -63,8 +63,23 @@ class Solution:
 ```
 
 
-#### Follow Up: *""*
+#### Follow Up: *"Can you make it faster?"*
 
 ```python
-
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        if k == len(nums): 
+            return nums
+        # Get frequencies of all the elements
+        freqs = Counter(nums)
+		# Create N buckets
+        buckets = [[] for _ in range(len(nums) + 1)]
+        # Add the element to the correct bucket based on its frequency
+        for n, f in freqs.items():
+            buckets[f].append(n)
+        res = []
+        # Flatten the buckets from highest to lowest
+        for b in reversed(buckets):
+            res.extend(b)
+        return res[:k]
 ```

@@ -5,48 +5,47 @@ tags:
   - dfs
   - bottom-up
   - easy
-pattern: Recursively find the left and right depths, return the max of the two depths + 1, use a global value for the result which calculates the max at every subproblem.
-rating: 4
+  - meta
 link: https://neetcode.io/problems/binary-tree-diameter
-last attempted: 2025-05-22
+last attempted: 2025-10-22
+rate:
+  - ★★★★
+  - ★
+  - ★★
+  - ★★★
+  - ★★★★★
+last_attempt:
 ---
- #### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- In order to find the max diameter, we will need the height of all the subtrees, so we need to take a bottom-up approach.
+#### Variants
+
+
+#### Problem
+
+
+#### Notes
 
 #### Code
----
+**Time Complexity**:
+**Space Complexity**: 
 
 ```python
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        res = 0
-        def dfs(root):
-            nonlocal res
-            if not root: 
-	            return 0
-	        
-            left = dfs(root.left)
-            right = dfs(root.right)
-            # Calculate the root
-            res = max(res, left+right)
-
-			# We only care about the max of the two subtrees
-            return 1 + max(left, right)
-
-        dfs(root)
-        return res
+        self.res = 0
+        def traverse(root) -> int:
+            if not root:
+                return 0
+            l = traverse(root.left)
+            r = traverse(root.right)
+            self.res = max(self.res, l + r)
+            return max(l, r) + 1
+        traverse(root)
+        return self.res
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- We calculate `res` separately because **the longest diameter path may not pass through the root**.
-- Calculate the left and right subtrees, calculate the result, and pass up the bigger of the two sides.
 
-#### Takeaways
----
-**Where did I go wrong?**
+#### Follow Up: *""*
 
-**Lessons Learned?**
+```python
+
+```
