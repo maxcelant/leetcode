@@ -9,12 +9,8 @@ tags:
 link: https://neetcode.io/problems/binary-tree-diameter
 last attempted: 2025-10-22
 rate:
-  - ★★★★
-  - ★
-  - ★★
-  - ★★★
   - ★★★★★
-last_attempt:
+last_attempt: 2025-10-21
 ---
 #### Variants
 

@@ -2,6 +2,7 @@
 tags:
   - sliding-window
   - easy
+  - nvidia
 pattern: if right pointer is smaller than left, move pointer forward, calc max of cur and max
 rating: 1000
 last_attempt: 2025-09-21
@@ -49,4 +50,18 @@ class Solution:
                 l = r
             res = max(res, prices[r] - prices[l])
         return res
+```
+
+```go
+func maxProfit(prices []int) int {
+    res := 0
+    l := 0
+    for r, _ := range prices {
+        if prices[r] < prices[l] {
+            l = r
+        }
+        res = max(res, prices[r] - prices[l])
+    }
+    return res
+}
 ```

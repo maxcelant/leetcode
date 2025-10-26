@@ -1,45 +1,50 @@
 ---
 tags:
+  - sliding-window
   - easy
-  - hashing
-link: https://neetcode.io/problems/contains-duplicate-ii?list=neetcode250
-rating: 1000
-last_attempt: 2025-09-21
+  - meta
+link: https://leetcode.com/problems/contains-duplicate-ii/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
+last_attempt: 2025-10-23
+rate:
+  - ★★
+  - ★★★
+  - ★★★★
+  - ★★★★★
 ---
+#### Variants
+
+
 #### Problem
-You are given an integer array `nums` and an integer `k`, return `true` if there are **two distinct indices** `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`, otherwise return `false`.
+Given an integer array `nums` and an integer `k`, return `true` _if there are two **distinct indices**_ `i` _and_ `j` _in the array such that_ `nums[i] == nums[j]` _and_ `abs(i - j) <= k`.
 
 **Example 1:**
 
-```java
-Input: nums = [1,2,3,1], k = 3
-
-Output: true
-```
-
-**Example 2:**
-
-```java
-Input: nums = [2,1,2], k = 1
-
-Output: false
-```
+**Input:** nums = [1,2,3,1], k = 3
+**Output:** true
 
 #### Notes
----
-Use a hash table of `[value]: index`.
+The window is the size of k, once we reach the size of k, we start removing from the left side.
+
 #### Code
----
+**Time Complexity**: O(N)
+**Space Complexity**: O(K)
 
 ```python
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        seen = defaultdict(int)
-        for i in range(len(nums)):
-            if nums[i] in seen:
-                j = seen[nums[i]]
-                if abs(i - j) <= k:
-                    return True
-            seen[nums[i]] = i
+        window = set()
+        for i, n in enumerate(nums):
+            if n in window:
+                return True
+            window.add(n)
+            if len(window) > k:
+                window.remove(nums[i - k])
         return False
+```
+
+
+#### Follow Up: *""*
+
+```python
+
 ```

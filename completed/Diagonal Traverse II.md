@@ -4,9 +4,9 @@ tags:
   - medium
   - meta
 link: https://leetcode.com/problems/diagonal-traverse-ii/description/
-last_attempt: 2025-10-20
+last_attempt: 2025-10-25
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 Given a 2D integer array `nums`, return _all elements of_ `nums` _in diagonal order as shown in the below images_.
