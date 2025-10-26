@@ -3,9 +3,10 @@ tags:
   - linked-list
   - medium
   - meta
-last_attempt: 2025-10-21
+  - nvidia
+last_attempt: 2025-10-24
 rate:
-  - ★★★★
+  - ★★★★★
 link:
 ---
 #### Variants
@@ -49,7 +50,37 @@ class Solution:
         return dummy.next
 ```
 
+```go
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+    dummy := &ListNode{Val: -1}
+    cur := dummy
+    carry := 0
+    for l1 != nil || l2 != nil {
+        sum := carry
+        if l1 != nil {
+            sum += l1.Val
+        }
+        if l2 != nil {
+            sum += l2.Val
+        }
+        carry = sum / 10
+        cur.Next = &ListNode{Val: sum % 10}
+        cur = cur.Next
+        if l1 != nil {
+            l1 = l1.Next
+        } 
+        if l2 != nil {
+            l2 = l2.Next
+        }
+    }
 
+    if carry != 0 {
+        cur.Next = &ListNode{Val: carry}
+    }
+
+    return dummy.Next
+}
+```
 #### Follow Up: *""*
 
 ```python

@@ -4,9 +4,9 @@ tags:
   - medium
   - meta
 link: https://leetcode.com/problems/clone-graph/submissions/1808121854/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-21
+last_attempt: 2025-10-25
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Variants
 - [[Copy Linked List with Random Pointer]]
