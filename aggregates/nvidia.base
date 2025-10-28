@@ -4,4 +4,9 @@ views:
     filters:
       and:
         - file.hasTag("nvidia")
+    order:
+      - file.name
+      - rate
+      - last_attempt
     sort: []
+    cardSize: 150

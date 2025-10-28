@@ -3,6 +3,7 @@ tags:
   - greedy
   - heaps
   - nvidia
+  - medium
 link: https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/?envType=company&envId=nvidia&favoriteSlug=nvidia-six-months
 last_attempt: 2025-10-25
 rate:
@@ -52,26 +53,50 @@ We pop from the heap and events that have an end date less than `i`, because thi
 **Space Complexity**: O(N)
 
 ```python
-class Solution:
-    def maxEvents(self, events: List[List[int]]) -> int:
-        res = 0
-        pq = []
-        events.sort()
-        max_day = max([end for [_, end] in events])
-        i = 0
-        for day in range(1, max_day + 1):
-            # Start day is less than or equal to current day
-            while i < len(events) and events[i][0] <= day:
-                heapq.heappush(pq, events[i][1])
-                i+=1
-            # Remove any events that have an end date less than current day
-            while pq and pq[0] < day:
-                heapq.heappop(pq)
-            # Visit an event, increment result
-            if pq:
-                heapq.heappop(pq)
-                res += 1
-        return res
+func maxEvents(events [][]int) int {
+    res := 0
+    pq := &IntHeap{}
+    heap.Init(pq)
+    slices.SortFunc(events, func(a []int, b []int) int {
+        return a[0] - b[0]
+    })
+    lastDay := 0
+    for _, event := range events {
+        lastDay = max(lastDay, event[1])
+    }
+    i := 0
+    for day := 1; day < lastDay + 1; day++ {
+        for i < len(events) && events[i][0] <= day {
+            heap.Push(pq, events[i][1])
+            i++
+        }
+        for pq.Len() != 0 && pq.Peek() < day {
+            heap.Pop(pq)
+        }
+        if pq.Len() != 0 {
+            heap.Pop(pq)
+            res++
+        }
+    }
+    return res
+}
+
+type IntHeap []int
+
+func (h IntHeap) Len() int { return len(h) }
+func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
+func (h IntHeap) Swap(i, j int) { h[i], h[j] = h[j], h[i] }
+func (h *IntHeap) Push(x any) { 
+    *h = append(*h, x.(int))
+}
+func (h IntHeap) Peek() int { return h[0]}
+func (h *IntHeap) Pop() any {
+    old := *h
+    n := len(old)
+    x := old[n-1]
+    *h = old[:n-1]
+    return x
+}
 ```
 
 
