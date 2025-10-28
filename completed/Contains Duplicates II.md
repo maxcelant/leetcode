@@ -6,10 +6,7 @@ tags:
 link: https://leetcode.com/problems/contains-duplicate-ii/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 last_attempt: 2025-10-23
 rate:
-  - ★★
   - ★★★
-  - ★★★★
-  - ★★★★★
 ---
 #### Variants
 

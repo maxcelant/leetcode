@@ -4,10 +4,9 @@ tags:
   - easy
   - two-pointers
 link: https://leetcode.com/problems/valid-word-abbreviation/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 3
-last_attempt: 2025-10-11
+last_attempt: 2025-10-27
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 A string can be **abbreviated** by replacing any number of **non-adjacent**, **non-empty** substrings with their lengths. The lengths **should not** have leading zeros.

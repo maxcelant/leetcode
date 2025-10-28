@@ -4,9 +4,10 @@ tags:
   - easy
   - nvidia
 pattern: if right pointer is smaller than left, move pointer forward, calc max of cur and max
-rating: 1000
 last_attempt: 2025-09-21
 link: https://neetcode.io/problems/buy-and-sell-crypto?list=neetcode250
+rate:
+  - ★★★★★
 ---
 #### Problem
 You are given an integer array `prices` where `prices[i]` is the price of NeetCoin on the `ith` day.

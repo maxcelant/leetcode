@@ -12,5 +12,7 @@ views:
     sort:
       - property: rate
         direction: ASC
+      - property: file.name
+        direction: DESC
     columnSize:
       file.name: 461
