@@ -4,9 +4,9 @@ tags:
   - medium
   - binary-search
 link: https://leetcode.com/problems/random-pick-with-weight/submissions/1802015201/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-14
+last_attempt: 2025-11-07
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 You are given a 0-indexed array of positive integers w where w[i] describes the weight of the ith index.
@@ -106,11 +106,4 @@ class Solution:
             else:
                 l = m + 1 # Strictly increment l! left bias
         return l
-```
-
-
-#### Follow Up: *""*
-
-```python
-
 ```

@@ -41,12 +41,6 @@ Remember: the goal is to find all subarrays that sum to `k`. So if I know the su
 >[!important] Example
 >The current sum is 3 and k is 5 ( diff=sum-k ). That would mean that removing ANY past subarrays with a total of 2 would result the total k.
 
-```litegal
-![[Pasted image 20251013213909.png]]
-![[Pasted image 20251013213918.png]]
-![[Pasted image 20251013213926.png]]
-![[Pasted image 20251013213931.png]]
-```
 #### Code
 ---
 
