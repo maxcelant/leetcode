@@ -2,16 +2,23 @@
 tags:
   - linked-list
   - hard
+link:
+last_attempt: 2025-11-03
+rate:
+  - ★★★★
 ---
+#### Variants
 
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- If we need to merge sorted lists/linked lists, remember this merging algorithm.
-- If we need to combine them into one list, two pointers is a good choice.
+
+#### Problem
+
+
+#### Notes
+Merging the linked lists together is a bit like a zipper. We keep assigning the `next` pointer to the next lowest value in the two lists. 
 
 #### Code
----
+**Time Complexity**: O(k*N) where we have k lists and N total nodes
+**Space Complexity**: O(1)
 
 ```python
 from typing import List, Optional
@@ -56,15 +63,9 @@ class Solution:
         return dummy.next
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- Using the `range(1, len(..))` is very powerful here because we can accumulate the merging of the lists into the final array cell of the original list.
-	- More on that [[Arrays#Flattening a List of Lists|here]]
 
-#### Takeaways
----
-**Where did I go wrong?**
-- The edge case where it's an empty list should just return `None`, not a linked list with `None` as it's value.
-**Lessons Learned?**
-- This is a great way to merge a list of lists.
+#### Follow Up: *""*
+
+```python
+
+```

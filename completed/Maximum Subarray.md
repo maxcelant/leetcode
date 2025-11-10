@@ -3,38 +3,41 @@ tags:
   - 1d-dynamic-programming
   - sliding-window
   - kadanes-algorithm
-pattern: Use kedanes algorithm
 link: https://neetcode.io/problems/maximum-subarray
-rating: 4
-last_attempt: 2025-05-08
+last_attempt: 2025-11-03
+rate:
+  - ★★★★
 ---
-#### Video Breakdown
+#### Variants
 
 
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- Realize that you are asked to find the sum of a contiguous subarray and know that [[Kadane's Algorithm]] solves exactly this.
+#### Problem
+
+
+#### Notes
+Use [[Kadane's Algorithm]]! See if the current sum is less than 0, then reset it.
 
 #### Code
----
+**Time Complexity**: O(N)
+**Space Complexity**: O(1)
 
-```python
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        maxsum = nums[0]
-        cursum = 0
-        for n in nums:
-            cursum = max(cursum + n, n)
-            maxsum = max(cursum, maxsum)
-        return maxsum
+```go
+func maxSubArray(nums []int) int {
+    res, cursum := nums[0], 0
+    for _, n := range nums {
+        if cursum < 0 {
+            cursum = 0
+        }
+        cursum += n
+        res = max(res, cursum)
+    }
+    return res
+}
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- 
 
-#### Takeaways
----
-**Lessons Learned?**
+#### Follow Up: *""*
+
+```python
+
+```

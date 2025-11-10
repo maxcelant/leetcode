@@ -6,13 +6,13 @@ views:
         - file.hasTag("meta")
     order:
       - file.name
-      - file.tags
       - last_attempt
       - rate
     sort:
       - property: rate
         direction: ASC
-      - property: file.name
-        direction: DESC
+      - property: last_attempt
+        direction: ASC
     columnSize:
-      file.name: 461
+      file.name: 524
+      note.rate: 140

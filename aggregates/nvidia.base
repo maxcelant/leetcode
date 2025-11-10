@@ -6,7 +6,14 @@ views:
         - file.hasTag("nvidia")
     order:
       - file.name
-      - rate
       - last_attempt
-    sort: []
+      - rate
+    sort:
+      - property: rate
+        direction: ASC
+      - property: last_attempt
+        direction: ASC
     cardSize: 150
+    columnSize:
+      file.name: 466
+      note.last_attempt: 271

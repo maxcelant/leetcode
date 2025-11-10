@@ -8,7 +8,17 @@ for diff in range(1, n):
 		print(s[i:j])
 ```
 
-`diff` is the length of the substring, we start at `1` because we don't really care for substrings of length `0` (empty strings). 
+```go
+n := len(s)
+for size := 1; size < n; size++ {
+	for i := 0; i < n - size + 1; i++ {
+		j := i + size
+		fmt.Println(s[i:j])
+	}
+}
+```
+
+`diff`/`size` is the length of the substring, we start at `1` because we don't really care for substrings of length `0` (empty strings). 
 
 ```ad-example
 For instance, if `diff` was `3`, and the word was `"faux"`, then it would produce strings of length`"fau", "aux"`.

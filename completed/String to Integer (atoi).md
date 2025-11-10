@@ -3,6 +3,7 @@ tags:
   - strings
   - meta
   - medium
+  - nvidia
 link: https://leetcode.com/problems/string-to-integer-atoi/description/?envType=company&envId=facebook&favoriteSlug=facebook-three-months
 last_attempt: 2025-10-18
 rate:
@@ -74,8 +75,45 @@ class Solution:
 ```
 
 
-#### Follow Up: *""*
+#### Go Solution
+
+The annoying bit in Go is doing the bounds check. Basically we are checking to see if adding the new digit will cause an overflow or not. We shift around the variables such that we can check if the `res` is greater.
+
+```
+MaxInt = 100
+res = 10
+digit = 5
+
+10 > (100 - 5) / 10
+10 > 9.5 which means doing '10 * 10 + 5 = 105' would cause an overflow
+```
 
 ```python
-
+func myAtoi(s string) int {
+    i, sign, res := 0, 1, 0
+    for i < len(s) && s[i] == ' ' {
+        i++
+    }
+    if i < len(s) && s[i] == '-' {
+        sign = -1
+        i++
+    } else if i < len(s) && s[i] == '+' {
+        i++
+    }
+    for i < len(s) && s[i] == '0' {
+        i++
+    }
+    for i < len(s) && unicode.IsDigit(rune(s[i])) {
+        num := int(s[i] - '0')
+        if res > (math.MaxInt32 - num) / 10 {
+            if sign == 1 {
+                return math.MaxInt32
+            }
+            return math.MinInt32
+        }
+        res = res * 10 + num
+        i++
+    }
+    return res * sign
+}
 ```

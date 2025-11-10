@@ -2,6 +2,8 @@
 tags:
   - medium
   - 2d-dynamic-programming
+  - nvidia
+  - meta
 pattern: Use 2D dp table, fill in default palindromes, traverse all substrings and look at bottom left value to see if that one is also a palindrome
 link: https://neetcode.io/problems/longest-palindromic-substring
 rating: 3
@@ -21,41 +23,37 @@ _"How could I make the insight that leads to discovering the solution?"_
 #### Code
 ---
 
-```python
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        n = len(s)
-        dp = [[False] * n for _ in range(n)]
-        res = [0, 0]
-
-		# All substrings of length 1 are palindromes
-        for i in range(n):
-            dp[i][i] = True
-
-		# All adjancent letters that are the same are palindromes
-        for i in range(1, n):
-            if s[i] == s[i-1]:
-                dp[i-1][i] = True
-                res = [i-1, i]
-
-		# Go through each possible substring
-		# Use dp table to see if the smaller one is also a substring
-        for diff in range(2, n):
-            for i in range(n - diff):
-                j = i + diff
-                if s[i] == s[j] and dp[i+1][j-1]:
-                    dp[i][j] = True
-                    res = [i, j]
-        
-        i, j = res
-        return s[i:j+1]
+```go
+func longestPalindrome(s string) string {
+    // Default the result to a single value palindrome
+    res := string(s[0])
+    N := len(s)
+    // Create a 2d matrix.
+    dp := make([][]bool, N)
+    for i := range s {
+        dp[i] = make([]bool, N)
+    }
+    // A single value palindromes are valid 
+    for i := range s {
+        dp[i][i] = true
+    }
+    // Check if 2 digit palindromes are valid
+    for i := 1; i < N; i++ {
+        if s[i] == s[i-1] {
+            dp[i-1][i] = true
+            res = s[i-1:i+1]
+        }
+    }
+    // Check sizes larger than 2
+    for size := 2; size < N; size++ {
+        for i := 0; i < N - size; i++ {
+            j := i + size
+            if s[i] == s[j] && dp[i+1][j-1] {
+                dp[i][j] = true
+                res = s[i:j+1]
+            }
+        }
+    }
+    return res
+}
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- We 
-
-#### Takeaways
----
-**Lessons Learned?**

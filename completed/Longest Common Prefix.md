@@ -2,51 +2,51 @@
 tags:
   - strings
   - easy
-pattern: Use first string as prefix, keep shrinking it until string is empty or we match the prefix
+  - meta
 link: https://leetcode.com/problems/longest-common-prefix
-rating: 4
-last_attempt: 2025-09-01
+last_attempt: 2025-11-06
+rate:
+  - ★★★★
+  - ★
+  - ★★
+  - ★★★
+  - ★★★★★
 ---
+#### Variants
+
+
 #### Problem
+Write a function to find the longest common prefix string amongst an array of strings.
 
+If there is no common prefix, return an empty string `""`.
 
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- 
+**Example 1:**
+
+>**Input:** strs = ["flower","flow","flight"]
+**Output:** "fl"
+
+**Example 2:**
+
+>**Input:** strs = ["dog","racecar","car"]
+**Output:** ""
+**Explanation:** There is no common prefix among the input strings.
+
+#### Notes
+We start by ass
 
 #### Code
----
+**Time Complexity**:
+**Space Complexity**: 
 
-```go
-import "strings"
+```python
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        prefix = strs[0]
+        for s in strs:
+            while len(prefix) > 0 and s[:len(prefix)] != prefix:
+                prefix = prefix[:-1]
+            if prefix == "":
+                return ""
+        return prefix
 
-func longestCommonPrefix(strs []string) string {
-	if len(strs) == 1 {
-		return strs[0]
-	}
-
-	prefix := strs[0]
-	for _, s := range strs {
-		for len(prefix) > 0 && !strings.HasPrefix(s, prefix) {
-			prefix = prefix[:len(prefix)-1]
-		}
-		if prefix == "" {
-			break
-		}
-	}
-	return prefix
-}
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- 
-
-#### Lessons Learned
----
-- 
-
-#### Video Breakdown
----

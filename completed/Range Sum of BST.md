@@ -4,10 +4,9 @@ tags:
   - easy
   - meta
 link: https://leetcode.com/problems/range-sum-of-bst/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 4
-last_attempt: 2025-10-11
+last_attempt: 2025-11-03
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 #### Problem
 Given the `root` node of a binary search tree and two integers `low` and `high`, return _the sum of values of all nodes with a value in the **inclusive** range_ `[low, high]`.
@@ -22,7 +21,7 @@ Given the `root` node of a binary search tree and two integers `low` and `h
 
 #### Notes
 ---
-Walk the tree DFS style. Keep track of a global count for the result. If the current node is within range, add it to the total. If the `low` value is less than the current node, then we can go left some more. Same goes with `high` and going right.
+Instead of brute force checking all the nodes, if we find that the current node is smaller than `low`, then we should only explore it's right subtree, because those are larger. Same rule applies for `high`.
 
 #### Code
 ---
@@ -32,13 +31,16 @@ class Solution:
     def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
         self.res = 0
         def traverse(root):
-            if not root: return
+            if not root:
+                return
             if low <= root.val <= high:
                 self.res += root.val
-            if low < root.val:
                 traverse(root.left)
-            if high > root.val:
                 traverse(root.right)
+            elif root.val < low:
+                traverse(root.right)
+            else:
+                traverse(root.left)
         traverse(root)
         return self.res
 ```
