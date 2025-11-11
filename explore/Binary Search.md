@@ -1,3 +1,17 @@
+#### Use Cases
+**When data is sorted or can be made sorted**
+- Find `x` in a sorted array
+**When you need to find the first or last occurrence of something**
+- First occurrence of a number
+- Last occurrence
+- First index where a condition becomes true
+**You need to minimize or maximize something (answer lies in a range)**
+- Minimum speed to arrive on time
+- Smallest radius to cover all points
+- Maximum value that satisfies a condition
+**When the search space is huge**
+- Dead give away
+
 Using  `l <= r` means that we want to continue even when `l` and `r` are equal. So that means that `l` needs to be strictly larger than `r` for the loop to end.
 
 >[!question]
@@ -74,4 +88,80 @@ class Solution:
         return -1
 ```
 
-##### 
+##### Search in Rotated Sorted Array
+
+```python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l, r = 0, len(nums) - 1
+        while l <= r:
+            m = l + (r - l) // 2
+            if nums[m] == target:
+                return m
+            
+            if nums[l] <= nums[m]:
+                if target > nums[m] or target < nums[l]:
+                    l = m + 1
+                else:
+                    r = m - 1
+            else:
+                if target < nums[m] or target > nums[r]:
+                    r = m - 1
+                else:
+                    l = m + 1
+        return -1
+```
+
+#### Binary Template II
+The idea with this template is that we aren't looking for a specific value per se, we are finding the _lower boundary_.
+
+This is important in situations where moving the right pointer _past the middle_ could mean you miss the correct value.
+
+```python
+def binarySearch(nums, target):
+    if len(nums) == 0:
+        return -1
+
+    left, right = 0, len(nums) - 1
+    while left < right:
+        mid = (left + right) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            left = mid + 1
+        else:
+            right = mid
+
+    # Post-processing:
+    # End Condition: left == right
+    if nums[left] == target:
+        return left
+    return -1
+```
+
+##### Problem 1: First Bad Version
+You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+
+Suppose you have `n` versions `[1, 2, ..., n]` and you want to find out the first bad one, which causes all the following ones to be bad.
+
+You are given an API `bool isBadVersion(version)` which returns whether `version` is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+
+```python
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        l, r = 0, n
+        while l < r:
+            m = l + (r - l) // 2
+            if isBadVersion(m):
+                r = m
+            else:
+                l = m + 1
+        return l
+```
+
+##### Problem 2: Find Peak Element
+- [[Find Peak Element]]
+
+##### Problem 3: Find Minimum in Sorted Array
+- [[Find Minimum in Rotated Sorted Array]]
+

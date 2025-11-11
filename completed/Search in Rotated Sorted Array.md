@@ -4,66 +4,62 @@ tags:
   - medium
 rating: 3
 last_attempt: 2025-05-10
-pattern: Determine which side you are on, then figure out how to shrink depending on where the target is.
 ---
-#### Intuition
----
-- Use binary search, duh.
+#### Variants
+
+
+#### Problem
+There is an integer array `nums` sorted in ascending order (with **distinct** values).
+
+Prior to being passed to your function, `nums` is **possibly left rotated** at an unknown index `k` (`1 <= k < nums.length`) such that the resulting array is `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]` (**0-indexed**). For example, `[0,1,2,4,5,6,7]` might be left rotated by `3` indices and become `[4,5,6,7,0,1,2]`.
+
+Given the array `nums` **after** the possible rotation and an integer `target`, return _the index of_ `target` _if it is in_ `nums`_, or_ `-1` _if it is not in_ `nums`.
+
+You must write an algorithm with `O(log n)` runtime complexity.
+
+**Example 1:**
+
+**Input:** nums = [4,5,6,7,0,1,2], target = 0
+**Output:** 4
+
+#### Notes
+1. Figure out which side you are on, left or right.
+2. Think about the 2 possible cases for each side.
+
+If I'm on the left side and the target is greater than the left boundary, which direction should I go? **left**
+If I'm on the left side and the target is greater than the middle value, which direction should I go? **left**
+
+
 
 #### Code
----
+**Time Complexity**: O(logn)
+**Space Complexity**: O(1)
 
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         l, r = 0, len(nums) - 1
-        
         while l <= r:
-            mid = l + (r - l) // 2
-
-            if nums[mid] == target:
-                return mid
-
-            # Check if in the left section
-            if nums[l] <= nums[mid]:
-                # If the target is greater than the middle
-                if target > nums[mid]:
-                    l = mid + 1
-                # If the target is less than the left pointer
-                elif target < nums[l]:
-                    l = mid + 1
+            m = l + (r - l) // 2
+            if nums[m] == target:
+                return m
+            # On left side
+            if nums[l] <= nums[m]:
+	            # Target is greater than middle or
+	            # Target is less than left boundary
+	            # Go right
+                if target > nums[m] or target < nums[l]:
+                    l = m + 1
                 else:
-                    r = mid - 1
-                
-            # Check if in the right section
+                    r = m - 1
+            # On right side
             else:
-                # If the target is less than the middle
-                if target < nums[mid]:
-                    r = mid - 1
-                # If the target is greater than the right
-                elif target > nums[r]:
-                    r = mid - 1
+	            # Target is less than middle or
+	            # Target is greater than right boundary
+	            # Go left
+                if target < nums[m] or target > nums[r]:
+                    r = m - 1
                 else:
-                    l = mid + 1 
+                    l = m + 1
         return -1
 ```
-
-#### Insight
----
-- With problems like this, you need to split it up into cases.
-- The important distinction is the position of the `middle` index—and whether it's in the left or right section.
-- If we are in the left section, we want to think of the possible cases in which the target is _somewhere_ on the right side. There are too main cases. Either it's bigger than `middle` or it's less than `left`.
-- Same goes with right section. It's either less than `middle` or greater than `right`. 
-
->![[Pasted image 20250306201940.png]]
-
->![[Pasted image 20250306202203.png]]
-
-#### Takeaways
----
-- **Where did I go wrong?**
-	- This one was conceptually difficult for me to differentiate the cases.
-- **Lessons Learned?**
-	- I should try my best to split this problem into understandable cases, aka the left and right partitions.
-- **Aha Moments?**
-	- Using the pictures to glue it in my head helped a lot.
