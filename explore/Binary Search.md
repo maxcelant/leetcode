@@ -1,16 +1,16 @@
 #### Use Cases
-**When data is sorted or can be made sorted**
+**1. When data is sorted or can be made sorted**
 - Find `x` in a sorted array
-**When you need to find the first or last occurrence of something**
+**2. When you need to find the first or last occurrence of something**
 - First occurrence of a number
 - Last occurrence
 - First index where a condition becomes true
-**You need to minimize or maximize something (answer lies in a range)**
+**3. You need to minimize or maximize something (answer lies in a range)**
 - Minimum speed to arrive on time
 - Smallest radius to cover all points
 - Maximum value that satisfies a condition
-**When the search space is huge**
-- Dead give away
+**4. When the search space is huge**
+- Dead give away. Linear solutions won't work.
 
 Using  `l <= r` means that we want to continue even when `l` and `r` are equal. So that means that `l` needs to be strictly larger than `r` for the loop to end.
 
@@ -23,7 +23,7 @@ There are three primary sections:
 3. Determine viable candidates in remaining space.
 
 #### Binary Search Template I
-
+With this template we are typically looking for a target value.
 ```python
 def search(nums: list[int], target: int) -> int:
 	if len(nums) == 0: 
@@ -88,7 +88,7 @@ class Solution:
         return -1
 ```
 
-##### Search in Rotated Sorted Array
+##### Problem 3: Search in Rotated Sorted Array
 
 ```python
 class Solution:
@@ -125,9 +125,7 @@ def binarySearch(nums, target):
     left, right = 0, len(nums) - 1
     while left < right:
         mid = (left + right) // 2
-        if nums[mid] == target:
-            return mid
-        elif nums[mid] < target:
+        if nums[mid] < target:
             left = mid + 1
         else:
             right = mid
@@ -161,7 +159,10 @@ class Solution:
 
 ##### Problem 2: Find Peak Element
 - [[Find Peak Element]]
-
 ##### Problem 3: Find Minimum in Sorted Array
 - [[Find Minimum in Rotated Sorted Array]]
+
+
+#### Template Analysis
+Templates II and III are used when you need to look at the neighbors of the left and right pointers.
 
