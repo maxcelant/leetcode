@@ -4,10 +4,9 @@ tags:
   - meta
   - medium
 link: https://leetcode.com/problems/nested-list-weight-sum/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 4
-last_attempt: 2025-10-13
+last_attempt: 2025-11-08
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 #### Problem
 
@@ -24,18 +23,17 @@ Just think about traversing a file system. If it's a folder, you recursively cal
 ```python
 class Solution:
     def depthSum(self, nestedList: List[NestedInteger]) -> int:
-        def traverse(ele, depth) -> int:
-            if ele.isInteger():
-                return ele.getInteger() * depth
-            res = 0
-            for sublist in ele.getList():
-                res += traverse(sublist, depth + 1)
-            return res
-                
-        res = 0
-        for ele in nestedList:
-            res += traverse(ele, 1)
-        return res
+        self.res = 0
+        def traverse(ni: NestedInteger, depth: int):
+            if ni.isInteger():
+                self.res += ni.getInteger() * depth
+                return
+
+            for l in ni.getList():
+                traverse(l, depth + 1)
+        
+        [ traverse(ni, 1) for ni in nestedList ]
+        return self.res
 
 ```
 

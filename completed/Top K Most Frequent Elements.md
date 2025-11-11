@@ -5,7 +5,7 @@ tags:
   - meta
   - bucket-sort
   - heaps
-last_attempt: 2025-10-19
+last_attempt: 2025-11-07
 link: https://leetcode.com/problems/top-k-frequent-elements/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 rate:
   - ★★★★★
