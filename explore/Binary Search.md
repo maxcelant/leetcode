@@ -168,7 +168,7 @@ The importance with this template is the post-processing once you have found you
 #### Template Analysis
 Templates II and III are used when you need to look at the neighbors of the left and right pointers.
 
-```
+```python
 left, right = 0, len(nums) - 1
 while left + 1 < right:
 	mid = (left + right) // 2
