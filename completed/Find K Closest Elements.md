@@ -1,10 +1,11 @@
 ---
 tags:
   - medium
-  - heaps
-link:
-rating:
+  - binary-search
+link: https://leetcode.com/problems/find-k-closest-elements/description/
 last_attempt: 2025-09-21
+rate:
+  - ★★★
 ---
 #### Problem
 You are given a sorted integer array `arr`, two integers `k` and `x`, return the `k` closest integers to `x` in the array. The result should also be sorted in ascending order.
@@ -24,7 +25,14 @@ Output: [4,5]
 
 #### Notes
 ---
-The idea is simple. Since it's a sorted array, we need to find the subarray range which has all the closest values. By using two pointers, we check the delta of a given value and move the side that has a larger delta.
+An important realization is that the left pointer can never be greater than `len(array) - k`. Because that's the size of the window.
+
+At each step in the binary search we need to ask ourselves, is `arr[l]` closer to `x` than `arr[l+k]`? Only one of these two can possibly be in the window! 
+
+So if `arr[l]` is closer to `x`, then we know we need to move the right pointer.
+
+If `arr[l+k]` is closer to `x`, then we need to move the left pointer. 
+
 #### Code
 ---
 

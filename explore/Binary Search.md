@@ -162,7 +162,32 @@ class Solution:
 ##### Problem 3: Find Minimum in Sorted Array
 - [[Find Minimum in Rotated Sorted Array]]
 
+#### Binary Template III
+The importance with this template is the post-processing once you have found your target. The next step is typically to _bias one side_ and find the **left or right boundary.**
 
 #### Template Analysis
 Templates II and III are used when you need to look at the neighbors of the left and right pointers.
 
+```
+left, right = 0, len(nums) - 1
+while left + 1 < right:
+	mid = (left + right) // 2
+	if nums[mid] == target:
+		return mid
+	elif nums[mid] < target:
+		left = mid
+	else:
+		right = mid
+
+# Post-processing:
+# End Condition: left + 1 == right
+if nums[left] == target: return left
+if nums[right] == target: return right
+return -1
+```
+
+##### Problem 1: Search in Range
+In this problem, we continue to move a pointer towards the biased side after we find the target value.
+- [[Find First and Last Position of Element in Sorted Array]]
+
+##### Problem 2: 
