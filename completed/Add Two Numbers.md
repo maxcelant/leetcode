@@ -4,10 +4,10 @@ tags:
   - medium
   - meta
   - nvidia
-last_attempt: 2025-10-24
+last_attempt: 2025-11-15
 rate:
   - ★★★★★
-link:
+link: https://leetcode.com/problems/add-two-numbers/?envType=company&envId=nvidia&favoriteSlug=nvidia-six-months
 ---
 #### Variants
 - [[Add Strings]]
@@ -52,37 +52,28 @@ class Solution:
 
 ```go
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-    dummy := &ListNode{Val: -1}
+    dummy := &ListNode{Val:-1}
     cur := dummy
     carry := 0
     for l1 != nil || l2 != nil {
-        sum := carry
+        val := 0
         if l1 != nil {
-            sum += l1.Val
-        }
-        if l2 != nil {
-            sum += l2.Val
-        }
-        carry = sum / 10
-        cur.Next = &ListNode{Val: sum % 10}
-        cur = cur.Next
-        if l1 != nil {
+            val += l1.Val
             l1 = l1.Next
-        } 
+        }
         if l2 != nil {
+            val += l2.Val
             l2 = l2.Next
         }
+        cur.Next = &ListNode{Val: (val + carry) % 10}
+        cur = cur.Next
+        carry = (val + carry) / 10
     }
 
     if carry != 0 {
-        cur.Next = &ListNode{Val: carry}
+        cur.Next = &ListNode{Val:carry}
     }
 
     return dummy.Next
 }
-```
-#### Follow Up: *""*
-
-```python
-
 ```
