@@ -4,10 +4,9 @@ tags:
   - meta
   - medium
 link: https://leetcode.com/problems/powx-n/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 3
-last_attempt: 2025-10-13
+last_attempt: 2025-11-13
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 Implement pow(x, n), which calculates x raised to the power n (i.e., xn).

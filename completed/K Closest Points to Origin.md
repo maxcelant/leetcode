@@ -40,29 +40,27 @@ We stop once we reach the first `k` values. We know this is true when the pivot 
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         self.points = points
-        l, r = 0, len(self.points) - 1
-        pivot_index = len(self.points)
-        while pivot_index != k:
-            pivot_index = self.partition(l, r)
-            if pivot_index > k:
-                r = pivot_index - 1
+        l, r = 0, len(points) - 1
+        while l <= r:
+            p = self.partition(l, r)
+            if p == k:
+                break
+            elif p < k:
+                l = p + 1
             else:
-                l = pivot_index
+                r = p - 1
         return self.points[:k]
-
-    def partition(self, l, r):
-        pivot_val = self.dist(self.points[l + (r - l) // 2])
-        while l < r:
-            if self.dist(self.points[l]) < pivot_val:
-                l += 1
-            else:
-                self.points[l], self.points[r] = self.points[r], self.points[l]
-                r -= 1
-        
-        if self.dist(self.points[l]) < pivot_val:
-            l += 1
-        return l
     
-    def dist(self, point: List[int]) -> int:
+    def partition(self, l, r):
+        pivot = self.dist(self.points[r])
+        i = l
+        for j in range(l, r):
+            if self.dist(self.points[j]) <= pivot:
+                self.points[i], self.points[j] = self.points[j], self.points[i]
+                i += 1
+        self.points[i], self.points[r] = self.points[r], self.points[i]
+        return i
+
+    def dist(self, point):
         return point[0]**2 + point[1]**2
 ```

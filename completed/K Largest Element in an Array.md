@@ -3,9 +3,9 @@ tags:
   - meta
   - medium
   - heaps
+  - quickselect
 link: https://leetcode.com/problems/kth-largest-element-in-an-array/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-rating: 5
-last_attempt: 2025-10-10
+last_attempt: 2025-11-13
 rate:
   - ★★★★★
 ---
@@ -44,4 +44,29 @@ class Solution:
             res = heapq.heappop(heap)
             k -= 1
         return -res
+```
+
+```python
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        l, r = 0, len(nums) - 1
+        target = len(nums) - k
+        while True:
+            pivot = self.partition(nums, l, r)
+            if pivot == target:
+                return nums[pivot]
+            elif pivot < target:
+                l = pivot + 1
+            else:
+                r = pivot - 1
+
+    def partition(self, nums, l, r):
+        pivot = nums[r]
+        i = l
+        for j in range(l, r):
+            if nums[j] <= pivot:
+                nums[i], nums[j] = nums[j], nums[i]
+                i += 1
+        nums[i], nums[r] = nums[r], nums[i]
+        return i
 ```

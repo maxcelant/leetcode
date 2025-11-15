@@ -7,10 +7,6 @@ link: https://leetcode.com/problems/longest-common-prefix
 last_attempt: 2025-11-06
 rate:
   - ★★★★
-  - ★
-  - ★★
-  - ★★★
-  - ★★★★★
 ---
 #### Variants
 

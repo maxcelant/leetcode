@@ -4,10 +4,9 @@ tags:
   - medium
   - meta
 link: https://neetcode.io/problems/lru-cache
-rating: 3
 last_attempt: 2025-05-13
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 Design a data structure that follows the constraints of a **[Least Recently Used (LRU) cache](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU)**.

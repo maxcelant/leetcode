@@ -15,4 +15,4 @@ views:
         direction: ASC
     columnSize:
       file.name: 524
-      note.rate: 140
+      note.rate: 256

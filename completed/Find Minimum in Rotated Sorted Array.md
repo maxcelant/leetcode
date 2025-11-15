@@ -16,8 +16,6 @@ last_attempt: 2025-05-09
 		- if `m < r` then `r = m
 		- if `m > r` then `l = m + 1`
 
->![[Pasted image 20250306111027.png]]
-
 #### Code
 ---
 
@@ -38,7 +36,6 @@ class Solution:
 #### Insight
 ---
 - We return `nums[l]` because that is the last updated value that points to the minimum. Since we stop when `l == r`, this occurs BEFORE we update `m` again, so to have the correct min, we return `nums[l]`.
-- 
 
 #### Takeaways
 ---

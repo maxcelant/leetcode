@@ -4,9 +4,9 @@ tags:
   - stack
   - meta
 link: https://neetcode.io/problems/minimum-remove-to-make-valid-parentheses?list=neetcode250
-last_attempt: 2025-10-19
+last_attempt: 2025-11-13
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 #### Problem
 You are given a string `s` consisting of lowercase English characters, as well as opening and closing parentheses, `(` and `)`.

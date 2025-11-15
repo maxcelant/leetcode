@@ -4,9 +4,9 @@ tags:
   - medium
   - linked-list
 link: https://leetcode.com/problems/lru-cache/description/?envType=company&envId=nvidia&favoriteSlug=nvidia-six-months
-last_attempt: 2025-10-26
+last_attempt: 2025-11-15
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 #### Variants
 
