@@ -3,56 +3,34 @@ tags:
   - dfs
   - graphs
   - medium
+  - meta
+rate:
+  - ★★★★★
+last_attempt: 2025-11-16
 ---
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- This is a directed graph cycle problem.
-- The `numCourses` is the courses the person has to complete from 0...N (no matter what), so the only thing that would stop them from completing it would be a cycle!
-
-#### Code
----
-
 ```python
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        prereqs = collections.defaultdict(list)
-		# Adjacency list of [key: course]: [val: listof prereqs]
-        for (course, prereq) in prerequisites:
-            prereqs[course].append(prereq)
+        adj_list = { i: [] for i in range(numCourses) }
+        for prq, crs in prerequisites:
+            adj_list[crs].append(prq)
+        visited = set()
+
+        def traverse(crs, stack) -> bool:
+            visited.add(crs)
+            for prq in adj_list[crs]:
+                if prq in stack:
+                    return False
+                if prq not in visited:
+                    stack.append(prq)
+                    if not traverse(prq, stack):
+                        return False
+                    stack.pop()
+            return True
         
-        visited, recstack = set(), set()
-        def dfs(course) -> bool:
-            if course in recstack: # We found a cycle!
-                return True
-            if course in visited:
+        for crs in range(numCourses):
+            if not traverse(crs, stack=[crs]):
                 return False
-            
-            visited.add(course)
-            recstack.add(course)
-            for c in prereqs[course]:
-                if dfs(c):
-                    return True
-            recstack.remove(course)
-            return False
-
-		# Go through each course
-        for course in range(numCourses):
-            if dfs(course):
-                return False
-        return True
-
+        
+        return len(visited) == numCourses
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- We use `for course in range(numCourses)` because we need to check all the courses, not matter what.
-- We need to construct the adjacency list for this traversal which maps a course with ALL of it's prerequisites. This allows us to basically "go backwards" from a course and find all that need to come before it. 
-- We use a `recstack` and visited set to find a cycle in the graph.
-
-#### Takeaways
----
-**Where did I go wrong?**
-- I fundamentally misunderstood the problem at first.
-**Lessons Learned?**

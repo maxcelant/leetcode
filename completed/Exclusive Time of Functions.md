@@ -4,9 +4,9 @@ tags:
   - meta
   - medium
 link: https://leetcode.com/problems/exclusive-time-of-functions/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-25
+last_attempt: 2025-11-16
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Variants
 - [[Exclusive Time of Functions (Variant)]]

@@ -8,7 +8,7 @@ link: https://leetcode.com/problems/shortest-path-in-binary-matrix/description/?
 rating: 3
 last_attempt: 2025-10-12
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 Given an `n x n` binary matrix `grid`, return _the length of the shortest **clear path** in the matrix_. If there is no clear path, return `-1`.

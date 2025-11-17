@@ -7,7 +7,7 @@ link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/?env
 rating: 3
 last_attempt: 2025-10-11
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.

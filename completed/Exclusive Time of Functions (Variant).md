@@ -6,7 +6,7 @@ tags:
 link:
 last_attempt: 2025-10-22
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Variants
 - [[Exclusive Time of Functions]]

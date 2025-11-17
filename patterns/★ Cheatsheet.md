@@ -16,6 +16,7 @@
 
 **Sliding Window**
 - Find a subset/substring/window that matches a condition in a non-contiguous list.
+- Find the largest window that fits some criteria.
 
 **Linked List**
 - Know how to use dummy nodes and fast-slow pointers.

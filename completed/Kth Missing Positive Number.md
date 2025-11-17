@@ -4,9 +4,9 @@ tags:
   - easy
   - meta
 link: https://leetcode.com/problems/kth-missing-positive-number/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-11-13
+last_attempt: 2025-11-16
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 Given an array `arr` of positive integers sorted in a **strictly increasing order**, and an integer `k`.

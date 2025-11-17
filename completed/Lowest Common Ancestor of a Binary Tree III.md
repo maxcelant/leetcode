@@ -7,7 +7,7 @@ link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/
 rating: 3
 last_attempt: 2025-10-11
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 Given two nodes of a binary tree `p` and `q`, return _their lowest common ancestor (LCA)_.

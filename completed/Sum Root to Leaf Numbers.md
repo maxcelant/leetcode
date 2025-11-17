@@ -4,9 +4,9 @@ tags:
   - medium
   - meta
 link: https://leetcode.com/problems/sum-root-to-leaf-numbers/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-19
+last_attempt: 2025-11-16
 rate:
-  - ★★★★
+  - ★★★★★
 ---
 
 #### Problem

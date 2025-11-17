@@ -4,6 +4,10 @@ tags:
   - hashing
   - hard
   - meta
+rate:
+  - ★★★★
+last_attempt: 2025-11-16
+link: https://leetcode.com/problems/minimum-window-substring/
 ---
 
 #### Intuition
@@ -17,32 +21,31 @@ tags:
 ---
 
 ```python
-
 class Solution:
-	def minWindow(self, s: str, t: str) -> str:
-		res = ""
-		resLen = float('inf')
-		counter_t = Counter(t)
-		counter_s = Counter()
-		have, need = 0, len(counter_t)
-		l = 0
-		for r in range(len(s)):
-			c = s[r]
-			counter_s[c] += 1
-			if c in counter_t and counter_t[c] == counter_s[c]:
-				have += 1
-			while have == need:
-				# calculate new result
-				if (r - l + 1) < resLen:
-					resLen = (r - l + 1)
-					res = "".join(s[l:r+1])
-				counter_s[s[l]] -= 1
-				# shrink window
-				if s[l] in counter_t and counter_s[s[l]] < counter_t[s[l]]:
-					have -= 1 
-				l += 1
-		return res		
-			
+    def minWindow(self, s: str, t: str) -> str:
+        tCount = Counter(t)
+        sCount = defaultdict(int)
+        res = (-1, -1) # return slice l:r+1 for the min substring
+        minCount = float('inf')
+        l = 0
+        have = 0
+        need = len(tCount)
+        for r in range(len(s)):
+            sCount[s[r]] += 1
+            if s[r] in tCount and tCount[s[r]] == sCount[s[r]]:
+                have += 1
+            while have == need:
+                if (r - l) + 1 < minCount:
+                    minCount = (r - l) + 1
+                    res = (l, r)
+                sCount[s[l]] -= 1
+                if sCount[s[l]] == 0:
+                    del sCount[s[l]]
+                if s[l] in tCount and sCount[s[l]] < tCount[s[l]]:
+                    have -= 1
+                l += 1
+        l, r = res
+        return s[l:r+1]		
 ```
 
 #### Insight
