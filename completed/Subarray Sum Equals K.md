@@ -6,7 +6,7 @@ tags:
 link: https://neetcode.io/problems/subarray-sum-equals-k?list=neetcode250
 last_attempt: 2025-10-14
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 You are given an array of integers `nums` and an integer `k`, return the total number of subarrays whose sum equals to `k`.

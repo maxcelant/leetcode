@@ -2,53 +2,47 @@
 tags:
   - linked-list
   - medium
-rating: 5
-pattern: Move fast pointer N ahead, the move both slow and fast until we reach the end. Use dummy node.
-last_attempt: 2025-05-22
+  - meta
+last_attempt: 2025-11-17
+rate:
+  - ★★★★★
+link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 ---
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- Realize that we need the length of the list and need the count from the end—hence we should use fast/slow pointers.
+#### Variants
+
+#### Problem
+Given the `head` of a linked list, remove the `nth` node from the end of the list and return its head.
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg)
+
+**Input:** head = [1,2,3,4,5], n = 2
+**Output:** [1,2,3,5]
+
+#### Notes
+
 #### Code
----
+**Time Complexity**:
+**Space Complexity**: 
 
 ```python
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        dummy = ListNode(0, head)
-        slow = dummy
-        fast = dummy.next
-
-		# Move fast pointer N spaces ahead
-        while n > 0:
-            fast = fast.next
+        dummy = ListNode(-1, head)
+        l = dummy
+        r = head
+        # Move r N nodes ahead
+        while n > 0 and r:
+            r = r.next
             n -= 1
-
-		# Move both pointers a space at a time til we reach the end
-		# This ensures we are N spaces from the end.
-        while fast:
-            fast = fast.next
-            slow = slow.next
-        if slow.next:
-            slow.next = slow.next.next
-        else:
-            slow.next = None
         
+        # Move both pointers simultaneously until r reaches the end
+        while r:
+            r = r.next
+            l = l.next
+        
+        l.next = l.next.next
         return dummy.next
 ```
 
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- Since we need the n-th index from the end, we need to make sure that the fast pointer is N nodes **in front of** the slow one
-- Using a `dummy` node and pointing it to the head makes our life easier. Because we can have our slow pointer starting from there instead of the `head`.
-	- This is especially useful when we need to modify the `head` node.
-
-#### Takeaways
----
-**Where did I go wrong?**
-- 
-**Lessons Learned?**
-- Use a dummy node to simplify things.
-- We can separate the fast and slow pointers by N spaces to find the node that is N from the end.
