@@ -6,7 +6,7 @@ tags:
 link: https://leetcode.com/problems/diameter-of-n-ary-tree/description/
 last_attempt: 2025-10-22
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Variants
 - [[Diameter of a Binary Tree]]

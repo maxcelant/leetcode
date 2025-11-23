@@ -41,7 +41,7 @@ def partition(nums, l, r):
 	i = l           # Position to put next "<= pivot"
 	# Iterate from start of range to end
 	for j in range(l, r):
-		if nums[i] <= pivot:
+		if nums[j] <= pivot:
 			nums[i], nums[j] = nums[j], nums[i]
 			i += 1
 	

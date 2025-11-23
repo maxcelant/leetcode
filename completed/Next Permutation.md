@@ -4,9 +4,9 @@ tags:
   - medium
   - meta
 link: https://leetcode.com/problems/next-permutation/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
-last_attempt: 2025-10-20
+last_attempt: 2025-11-17
 rate:
-  - ★★★
+  - ★★★★★
 ---
 #### Problem
 A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.

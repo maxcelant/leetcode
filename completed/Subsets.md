@@ -1,43 +1,49 @@
 ---
 tags:
   - backtracking
-  - retry
   - medium
+  - meta
+link: https://leetcode.com/problems/subsets/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
+last_attempt: 2025-11-22
+rate:
+  - ★★★★
 ---
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- I need to ALL solutions, including the intermediate steps, so backtracking is the key.
+#### Variants
+
+#### Problem
+Given an integer array `nums` of **unique** elements, return _all possible_ _subsets_ _(the power set)_.
+
+The solution set **must not** contain duplicate subsets. Return the solution in **any order**.
+
+**Example 1:**
+
+```
+**Input:** nums = [1,2,3]
+**Output:** [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+```
+
+**Example 2:**
+
+```
+**Input:** nums = [0]
+**Output:** [[],[0]]
+```
+#### Notes
 
 #### Code
----
+**Time Complexity**: O(2^n) because at every point, we have two decisions: take or don't take.
+**Space Complexity**: 
 
 ```python
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
-        def findAllSubsets(start: int, subset: List[int]):
+        def backtrack(i, subset):
             res.append(subset.copy())
-            if start == len(nums):
-                return
-            
-            for i in range(start, len(nums)):
-                subset.append(nums[i])
-                findAllSubsets(i + 1, subset)
+            for j in range(i, len(nums)):
+                subset.append(nums[j])
+                backtrack(j + 1, subset)
                 subset.pop()
-        findAllSubsets(0, [])
+        backtrack(0, [])
         return res
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- This problem boils down to understanding [[Backtracking#Understanding the For Loop Approach|For Loop Backtracking DFS]] very well.
-- Except because we want **all** values, we are just going to `append` no matter what.
-- The key is that the `for` loop range decreases as we go on.
-
-#### Takeaways
----
-**Where did I go wrong?**
-
-**Lessons Learned?**

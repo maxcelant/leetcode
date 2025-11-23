@@ -12,9 +12,8 @@ def kedanes(nums):
 
 The important aspect of this relatively simple algorithm is the idea that at every index, we can choose to ignore the previously cached sum, and just take the current value.
 
-```ad-example
+>[!example]
 If we had `nums = [-3, -1, 5]` and our `cursum = -4`, then why would we want to include that with `5`? It would just be better to ignore the `cursum` and take `5` by itself.
-```
 
 This algorithm has a lot of overlap with [[Sliding Window]].
 

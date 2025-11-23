@@ -8,9 +8,6 @@ last_attempt: 2025-10-23
 rate:
   - ★★★
 ---
-#### Variants
-
-
 #### Problem
 Given an integer array `nums` and an integer `k`, return `true` _if there are two **distinct indices**_ `i` _and_ `j` _in the array such that_ `nums[i] == nums[j]` _and_ `abs(i - j) <= k`.
 

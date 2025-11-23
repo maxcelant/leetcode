@@ -29,7 +29,6 @@ A string is `k`**-palindrome** if it can be transformed into a palindrome by r
 **Output:** true
 
 #### Notes
-Each cell is a subproblem that represents the number of letters that don't match _so far_. Once we get to the final cell, `i == j`, then we that will tell us the _least amount of changes_ to make a valid palindrome. If that value is over `k`, then we know we can't create a valid palindrome with `k` changes.
 
 #### Code
 **Time Complexity**: O(N^2)
@@ -38,39 +37,28 @@ Each cell is a subproblem that represents the number of letters that don't match
 ```python
 class Solution:
     def isValidPalindrome(self, s: str, k: int) -> bool:
-        memo = [[-1 for _ in range(len(s))] for _ in range(len(s))]
-        
-        def find_k(i: int, j: int) -> int:
-            # Base case, only 1 letter remaining
-            if i == j:
-                return 0
-            
-            # Base case 2: two letters remaining
-            if i == j - 1:
-                return s[i] != s[j]
-
-            # Avoid doing extra work if we already computed it
-            if memo[i][j] != -1:
-                return memo[i][j]
-            
-            # The letters match so we don't add anything to the cell
-            if s[i] == s[j]:
-                memo[i][j] = find_k(i + 1, j - 1)
-                return memo[i][j]
-            
-            # Since they don't match, we add one to the cell and
-            # Check the palindrome shifting the left by one and right by one
-            # in separate subtrees.
-            # We take the min of the two + 1
-            memo[i][j] = 1 + min(find_k(i + 1, j), find_k(i, j - 1))
-            return memo[i][j]
-        
-        return find_k(0, len(s) - 1) <= k
-```
-
-
-#### Follow Up: *""*
-
-```python
-
+		if k == 0:
+			return self.isPalindrome(0, len(s) - 1)
+		
+		dp = {}
+		def find(l, r, k):
+			if (l, r, k) in dp:
+				return dp[(l, r, k)]
+			
+			if k == 0:
+				dp[(l, r, k)] = self.isPalindrome(l, r)
+				return dp[(l, r, k)]
+			
+			while l < r:
+				if self.s[l] != self.s[r]:
+					dp[(l,r,k)] = find(l + 1, r, k - 1) or find(l, r - 1, k -1)
+					
+				l, r = l + 1, r - 1
+		
+	def isPalindrome(l, r) -> bool:
+		while l < r:
+			if self.s[l] != self.s[r]:
+				return False
+			l, r = l + 1, r - 1
+		return True
 ```

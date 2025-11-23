@@ -7,7 +7,6 @@
 	1. What is the target/base case to create leaf nodes?
 	2. How do we generate possible children?
 	3. (optional) How do I prune bad nodes?
-- The non-for loop approach is more intuitive for me.
 - I'm saying pruning is optional because there are cases like [[Subsets]] and [[Subsets II]] where we want ALL of the subsets created.
 
 #### Formatting Tips

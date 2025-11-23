@@ -6,7 +6,7 @@ tags:
 link: https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 last_attempt: 2025-11-02
 rate:
-  - ★★★
+  - ★
 ---
 #### Variants
 - [[Linked List Cycle]]
@@ -62,11 +62,4 @@ class Solution:
                 break
         
         return head
-```
-
-
-#### Follow Up: *""*
-
-```python
-
 ```
