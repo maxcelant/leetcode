@@ -4,9 +4,10 @@ tags:
   - medium
   - dfs
   - meta
-last_attempt: 2025-05-22
+  - nvidia
+last_attempt: 2025-11-23
 rate:
-  - ★★★★
+  - ★★★★★
 link: https://leetcode.com/problems/copy-list-with-random-pointer/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 ---
 #### Problem
@@ -30,7 +31,6 @@ As we traverse, we store seen nodes in `copies` so that we don't do repeated (or
 
 We simply recursively call the function on the `next` and `random` pointer to get those values. It's a bottom-up approach. We solve the children before the parent.
 
-
 #### Code
 ---
 **Time Complexity**: O(N)
@@ -52,11 +52,4 @@ class Solution:
             new_node.next = traverse(node.next)
             return new_node
         return traverse(head)
-```
-
-
-#### Follow Up: *""*
-
-```python
-
 ```
