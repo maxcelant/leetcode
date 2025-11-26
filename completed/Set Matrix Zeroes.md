@@ -6,11 +6,8 @@ tags:
 link: https://leetcode.com/problems/set-matrix-zeroes/description/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 last_attempt: 2025-10-23
 rate:
-  - ★★★
+  - ★
 ---
-#### Variants
-
-
 #### Problem
 Given an `m x n` integer matrix `matrix`, if an element is `0`, set its entire row and column to `0`'s.
 
@@ -32,15 +29,17 @@ You must do it [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
 #### Notes
 **For the O(N) space complexity approach:**
-we first create a set of all the zeros in the matrix. We then loop through and update the row and col that for those zero values.
+we first create a set of all the zeros in the matrix. We then loop through and update the row and col for those zero values.
 
 **For the O(1) space complexity approach:**
-We first iterate through the matrix and any time we find a zero, we mar
-
+Use the matrix itself as an indicator.
+Use the first cell of every row and column as a flag.
+We later use these flags to convert the row/col to zeros.
+We must handle the first row/column a little differently since technically the first row and column both use `matrix[0][0]` as an indicator. So we will use `matrix[0][0]` to indicate the first row and a `first_col` flag for first column.
 
 #### Code
-**Time Complexity**:
-**Space Complexity**: 
+**Time Complexity**: O(N\*M)
+**Space Complexity**: O(N\*M)
 
 ```python
 class Solution:
@@ -62,5 +61,7 @@ class Solution:
 #### Follow Up: *"Use O(1) Space"*
 
 ```python
-
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+    
 ```

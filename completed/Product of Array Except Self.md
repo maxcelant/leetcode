@@ -31,21 +31,20 @@ Remember to create a `result` array. We use the `nums` array to calculate the up
 As you scan from left to right, we are accumulating the prefix. Since the prefix needs to be the produce of everything **before the current value**, we want to calculate it AFTER we get the result for that index!
 
 #### Code
-**Time Complexity**:
-**Space Complexity**: 
+**Time Complexity**: O(N)
+**Space Complexity**: O(1)
 
-```go
-func productExceptSelf(nums []int) []int {
-    res := make([]int, len(nums))
-    prefix, suffix := 1, 1
-    for i := range nums {
-        res[i] = prefix
-        prefix *= nums[i]
-    }
-    for i := len(nums) - 1; i >= 0; i-- {
-        res[i] *= suffix
-        suffix *= nums[i]
-    }
-    return res
-}
+```python
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        res = [0] * len(nums)
+        prefix = 1
+        for i in range(len(nums)):
+            res[i] = prefix
+            prefix *= nums[i]
+        suffix = 1
+        for i in range(len(nums) - 1, -1, -1):
+            res[i] *= suffix
+            suffix *= nums[i]
+        return res
 ```

@@ -3,8 +3,9 @@ tags:
   - linked-list
   - medium
   - meta
+  - nvidia
 link: https://neetcode.io/problems/lru-cache
-last_attempt: 2025-05-13
+last_attempt: 2025-11-25
 rate:
   - ★★★★★
 ---

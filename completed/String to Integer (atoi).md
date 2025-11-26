@@ -5,7 +5,7 @@ tags:
   - medium
   - nvidia
 link: https://leetcode.com/problems/string-to-integer-atoi/description/?envType=company&envId=facebook&favoriteSlug=facebook-three-months
-last_attempt: 2025-10-18
+last_attempt: 2025-11-25
 rate:
   - ★★★★
 ---
@@ -23,11 +23,11 @@ Return the integer as the final result.
 
 **Example 1:**
 ```
-**Input:** s = "42"
+Input: s = "42"
 
-**Output:** 42
+Output: 42
 
-**Explanation:**
+Explanation:
 
 The underlined characters are what is read in and the caret is the current reader position.
 Step 1: "42" (no characters read because there is no leading whitespace)
@@ -49,71 +49,21 @@ Easy but has lots of edge cases. We remove leading whitespace (not all whitespac
 ```python
 class Solution:
     def myAtoi(self, s: str) -> int:
-        i = res = 0
-        sign = 1
-
-        # Remove leading whitespace
+        i = 0
         while i < len(s) and s[i] == " ":
             i += 1
-
-        # Sign it
+        sign = 1
         if i < len(s) and s[i] == "+":
             i += 1
-        elif i < len(s) and s[i] == '-':
+        elif i < len(s) and s[i] == "-":
             sign = -1
             i += 1
-        # Loop until we reach a non-numeric char
+        while i < len(s) and s[i] == "0":
+            i += 1
+        res = 0
         while i < len(s) and s[i].isnumeric():
             res = res * 10 + int(s[i])
-            seen_nonzero = True
             i += 1
-        
-        # Attach sign
-        res = res * sign
-        # Clamp to range
-        return min((2**31)-1, max(-2**31, res))
-```
-
-
-#### Go Solution
-
-The annoying bit in Go is doing the bounds check. Basically we are checking to see if adding the new digit will cause an overflow or not. We shift around the variables such that we can check if the `res` is greater.
-
-```
-MaxInt = 100
-res = 10
-digit = 5
-
-10 > (100 - 5) / 10
-10 > 9.5 which means doing '10 * 10 + 5 = 105' would cause an overflow
-```
-
-```python
-func myAtoi(s string) int {
-    i, sign, res := 0, 1, 0
-    for i < len(s) && s[i] == ' ' {
-        i++
-    }
-    if i < len(s) && s[i] == '-' {
-        sign = -1
-        i++
-    } else if i < len(s) && s[i] == '+' {
-        i++
-    }
-    for i < len(s) && s[i] == '0' {
-        i++
-    }
-    for i < len(s) && unicode.IsDigit(rune(s[i])) {
-        num := int(s[i] - '0')
-        if res > (math.MaxInt32 - num) / 10 {
-            if sign == 1 {
-                return math.MaxInt32
-            }
-            return math.MinInt32
-        }
-        res = res * 10 + num
-        i++
-    }
-    return res * sign
-}
+        res *= sign
+        return max(-2**31, min(2**31 - 1, res))
 ```

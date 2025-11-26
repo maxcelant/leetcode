@@ -1,8 +1,12 @@
 ---
 tags:
-link:
-last_attempt:
+  - medium
+  - linked-list
+  - nvidia
+link: https://leetcode.com/problems/reverse-linked-list-ii/description/?envType=company&envId=nvidia&favoriteSlug=nvidia-six-months
+last_attempt: 2025-11-23
 rate:
+  - ★★★
 ---
 #### Variants
 
@@ -27,30 +31,27 @@ class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         prev, cur = None, head
         i = 1
-        # Traverse until we reach left barrier
+        # Move forward two pointers until we reach left barrier
         while i < left:
             prev = cur
             cur = cur.next
             i += 1
-        
-        # Use pointers to attach at the end
-        con, tail = prev, cur
-        # Reverse nodes until we reach right barrier
+
+		# Keep track of pointers to make connections later to update the
+		# orientation of the list
+        newHead, tail = prev, cur
         while i <= right:
             temp = cur.next
             cur.next = prev
             prev = cur
             cur = temp
             i += 1
-        
-        # Attach the new nodes to the correct outer nodes
-        # If the left pointer is the first node, then con will be null
-        # So to avoid any runtime errors, make prev the new head instead
-        if con:
-            con.next = prev
+        # If left = 0, then prev and thus newHead will be None
+        # So this is handling that edge case.
+        if newHead:
+            newHead.next = prev
         else:
             head = prev
         tail.next = cur
         return head
-
 ```

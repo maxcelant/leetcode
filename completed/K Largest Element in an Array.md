@@ -4,6 +4,7 @@ tags:
   - medium
   - heaps
   - quickselect
+  - nvidia
 link: https://leetcode.com/problems/kth-largest-element-in-an-array/?envType=company&envId=facebook&favoriteSlug=facebook-thirty-days
 last_attempt: 2025-11-13
 rate:

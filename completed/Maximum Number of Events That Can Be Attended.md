@@ -6,7 +6,7 @@ tags:
 link: https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/description/?envType=company&envId=nvidia&favoriteSlug=nvidia-six-months
 last_attempt: 2025-11-23
 rate:
-  - ★★★
+  - ★★★★
 ---
 #### Problem
 You are given an array of `events` where `events[i] = [startDayi, endDayi]`. Every event `i` starts at `startDayi` and ends at `endDayi`.

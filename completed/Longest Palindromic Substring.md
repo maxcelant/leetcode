@@ -4,7 +4,6 @@ tags:
   - 2d-dynamic-programming
   - nvidia
   - meta
-pattern: Use 2D dp table, fill in default palindromes, traverse all substrings and look at bottom left value to see if that one is also a palindrome
 link: https://neetcode.io/problems/longest-palindromic-substring
 rate:
   - ★★★★
