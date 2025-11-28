@@ -2,59 +2,64 @@
 tags:
   - graphs
   - medium
+  - nvidia
+  - dfs
+link: https://leetcode.com/problems/number-of-islands/description/?envType=company&envId=nvidia&favoriteSlug=nvidia-three-months
+last_attempt: 2025-11-28
+rate:
+  - ★★★★★
 ---
-#### Intuition
----
-_"How could I make the insight that leads to discovering the solution?"_
-- Use dfs to "traverse" an entire island, keeping track of the visited cells.
-- Once we fully dfs, we just move to the next cell and skip those that we've already visited and also skip "0" ones.
-- When we reach a `(r,c)` that's unvisited, we can increment the island count by 1.
-- We should check all four directions, just to cover all cases.
+#### Variants
+- [[Making a Large Island]]
+
+#### Problem
+Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return _the number of islands_.
+
+An **island** is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+**Example 1:**
+
+**Input:** grid = [
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]
+**Output:** 1
+
+#### Notes
+Use visited set, traverse each island, increment result.
 
 #### Code
----
+**Time Complexity**: O(N\*M)
+**Space Complexity**: O(N\*M))
 
 ```python
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        n, m = len(grid), len(grid[0])
+        self.grid = grid
+        self.visited = set()
         res = 0
-        visited = set() # of (r, c) tuples
-
-        def dfs(r: int, c: int):
-            # base case
-            if r < 0 or c < 0 or r >= n or c >= m or grid[r][c] == '0':
-                return
-            
-            for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
-                if (r+dx, c+dy) in visited:
+        for r in range(len(self.grid)):
+            for c in range(len(self.grid[0])):
+                if self.grid[r][c] == "0":
                     continue
-                visited.add((r+dx, c+dy))
-                dfs(r+dx, c+dy)
-                
-		# dfs all four directions
-        for r in range(n):
-            for c in range(m):
-                if grid[r][c] == '0':
-                    continue
-                if (r, c) in visited:
-                    continue
-                dfs(r, c)
-                res += 1
-        
+                if (r, c) not in self.visited:
+                    self.explore(r, c)
+                    res += 1
         return res
+
+    def explore(self, r, c):
+        if (
+            not (0 <= r < len(self.grid)) or
+            not (0 <= c < len(self.grid[0])) or
+            self.grid[r][c] == "0" or
+            (r, c) in self.visited
+        ):
+            return
+        self.visited.add((r, c))
+        self.explore(r + 1, c)
+        self.explore(r - 1, c)
+        self.explore(r, c + 1)
+        self.explore(r, c - 1)
 ```
-
-#### Insight  
----
-_"What are the important aspects of the solution?"_
-- We should ignore visited and `'0'` cells as early as we can in our search—so in our double for loop.
-- By using DFS we can map out the entire island in one go.
-- `dx, dy` is for all four cardinal directions.
-
-#### Takeaways
----
-**Where did I go wrong?**
-- The base case condition didn't have the `grid[r][c] == 0` in it, so it caused an infinite error bug.
-**Lessons Learned?**
-- Pay close attention to your base cases.
